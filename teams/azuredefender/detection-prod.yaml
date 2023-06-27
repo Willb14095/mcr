@@ -163,13 +163,6 @@ repos:                                                                          
     logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
     supportLink: https://microsoft.com
     documentationLink: https://microsoft.com
-    syndications:
-        - type: cloud                                  
-          destinations:
-            - usnat                                    
-            - ussec                                    
-          tags: 
-            - source: /^\d+\.\d+\.\d+$/
   # Azure Defender pod collector
   - name: public/azuredefender/stable/pod-collector
     displayName: Microsoft Azure Defender Pod Collector Agent for K8S
