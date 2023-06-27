@@ -1,0 +1,38 @@
+version: 2.1
+subscriptionId: 5d5f0ef0-d0a1-4f94-83db-deb0a2d1a292
+resourceGroup: oryxmcrimages
+registry: oryxprodmcr
+onboardingNotification: oryxnoti
+dependencyNotification: oryxnoti
+contactEmail: oryxeng@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\oryx
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: Oryx images
+  shortDescription: Product family for all the Oryx images (base images, build image and runtime images)
+  readMe: README.oryx.md
+  logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  supportLink: https://github.com/microsoft/Oryx/issues
+  documentationLink: https://github.com/microsoft/Oryx
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+repos:
+
+  - name: public/oryx/build
+    displayName: Oryx Build
+    readme: README.oryx-build.md
+    description: Build tools and script generator
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://github.com/microsoft/Oryx/issues
+    documentationLink: https://github.com/microsoft/Oryx
+    discoveryPortalReadme: README.oryx-build.portal.md
+    logoFile: container.svg
+    licenseType: MIT

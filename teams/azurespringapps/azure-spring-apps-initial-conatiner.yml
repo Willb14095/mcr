@@ -1,0 +1,39 @@
+version: 2.0
+subscriptionId: 203dfa53-bfa1-47c6-945d-16119dff147e
+resourceGroup: amss-rp-shared
+registry: ascprodacrglobalrp
+onboardingNotification: spring-dev-team
+dependencyNotification: spring-dev-team
+
+ownership:
+  securityGroups:
+  - groupName: fareast\amssst
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/azurespringapps/apm/applicationinsights
+    displayName: APP Insights Agent Initial Image
+    description: APP Insights Agent Initial Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/apm/appdynamics
+    displayName: APP Dynamics Agent Initial Image
+    description: APP Dynamics Agent Initial Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/apm/newrelic
+    displayName: Newrelic Agent Initial Image
+    description: Newrelic Agent Initial Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/apm/dynatrace
+    displayName: Dynatrace Agent Initial Image
+    description: Dynatrace Agent Initial Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/azure-spring-cloud-apps-initial
+    displayName: ASA Initial Image
+    description: ASA Initial Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg

@@ -1,0 +1,26 @@
+version: 2.0
+subscriptionId: 6ade2858-9d1b-4fc7-87d1-f876df8d8eaf
+resourceGroup: mcrgenomics
+registry: mcrgenomics
+onboardingNotification: mcrgenomics-acr@microsoft.com
+dependencyNotification: mcrgenomics-acr@microsoft.com
+
+ownership:                                                                                            
+  securityGroups:                                                                                    
+  - groupName: redmond\msgenpm                                                                         
+    permissions:                                                                                      
+    - read
+    - write
+
+repos:
+  - name: public/msgenomics/croro
+    displayName: Cromwell Output Reorganization
+    description: Implementation WDL workflow for organizing outputs from Cromwell, specifically Cromwell On Azure.
+    documentationLink: https://github.com/microsoft/cromwell-output-reorganization
+    logoFile: eeab.svg
+
+  - name: public/msgenomics/nf-havoc
+    displayName: nf-HAVoC (Helsinki university Analyzer for Variants of Concern)
+    description: A set of bioinformatics tools for analyzing SARS-CoV-2 data.
+    documentationLink: https://github.com/microsoft/nf-HAVoC
+    logoFile: eeab.svg

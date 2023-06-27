@@ -1,0 +1,41 @@
+version: 2.1
+subscriptionId: 68397ef5-9754-46e7-9572-9b15d12367f1
+resourceGroup: msgraph-public-container-images
+registry: msgraphprod
+onboardingNotification: graphsdkpub
+dependencyNotification: graphsdkpub
+contactEmail: graphsdkpub@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\graphsdkpub
+    permissions:
+    - read
+    - write
+repos:
+  - name: public/kiota/generator
+    displayName: Microsoft OpenAPI Kiota Generator (deprecated)
+    readme: README-kiota-renamed.md
+    discoveryPortalReadme: README-kiota-renamed.portal.md
+    description: Kiota is an OpenAPI based client generator for RESTful APIs.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    logoFile: generic_logo.svg
+    supportLink: https://github.com/microsoft/kiota/issues
+    documentationLink: https://microsoft.github.io/kiota
+    licenseType: MIT
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+  - name: public/openapi/kiota
+    displayName: Microsoft OpenAPI Kiota Generator
+    readme: README.md
+    discoveryPortalReadme: README.portal.md
+    description: Kiota is an OpenAPI based client generator for RESTful APIs.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    logoFile: generic_logo.svg
+    supportLink: https://github.com/microsoft/kiota/issues
+    documentationLink: https://microsoft.github.io/kiota
+    licenseType: MIT
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

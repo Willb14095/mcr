@@ -1,0 +1,862 @@
+version: 2.1
+subscriptionId: d7d4a928-c9b8-4cf0-8d82-f1bdecb001a9
+resourceGroup: BuildResources
+registry: aicpmcr
+onboardingNotification: csmcrnot
+dependencyNotification: csmcrnot
+contactEmail: cscontainers@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\cscpfteall   
+    permissions:
+    - read
+    - write
+  - groupName: redmond\tadevteam   
+    permissions:
+    - read
+    - write
+  - groupName: redmond\tadevcai   
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: Azure Cognitive Services
+  shortDescription: Container support for Azure Cognitive Services.
+  readMe: README.azure-cognitive-services-product-family.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+  documentationLink: https://docs.microsoft.com/en-us/azure/cognitive-services/
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+
+repos:
+
+  - name: public/azure-cognitive-services/textanalytics/language
+    displayName: Azure Cognitive Services Text Analytics Language
+    readme: README.azure-cognitive-services-textanalytics-language.md
+    description: Azure Cognitive Services Language Detection Images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: TextAnalytics.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-textanalytics-language.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/textanalytics/sentiment
+    displayName: Azure Cognitive Services Text Analytics Sentiment
+    readme: README.azure-cognitive-services-textanalytics-sentiment.md
+    description: Azure Cognitive Services Sentiment Analysis Images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: TextAnalytics.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-textanalytics-sentiment.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+          
+  - name: public/azure-cognitive-services/textanalytics/customner
+    displayName: Azure Cognitive Services Text Analytics Custom NER
+    readme: README.azure-cognitive-services-textanalytics-customner.md
+    description: Azure Cognitive Services Custom NER Images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: TextAnalytics.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-textanalytics-customner.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+
+  - name: public/azure-cognitive-services/textanalytics/keyphrase
+    displayName: Azure Cognitive Services Text Analytics Keyphrase
+    readme: README.azure-cognitive-services-textanalytics-keyphrase.md
+    description: Azure Cognitive Services Key Phrase Extraction Images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: TextAnalytics.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-textanalytics-keyphrase.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/textanalytics/healthcare
+    displayName: Azure Cognitive Services Text Analytics Healthcare
+    readme: README.azure-cognitive-services-textanalytics-healthcare.md
+    description: Azure Cognitive Services Healthcare Images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: TextAnalytics.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-textanalytics-healthcare.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+        
+  - name: public/azure-cognitive-services/language/luis
+    displayName: Azure Cognitive Services Language Understanding
+    description: Azure Cognitive Services Language Understanding Images
+    readme: README.azure-cognitive-services-language-luis.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: LUIS.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-language-luis.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/custom-form/labeltool
+    displayName: Azure Cognitive Services Custom Form Recognizer Labeltool
+    description: Azure Cognitive Services Custom Form Recognizer Labeltool Images Images
+    readme: README.azure-cognitive-services-custom-form-labeltool.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-custom-form-labeltool.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/samples/language/frontend
+    displayName: Azure Cognitive Services Language Frontend Sample
+    description: Azure Cognitive Services Language Detection Frontend Sample Images
+    readme: README.azure-cognitive-services-samples-language-frontend.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: TextAnalytics.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-samples-language-frontend.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+         
+  - name: public/azure-cognitive-services/decision/anomaly-detector
+    displayName: Azure Cognitive Services Decision Anomaly Detector
+    description: Azure Cognitive Services Decision Anomaly Detector Images
+    readme: README.azure-cognitive-services-decision-anomaly-detector.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: AnomalyFinder.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-decision-anomaly-detector.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/vision/read
+    displayName: Azure Cognitive Services Computer Vision Read OCR
+    description: Azure Cognitive Services Computer Vision Read OCR Images
+    readme: README.azure-cognitive-services-vision-read.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: ComputerVision.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-vision-read.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/form-recognizer/layout
+    displayName: Azure Cognitive Services Form Recognizer Layout
+    description: Azure Cognitive Services Form Recognizer Layout Images
+    readme: README.azure-cognitive-services-form-recognizer-layout.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-layout.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+  
+  - name: public/azure-cognitive-services/form-recognizer/businesscard
+    displayName: Azure Cognitive Services Form Recognizer BusinessCard
+    description: Azure Cognitive Services Form Recognizer BusinessCard Images
+    readme: README.azure-cognitive-services-form-recognizer-businesscard.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-businesscard.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+  
+  - name: public/azure-cognitive-services/form-recognizer/receipt
+    displayName: Azure Cognitive Services Form Recognizer Receipt
+    description: Azure Cognitive Services Form Recognizer Receipt Images
+    readme: README.azure-cognitive-services-form-recognizer-receipt.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-receipt.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+  
+  - name: public/azure-cognitive-services/form-recognizer/invoice
+    displayName: Azure Cognitive Services Form Recognizer Invoice
+    description: Azure Cognitive Services Form Recognizer Invoice Images
+    readme: README.azure-cognitive-services-form-recognizer-invoice.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-invoice.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/form-recognizer/custom-api
+    displayName: Azure Cognitive Services Form Recognizer Custom API
+    description: Azure Cognitive Services Form Recognizer Custom API Images
+    readme: README.azure-cognitive-services-form-recognizer-custom-api.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-custom-api.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+  
+  - name: public/azure-cognitive-services/form-recognizer/custom-supervised
+    displayName: Azure Cognitive Services Form Recognizer Custom Supervised
+    description: Azure Cognitive Services Form Recognizer Custom Supervised Images
+    readme: README.azure-cognitive-services-form-recognizer-custom-supervised.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-custom-supervised.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+  
+  - name: public/azure-cognitive-services/form-recognizer/id-document
+    displayName: Azure Cognitive Services Form Recognizer ID Document
+    description: Azure Cognitive Services Form Recognizer ID Document Images
+    readme: README.azure-cognitive-services-form-recognizer-id-document.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-id-document.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/form-recognizer/layout-3.0
+    displayName: Azure Cognitive Services Form Recognizer Layout 3.0
+    description: Azure Cognitive Services Form Recognizer Layout Images
+    readme: README.azure-cognitive-services-form-recognizer-layout.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-layout.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/form-recognizer/read-3.0
+    displayName: Azure Cognitive Services Form Recognizer Read 3.0
+    description: Azure Cognitive Services Form Recognizer Read Images
+    readme: README.azure-cognitive-services-form-recognizer-read.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-read.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/form-recognizer/document-3.0
+    displayName: Azure Cognitive Services Form Recognizer Document 3.0
+    description: Azure Cognitive Services Form Recognizer Document Images
+    readme: README.azure-cognitive-services-form-recognizer-document.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-document.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/form-recognizer/id-document-3.0
+    displayName: Azure Cognitive Services Form Recognizer ID Document 3.0
+    description: Azure Cognitive Services Form Recognizer ID Document Images
+    readme: README.azure-cognitive-services-form-recognizer-id-document.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-id-document.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/form-recognizer/receipt-3.0
+    displayName: Azure Cognitive Services Form Recognizer Receipt 3.0
+    description: Azure Cognitive Services Form Recognizer Receipt Images
+    readme: README.azure-cognitive-services-form-recognizer-receipt.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-receipt.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/form-recognizer/invoice-3.0
+    displayName: Azure Cognitive Services Form Recognizer Invoice 3.0
+    description: Azure Cognitive Services Form Recognizer Invoice Images
+    readme: README.azure-cognitive-services-form-recognizer-invoice.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-invoice.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/form-recognizer/businesscard-3.0
+    displayName: Azure Cognitive Services Form Recognizer BusinessCard 3.0
+    description: Azure Cognitive Services Form Recognizer BusinessCard Images
+    readme: README.azure-cognitive-services-form-recognizer-businesscard.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-businesscard.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azure-cognitive-services/form-recognizer/custom-template-3.0
+    displayName: Azure Cognitive Services Form Recognizer Custom Template 3.0
+    description: Azure Cognitive Services Form Recognizer Custom Template Images
+    readme: README.azure-cognitive-services-form-recognizer-custom-api.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-custom-api.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/form-recognizer/studio
+    displayName: Azure Cognitive Services Form Recognizer Studio
+    description: Azure Cognitive Services Form Recognizer Studio Images
+    readme: README.azure-cognitive-services-form-recognizer-studio.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: FormRecognizer.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-form-recognizer-studio.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/vision/spatial-analysis
+    displayName: Azure Cognitive Services Computer Vision Spatial Analysis
+    description: Azure Cognitive Services Computer Vision Spatial Analysis for Video
+    readme: README.azure-cognitive-services-vision-spatial-analysis.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: ComputerVision.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-vision-spatial-analysis.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/vision/custom-image-analysis
+    displayName: Azure Cognitive Services Computer Vision Custom Image Analysis
+    description: Azure Cognitive Services Computer Vision Custom Image Analysis
+    readme: README.azure-cognitive-services-vision-custom-image-analysis.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: ComputerVision.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-vision-custom-image-analysis.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/vision/spatial-analysis/telegraf
+    displayName: Azure Cognitive Services Computer Vision Spatial Analysis Telegraf
+    description: Azure Cognitive Services Computer Vision Spatial Analysis System Health with Telegraf
+    readme: README.azure-cognitive-services-vision-spatial-analysis-telegraf.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: ComputerVision.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-vision-spatial-analysis-telegraf.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/vision/spatial-analysis/diagnostics
+    displayName: Azure Cognitive Services Computer Vision Spatial Analysis Diagnostics
+    description: Azure Cognitive Services Computer Vision Spatial Analysis Diagnostics with Docker logs
+    readme: README.azure-cognitive-services-vision-spatial-analysis-diagnostics.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: ComputerVision.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-vision-spatial-analysis-diagnostics.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/speechservices/speech-to-text
+    displayName: Azure Cognitive Services Speech To Text
+    description: Azure Cognitive Services Speech To Text Images
+    readme: README.azure-cognitive-services-speechservices-speech-to-text.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: Speech.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-speechservices-speech-to-text.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/speechservices/custom-speech-to-text
+    displayName: Azure Cognitive Services Custom Speech To Text
+    description: Azure Cognitive Services Custom Speech To Text Images
+    readme: README.azure-cognitive-services-speechservices-custom-speech-to-text.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: Speech.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-speechservices-custom-speech-to-text.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/speechservices/text-to-speech
+    displayName: Azure Cognitive Services Text To Speech
+    description: Azure Cognitive Services Text To Speech Images
+    readme: README.azure-cognitive-services-speechservices-text-to-speech.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: Speech.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-speechservices-text-to-speech.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/speechservices/custom-text-to-speech
+    displayName: Azure Cognitive Services Custom Text To Speech
+    description: Azure Cognitive Services Custom Text To Speech Images
+    readme: README.azure-cognitive-services-speechservices-custom-text-to-speech.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: Speech.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-speechservices-custom-text-to-speech.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/speechservices/neural-text-to-speech
+    displayName: Azure Cognitive Services Neural Text To Speech
+    description: Azure Cognitive Services Neural Text To Speech Images
+    readme: README.azure-cognitive-services-speechservices-neural-text-to-speech.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: Speech.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-speechservices-neural-text-to-speech.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/speechservices/language-detection
+    displayName: Azure Cognitive Services Speech Language Detection
+    description: Azure Cognitive Services Speech Language Detection Images
+    readme: README.azure-cognitive-services-speechservices-language-detection.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: Speech.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-speechservices-language-detection.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/translator/text-translation
+    displayName: Azure Cognitive Services Text Translation
+    description: Azure Cognitive Services Text Translation Images
+    readme: README.azure-cognitive-services-translator-text-translation.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: Translator.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-translator-text-translation.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/diagnostic
+    displayName: Azure Cognitive Services Diagnostic
+    description: Azure Cognitive Services Diagnostic Images
+    readme: README.azure-cognitive-services-diagnostic.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: CognitiveServices.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-diagnostic.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /.*/
+
+  - name: public/azure-cognitive-services/health-insights/clinical-matching
+    displayName: Azure Cognitive Services Health Insights Clinical Matching
+    readme: README.azure-cognitive-services-health-insights-clinical-matching.md
+    description: Azure Cognitive Services Health Insights Clinical Matching Image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: CognitiveServices.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-health-insights-clinical-matching.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+  
+  - name: public/azure-cognitive-services/health-insights/cancer-profiling
+    displayName: Azure Cognitive Services Health Insights Cancer Profiling
+    readme: README.azure-cognitive-services-health-insights-cancer-profiling.md
+    description: Azure Cognitive Services Health Insights Cancer Profiling Image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: CognitiveServices.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-cognitive-services
+    documentationLink: https://aka.ms/cognitive-services-containers
+    discoveryPortalReadme: README.azure-cognitive-services-health-insights-cancer-profiling.portal.md
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/product/ForOnlineServices/EAEAS
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

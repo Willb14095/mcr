@@ -1,0 +1,30 @@
+version: 2.1
+subscriptionId: 5f91e934-4268-4ced-ac52-573d009717b0
+resourceGroup: mcr-iotcadapter-do-not-delete
+registry: iotcadapteracr
+onboardingNotification: iotcadapter@microsoft.com
+dependencyNotification: iotcadapter@microsoft.com
+contactEmail: shak@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\iotcentraldev
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/iotedge/iotcadapter
+    displayName: IoT Central Adapter Module for Industrial IoT 
+    description: Contains IoT Central Adapter module runs on IoT Edge, and connects industrial assets to IoT Central
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/iot-for-all/iotc-iiot
+    documentationLink: https://github.com/iot-for-all/iotc-iiot
+    licenseType: MIT
+  - name: unlisted/iotedge/iotc-miab-gateway
+    displayName: Manufacturing In a Box Gateway 
+    description: Contains a module that sends OPC-UA data to IoT Central, and handles commands from IoT Central
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/iot-for-all/iotc-miab-gateway
+    documentationLink: https://github.com/iot-for-all/iotc-miab-gateway
+    licenseType: MIT

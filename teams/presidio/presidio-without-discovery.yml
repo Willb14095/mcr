@@ -1,0 +1,85 @@
+version: 2.0
+subscriptionId: 8d7aebc0-448f-44dd-95c8-9b428040fee3
+resourceGroup: presidio-public-images
+registry: presidio
+onboardingNotification: presidio-onboard
+dependencyNotification: presidio-dependency
+
+ownership:
+  securityGroups:
+    - groupName: redmond\csenghealthcaredev
+      permissions:
+        - read
+        - write
+
+repos:
+  - name: public/presidio-ocr
+    displayName: Presidio OCR
+    readme: README.presidio.deprecated.md
+    description: The Presidio OCR
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/presidio-anonymizer-image
+    displayName: Presidio Image Anonymizer
+    readme: README.presidio.deprecated.md
+    description: The Presidio image anonymizer
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/presidio-api
+    displayName: Presidio API
+    readme: README.presidio.deprecated.md
+    description: The Presidio external facing API service
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/presidio-scheduler
+    displayName: Presidio Scheduler
+    readme: README.presidio.deprecated.md
+    description: The Presidio scheduler
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/presidio-datasink
+    displayName: Presidio Datasink
+    readme: README.presidio.deprecated.md
+    description: The Presidio datasink
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/presidio-collector
+    displayName: Presidio Collector
+    readme: README.presidio.deprecated.md
+    description: The Presidio collector
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/presidio-recognizers-store
+    displayName: Presidio Recognizers Store
+    readme: README.presidio.deprecated.md
+    description: The Presidio recognizers store, manages the different custom recognizers
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true

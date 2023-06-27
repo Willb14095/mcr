@@ -1,0 +1,24 @@
+version: 2.0
+subscriptionId: 7b1b875f-b4a5-4994-b794-00d1d1393dcc
+resourceGroup: azuremigrate-extension-prod-rg
+registry: AzureMigrateBootstrapAgent
+onboardingNotification: azuremigrateengg
+dependencyNotification: azuremigrateengg
+
+ownership:
+  securityGroups:
+    - groupName: fareast\azuremigratefte
+      permissions:
+        - read
+        - write
+
+repos:
+  - name: unlisted/azuremigrate/bootstrap-agent
+    displayName: Azure Migrate Bootstrap agent image
+    description: Image to bootstrap Azure Migrate appliance (OCI Artifact type = Container images)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    
+  - name: unlisted/azuremigrate/helm/bootstrap-agent
+    displayName: Azure Migrate Bootstrap agent helm chart
+    description: Helm chart for bootstrap Azure Migrate appliance (OCI Artifact type = HELM charts)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg

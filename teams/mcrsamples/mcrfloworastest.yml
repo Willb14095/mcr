@@ -1,0 +1,29 @@
+version: 2.1
+subscriptionId: 910d9cee-44b6-4242-ab71-ebe693ed8cc6
+resourceGroup: brettorastest
+registry: brettcanarytest
+onboardingNotification: mcrflowtestnot
+dependencyNotification: mcrflowtestnot
+disableOnboardingNotifications: true
+contactEmail: brettbishop@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\mcrdev
+    permissions:
+    - read
+    - write
+
+repos:  
+  - name: public/mcr/hello-world-oci
+    displayName: Mcr Hello World OCI
+    readme: README.hello-world.md
+    discoveryPortalReadme: README.hello-world.portal.md
+    description: Hello World! (an example of minimal Dockerization).
+    logoFile: Microsoft_logo.svg
+    licenseType: MIT
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    categories: [Monitoring]
+    requireAuthForDiscovery: true
+

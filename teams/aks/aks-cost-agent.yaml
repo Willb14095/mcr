@@ -1,0 +1,34 @@
+version: 2.1
+subscriptionId: 5f004364-663b-45ce-bf32-f04b6fdbac59
+resourceGroup: aks-oss-images
+registry: AKSOSSCR
+onboardingNotification: aks-cost-agent
+dependencyNotification: aks-cost-agent
+contactEmail: aks-cost-agent@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-Read_Write-CG-23637
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/aks/aks-cost-agent-exporter
+    displayName: 'AKS Cost Agent - Exporter'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/aks-cost-agent
+    documentationLink: https://github.com/Azure/aks-cost-agent
+    licenseType: MIT
+  - name: unlisted/aks/aks-cost-agent-cluster-resource-metrics
+    displayName: 'AKS Cost Agent - Cluster Resource Metrics'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/aks-cost-agent
+    documentationLink: https://github.com/Azure/aks-cost-agent
+    licenseType: MIT
+  - name: unlisted/aks/helmchart/aks-cost-agent
+    displayName: 'AKS Cost Agent'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/aks-cost-agent
+    documentationLink: https://github.com/Azure/aks-cost-agent
+    licenseType: MIT

@@ -1,0 +1,23 @@
+version: 2.0
+subscriptionId: 30c56c3a-54da-46ea-b004-06eb33432687
+resourceGroup: containerinsightsprod
+registry: containerinsights
+onboardingNotification: mcr-onboarding-ai
+dependencyNotification: mcr-dependency-ai
+
+ownership:
+  securityGroups:
+  - groupName: Redmond\TeamSword
+    permissions:
+    - read
+    - write
+
+repos:
+
+  - name: public/azuremonitor/applicationinsights/aiprod
+    displayName: Azure Monitor Application Insights AKS webhook image
+    readme: README.notused.md
+    description: Azure Monitor Application Insights webhook image for monitoring AKS & AKS-Engine Kubernetes clusters
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-monitoring
+    documentationLink: https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview

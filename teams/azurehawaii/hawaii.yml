@@ -1,0 +1,24 @@
+version: 2.0
+subscriptionId: 6cc467ed-96d8-453d-af5d-8fb2180c238d
+resourceGroup: cosmos-tools
+registry: hawaiiacrprod
+onboardingNotification: DataGatewayHosting
+dependencyNotification: DataGatewayHosting
+
+ownership:
+  securityGroups:
+  - groupName: redmond\HawaiiHostingSG
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: internal/datagateway-preview
+    displayName: DataGateway Preview image
+    readme: README.previewimage.md # OPTIONAL. Markdown file that describes how customers can use the image. Required if contentUpdate = true for dockerhub syndication. Should be a minimum of 140 char
+    description: DataGateway provides an abstraction for building GraphQL applications with data.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg # Intentionally left as Microsoft logo since this is a preview and we don't have an official name/logo yet.
+    categories: [Databases]
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

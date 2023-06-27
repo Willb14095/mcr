@@ -1,0 +1,126 @@
+version: 2.0
+subscriptionId: 4aba072d-001e-4b88-8b41-c6a26588a4b2
+resourceGroup: cosmosdb-public-emulator
+registry: cosmosdbemulator
+onboardingNotification: acpe4docker
+disableOnboardingNotifications: true
+dependencyNotification: acpe4docker
+
+ownership:
+  securityGroups:
+  - groupName: redmond\cdbcolocalemulator
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: Azure Cosmos Public Emulator For Docker
+  shortDescription: Product family for Azure Cosmos Emulator running as a Docker Container
+  readMe: README.acpe.md
+  logoUrl: https://cosmosdbportalstorage.blob.core.windows.net/emulator/CosmosDB.ico
+  supportLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator#troubleshooting
+  documentationLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+repos:
+  - name: public/cosmosdb/windows/azure-cosmos-emulator
+    displayName: Azure Cosmos Emulator For Windows 2017
+    readme: README.acpe-windows.md
+    description: Azure Cosmos Emulator running as a Docker Container for Windows
+    logoUrl: https://cosmosdbportalstorage.blob.core.windows.net/emulator/CosmosDB.ico
+    supportLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator#troubleshooting
+    documentationLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/cosmosdb/winsrv2019/azure-cosmos-emulator
+    displayName: Azure Cosmos Emulator For Windows Server 2019
+    readme: README.acpe-windows.md
+    description: Azure Cosmos Emulator running as a Docker Container for Windows
+    logoUrl: https://cosmosdbportalstorage.blob.core.windows.net/emulator/CosmosDB.ico
+    supportLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator#troubleshooting
+    documentationLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+ 
+  - name: public/cosmosdb/winsrv2019lite/azure-cosmos-emulator
+    displayName: Azure Cosmos Emulator For Windows Server 2019 Lite
+    readme: README.acpe-windows.md
+    description: Azure Cosmos Emulator running as a Docker Container for Windows
+    logoUrl: https://cosmosdbportalstorage.blob.core.windows.net/emulator/CosmosDB.ico
+    supportLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator#troubleshooting
+    documentationLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/cosmosdb/winsrv2022/azure-cosmos-emulator
+    displayName: Azure Cosmos Emulator For Windows Server 2022
+    readme: README.acpe-windows.md
+    description: Azure Cosmos Emulator running as a Docker Container for Windows
+    logoUrl: https://cosmosdbportalstorage.blob.core.windows.net/emulator/CosmosDB.ico
+    supportLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator#troubleshooting
+    documentationLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+ 
+  - name: public/cosmosdb/winsrv2022lite/azure-cosmos-emulator
+    displayName: Azure Cosmos Emulator For Windows Server 2022 Lite
+    readme: README.acpe-windows.md
+    description: Azure Cosmos Emulator running as a Docker Container for Windows
+    logoUrl: https://cosmosdbportalstorage.blob.core.windows.net/emulator/CosmosDB.ico
+    supportLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator#troubleshooting
+    documentationLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+ 
+  - name: public/cosmosdb/linux/azure-cosmos-emulator
+    displayName: Azure Cosmos Emulator For Linux
+    readme: README.acpe-linux.md
+    description: Azure Cosmos Emulator running as a Docker Container for Linux
+    logoUrl: https://cosmosdbportalstorage.blob.core.windows.net/emulator/CosmosDB.ico
+    supportLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator#troubleshooting
+    documentationLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+ 
+  - name: public/cosmosdb/linux/mongodb/azure-cosmos-emulator
+    displayName: Azure Cosmos Emulator For Linux - MongoDB
+    readme: README.acpe-linux.md
+    description: Azure Cosmos Emulator running as a Docker Container for Linux
+    logoUrl: https://cosmosdbportalstorage.blob.core.windows.net/emulator/CosmosDB.ico
+    supportLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator#troubleshooting
+    documentationLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+  
+  - name: public/cosmosdb/linux/cassandra/azure-cosmos-emulator
+    displayName: Azure Cosmos Emulator For Linux - Cassandra
+    readme: README.acpe-linux.md
+    description: Azure Cosmos Emulator running as a Docker Container for Linux
+    logoUrl: https://cosmosdbportalstorage.blob.core.windows.net/emulator/CosmosDB.ico
+    supportLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator#troubleshooting
+    documentationLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+  
+  - name: public/cosmosdb/linux/nosql/azure-cosmos-emulator
+    displayName: Azure Cosmos Emulator For Linux - NoSQL
+    readme: README.acpe-linux.md
+    description: Azure Cosmos Emulator running as a Docker Container for Linux
+    logoUrl: https://cosmosdbportalstorage.blob.core.windows.net/emulator/CosmosDB.ico
+    supportLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator#troubleshooting
+    documentationLink: https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true
+ 

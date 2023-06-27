@@ -1,0 +1,31 @@
+version: 2.0
+subscriptionId: 06245bbe-eefc-4930-90a9-5d17a155cb95
+resourceGroup: container
+registry: standardizedOS
+onboardingNotification: ContainerOSOnboard
+dependencyNotification: ContainerOS_Depend
+contactEmail: M365-HaaS-Containers@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\SG-HaaS-Containers
+    permissions:
+    - read
+    - write
+    
+repos:
+- name: internal/standardizedos/dotnet
+  displayName: Distroless_dotnet
+  logoUrl: https://en.wikipedia.org/wiki/File:CBL_-_Mariner_Logo.svg
+  supportLink: https://eng.ms/docs/products/mariner-linux/gettingstarted/containers/distroless
+  documentationLink: https://eng.ms/docs/products/mariner-linux/gettingstarted/containers/distroless
+  categories: [Base Images]
+  operatingSystems: [Linux]
+  
+- name: unlisted/linux/amd64/dotnet
+  displayName: Distroless_dotnet_internal
+  logoUrl: https://en.wikipedia.org/wiki/File:CBL_-_Mariner_Logo.svg
+  supportLink: https://eng.ms/docs/products/mariner-linux/gettingstarted/containers/distroless
+  documentationLink: https://eng.ms/docs/products/mariner-linux/gettingstarted/containers/distroless
+  categories: [Base Images]
+  operatingSystems: [Linux]

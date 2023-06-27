@@ -1,0 +1,30 @@
+version: 2.0
+subscriptionId: 6c6683e9-e5fe-4038-8519-ce6ebec2ba15
+resourceGroup: vienna-eastus
+registry: azuremlmcr
+onboardingNotification: promptflow-mcr-onboarding
+dependencyNotification: promptflow-mcr-onboarding
+contactEmail: aml-pt-eng@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: fareast\aml-pt-eng
+    permissions:
+      - read
+      - write
+
+repos:
+  # PromptFlow RunTime
+  - name: public/azureml/promptflow/promptflow-runtime
+    displayName: AzureML PromptFlow RunTime image
+    licenseType: MIT
+    description: AzureML PromptFlow RunTime image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud 
+        destinations: 
+          - usnat 
+          - ussec 
+        tags: 
+          - source: latest 
+          - source: /^\d{8}\.v\d+$/

@@ -1,0 +1,34 @@
+version: 2.0
+subscriptionId: 203dfa53-bfa1-47c6-945d-16119dff147e
+resourceGroup: amss-rp-shared
+registry: ascprodacrglobalrp
+onboardingNotification: spring-dev-team
+dependencyNotification: spring-dev-team
+
+ownership:
+  securityGroups:
+  - groupName: fareast\amssst
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/azurespringapps/geneva-mdm
+    displayName: Geneva MDM Image
+    description: Geneva MDM Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/geneva-mdsd
+    displayName: Geneva MDSD Image
+    description: Geneva MDSD Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/geneva-fluentd
+    displayName: Geneva Fluentd Image
+    description: Geneva Fluentd Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/geneva-eventrouter
+    displayName: Event Router Image
+    description: Event Router Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg

@@ -1,0 +1,106 @@
+version: 2.0
+subscriptionId: 7c3a6770-f643-4a37-a6d0-863a2bf9dec4
+resourceGroup: bonsai-prod-ext-sim
+registry: bonsaisimprod
+onboardingNotification: bonsai-mcr@service.microsoft.com
+dependencyNotification: bonsai-mcr@service.microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\RAM_869b2bf3-6b2c-4592-ae31-edc6b4b857fa
+    permissions:
+    - read
+    - write
+
+repos:
+- name: public/bonsai/cartpoledemo
+  displayName: Cartpole simulator demo
+  description: Demo image containing the cartpole simulator
+
+- name: public/bonsai/moabdemo
+  displayName: Moab simulator demo
+  description: Demo image containing the moab simulator
+
+- name: public/bonsai/wm-ls-a20
+  displayName: Bonsai MATLAB 2020a base image
+  description: MATLAB 2020a base image with Bonsai toolbox
+
+- name: public/bonsai/wm-ls-b20
+  displayName: Bonsai MATLAB 2020b base image
+  description: MATLAB 2020b base image with Bonsai toolbox
+
+- name: public/bonsai/wm-ls-a21
+  displayName: Bonsai MATLAB 2021a base image
+  description: MATLAB 2021a base image with Bonsai toolbox
+
+- name: public/bonsai/wm-ls-b21
+  displayName: Bonsai MATLAB 2021b base image
+  description: MATLAB 2021a base image with Bonsai toolbox
+
+- name: public/bonsai/wm-ls-a22
+  displayName: Bonsai MATLAB 2022a base image
+  description: MATLAB 2022a base image with Bonsai toolbox
+
+- name: public/bonsai/wm-ls-b22
+  displayName: Bonsai MATLAB 2022b base image
+  description: MATLAB 2022b base image with Bonsai toolbox
+
+- name: public/bonsai/anylogic-professional-8
+  displayName: Bonsai AnyLogic base image
+  description: AnyLogic Professional 8 and Bonsai connector
+
+- name: public/bonsai/sc-lpv
+  displayName: Bonsai VPlink base image
+  description: Bonsai VPlink base image
+
+- name: public/bonsai/ecosystem/exported/moab
+  displayName: Moab - Exported
+  description: Exported Moab Brain
+
+- name: public/bonsai/ecosystem/exported/cartpole_python
+  displayName: Cartpole Python - Exported
+  description: Exported Cartpole Python Brain
+
+- name: public/bonsai/ecosystem/simpackages/cartpole_csharp
+  displayName: Cartpole CSharp Simulator Package
+  description: Cartpole CSharp Simulator Package
+
+- name: public/bonsai/ecosystem/exported/cartpole_csharp
+  displayName: Cartpole CSharp - Exported
+  description: Exported Cartpole CSharp Brain
+
+- name: public/bonsai/ecosystem/simpackages/cartpole_java
+  displayName: Cartpole Java Simulator Package
+  description: Cartpole Java Simulator Package
+
+- name: public/bonsai/ecosystem/exported/cartpole_java
+  displayName: Cartpole Java - Exported
+  description: Exported Cartpole Java Brain
+
+- name: public/bonsai/ecosystem/exported/chemicalprocessing
+  displayName: Chemical Processing - Exported
+  description: Exported Chemical Processing Brain
+
+- name: public/bonsai/ecosystem/exported/energymanagement
+  displayName: Energy Management - Exported
+  description: Exported Energy Management Brain
+
+- name: public/bonsai/ecosystem/exported/factorylogistics
+  displayName: Factory Logistics - Exported
+  description: Exported Factory Logistics Brain
+
+- name: public/bonsai/fmu
+  displayName: Bonsai FMU base image
+  description: Bonsai - FMU connector for Windows Containers
+
+- name: public/bonsai/python
+  displayName: Python base image
+  description: Bonsai - Python base images
+
+- name: public/bonsai/flexsim
+  displayName: Bonsai FlexSim base image
+  description: Bonsai FlexSim base image
+
+- name: public/bonsai/cosmotech
+  displayName: Bonsai CosmoTech base image
+  description: Bonsai CosmoTech base image

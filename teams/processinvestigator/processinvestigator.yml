@@ -1,0 +1,62 @@
+version: 2.0
+subscriptionId: 88a43f44-b9ff-4c2a-856b-1d5856351ce5                                                  # REQUIRED. The id of the Azure subscription where the registry lives
+resourceGroup: FilelessAttackDetection-rg                                                             # REQUIRED. The Azure resource group where the registry lives
+registry: filelessattackdetection                                                                     # REQUIRED. The private ACR where the container image lives
+onboardingNotification: pimcrnotify                                                                   # REQUIRED. An @microsoft.com distribution group for onboarding notifications that include image scanning results. Can be the same DG used for dependencyNotification.
+
+ownership:
+  securityGroups:
+  - groupName: redmond\picore
+    permissions:
+    - read
+    - write
+
+repos:                                                                                                # REQUIRED. The collection of onboarded repositories
+  - name: unlisted/filelessattackdetection/stable/fileless-continuous-scanner
+    displayName: Fileless Attack Detection Continuous Scanner
+    description: Fileless Attack Detection Continuous Scanner for integration with Azure Defender
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: unlisted/filelessattackdetection/stable/fileless-continuous-scanner-debug
+    displayName: Fileless Attack Detection Continuous Scanner - Debug
+    description: Debug version of Fileless Attack Detection Continuous Scanner for integration with Azure Defender
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: unlisted/filelessattackdetection/stable/pibuild-c6-x64
+    displayName: PI build image - x64
+    description: Process Investigator for Linux Centos 6 build image - x64
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: unlisted/filelessattackdetection/stable/pibuild-c6-x86
+    displayName: PI build image - x86
+    description: Process Investigator for Linux Centos 6 build image - x86
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: unlisted/filelessattackdetection/stable/build-ubuntu-bionic-x64-aarch64cross
+    displayName: PI build image - AARCH64
+    description: Process Investigator for Linux Ubuntu 18 build image - AARCH64
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: unlisted/filelessattackdetection/stable/pitest-c7-x64
+    displayName: PI test image - x64
+    description: Process Investigator for Linux Centos 7 test image - x64
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: unlisted/filelessattackdetection/stable/pitest-c7-x86
+    displayName: PI test image - x86
+    description: Process Investigator for Linux Centos 7 test image - x86
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: unlisted/filelessattackdetection/stable/pitesttools-ub18-x64
+    displayName: PI Sample Malware image
+    description: PI Sample Malware image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

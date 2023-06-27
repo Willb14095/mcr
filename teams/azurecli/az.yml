@@ -1,0 +1,60 @@
+version: 2.1
+subscriptionId: 6b085460-5f21-477e-ba44-1035046e9101
+resourceGroup: azure-cli-prod
+registry: azurecli
+onboardingNotification: azpycli@microsoft.com
+contactEmail: azpycli@microsoft.com
+
+ownership:
+  securityGroups:                                                                                    
+  - groupName: northamerica\azclisg
+    permissions:
+    - read
+    - write
+
+repos:
+- name: public/azure-cli
+  displayName: Azure CLI
+  licenseType: MIT
+  description: Our next generation multi-platform command line experience for Azure.
+  logoUrl: https://docs.microsoft.com/en-us/azure/media/index/azure_dev-7.svg
+  logoFile: azure_dev-7.svg
+  documentationLink: https://docs.microsoft.com/cli/azure
+  discoveryPortalReadme: README.azurecli.portal.md
+  readme: README.azurecli.md
+  syndications:                                                                                     
+      - type: dockerhub
+        contentUpdate: true
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /[0-9]\.[0-9]+\.[0-9]+/
+            
+- name: public/azure-cli-ext/ext-list-publisher
+  displayName: Azure CLI Extension List Publisher
+  licenseType: MIT
+  description: Automatically create a PR to update the document listing the available CLI extensions.
+  logoUrl: https://docs.microsoft.com/en-us/azure/media/index/azure_dev-7.svg
+  logoFile: azure_dev-7.svg
+  documentationLink: https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview
+  discoveryPortalReadme: README.az-ext-list-publisher.portal.md
+  readme: README.az-ext-list-publisher.md
+  syndications:
+      - type: dockerhub
+        contentUpdate: true
+            
+- name: public/azure-cli/tools
+  displayName: Azure CLI Tools
+  licenseType: MIT
+  description: Setup tools and environment for azure cli codegen.
+  logoUrl: https://docs.microsoft.com/en-us/azure/media/index/azure_dev-7.svg
+  logoFile: azure_dev-7.svg
+  documentationLink: https://github.com/Azure/autorest.cli/blob/master/doc/A3-docker-tools-cheatsheet.md
+  discoveryPortalReadme: README.azure-cli-tools.portal.md
+  readme: README.azure-cli-tools.md
+  syndications:
+      - type: dockerhub
+        contentUpdate: true

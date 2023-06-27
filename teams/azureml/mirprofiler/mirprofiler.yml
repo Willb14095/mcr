@@ -1,0 +1,19 @@
+version: 2.0
+subscriptionId: 6c6683e9-e5fe-4038-8519-ce6ebec2ba15
+resourceGroup: amlmir-mcr
+registry: amlmir
+onboardingNotification: mir-profiling
+dependencyNotification: mir-profiling
+
+ownership:
+  securityGroups:
+  - groupName: fareast\mirprofilerimages
+    permissions:
+      - read
+      - write
+  
+repos:
+  - name: unlisted/azureml/online-endpoints-model-profiler
+    displayName: Azureml Online Endpoints Model Profiler
+    description: Azure Machine Learning Online Endpoints Model Profiler
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg

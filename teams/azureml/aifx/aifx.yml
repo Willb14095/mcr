@@ -1,0 +1,95 @@
+version: 2.0
+subscriptionId: 3905431d-c062-4c17-8fd9-c51f89f334c4
+resourceGroup: PytorchEnterprise
+registry: ptebic
+onboardingNotification: pytorch_infra_team
+
+ownership:
+  securityGroups:
+  - groupName: redmond\pytorch_infra_team
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azureml/aifx/stable-ubuntu2004-cu115-py38-torch1110
+    displayName: Pytorch Enterprise On Azure-Public-Torch1110-Python38-SCCL+CUDA115
+    description: Public image, Ubuntu 20.04, Python 3.8, Pytorch 1.11.0 with CUDA 11.5 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu113-py38-torch1110
+    displayName: Pytorch Enterprise On Azure-Public-Torch1110-Python38-SCCL+CUDA113
+    description: Public image, Ubuntu 20.04, Python 3.8, Pytorch 1.11.0 with CUDA 11.3 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu113-py38-torch1131
+    displayName: Pytorch Enterprise On Azure-Public-Torch1131-Python38-SCCL+CUDA113
+    description: Public image, Ubuntu 20.04, Python 3.8, Pytorch 1.13.1 with CUDA 11.3 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu116-py38-torch1120
+    displayName: Pytorch Enterprise On Azure-Public-Torch1120-Python38-SCCL+CUDA116
+    description: Public image, Ubuntu 20.04, Python 3.8, Pytorch 1.12.0 with CUDA 11.6 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu116-py37-torch1120
+    displayName: Pytorch Enterprise On Azure-Public-Torch1120-Python37-SCCL+CUDA116
+    description: Public image, Ubuntu 20.04, Python 3.7, Pytorch 1.12.0 with CUDA 11.6 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu116-py39-torch1120
+    displayName: Pytorch Enterprise On Azure-Public-Torch1120-Python39-SCCL+CUDA116
+    description: Public image, Ubuntu 20.04, Python 3.9, Pytorch 1.12.0 with CUDA 11.6 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu116-py38-torch1121
+    displayName: Pytorch Enterprise On Azure-Public-Torch1121-Python38-SCCL+CUDA116
+    description: Public image, Ubuntu 20.04, Python 3.8, Pytorch 1.12.1 with CUDA 11.6 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu116-py39-torch1121
+    displayName: Pytorch Enterprise On Azure-Public-Torch1121-Python39-SCCL+CUDA116
+    description: Public image, Ubuntu 20.04, Python 3.9, Pytorch 1.12.1 with CUDA 11.6 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu117-py38-torch1130
+    displayName: Pytorch Enterprise On Azure-Public-Torch1130-Python38-SCCL+CUDA117
+    description: Public image, Ubuntu 20.04, Python 3.8, Pytorch 1.13.0 with CUDA 11.7 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-rocm523-py38-torch1121
+    displayName: Pytorch Enterprise On Azure-Public-Torch1121-Python38-SCCL+ROCm523
+    description: Public image, Ubuntu 20.04, Python 3.8, Pytorch 1.12.1 with ROCm523 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu117-py38-torch1131
+    displayName: Pytorch Enterprise On Azure-Public-Torch1131-Python38-SCCL+CUDA117
+    description: Public image, Ubuntu 20.04, Python 3.8, Pytorch 1.13.1 with CUDA 11.7 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu117-py39-torch1131
+    displayName: Pytorch Enterprise On Azure-Public-Torch1131-Python39-SCCL+CUDA117
+    description: Public image, Ubuntu 20.04, Python 3.9, Pytorch 1.13.1 with CUDA 11.7 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu117-py310-torch1131
+    displayName: Pytorch Enterprise On Azure-Public-Torch1131-Python310-SCCL+CUDA117
+    description: Public image, Ubuntu 20.04, Python 3.10, Pytorch 1.13.1 with CUDA 11.7 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu117-py38-torch200
+    displayName: Pytorch Enterprise On Azure-Public-Torch200-Python38-SCCL+CUDA117
+    description: Public image, Ubuntu 20.04, Python 3.8, Pytorch 2.0.0 with CUDA 11.7 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu117-py39-torch200
+    displayName: Pytorch Enterprise On Azure-Public-Torch200-Python39-SCCL+CUDA117
+    description: Public image, Ubuntu 20.04, Python 3.9, Pytorch 2.0.0 with CUDA 11.7 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+  - name: public/azureml/aifx/stable-ubuntu2004-cu118-py38-torch200
+    displayName: Pytorch Enterprise On Azure-Public-Torch200-Python38-SCCL+CUDA118
+    description: Public image, Ubuntu 20.04, Python 3.8, Pytorch 2.0.0 with CUDA 11.8 and SCCL
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    documentationLink: https://microsoft.com
+

@@ -1,0 +1,18 @@
+version: 2.0
+subscriptionId: d355e77f-e625-4931-b133-445d3dcf12cb
+resourceGroup: opcuabroker-production-resources
+registry: opcuabrokerprod
+onboardingNotification: azureiiot
+dependencyNotification: azureiiot
+ownership:
+  securityGroups:
+  - groupName: redmond\azureiiot
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/opcuabroker/helmchart/microsoft.opcuabroker
+    displayName: OPC UA Broker Arc Kubernetes Extension helm chart
+    description: helm chart for the Microsoft.opcuabroker Arc Kubernetes extension
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

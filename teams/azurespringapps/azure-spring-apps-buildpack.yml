@@ -1,0 +1,184 @@
+version: 2.0
+subscriptionId: 203dfa53-bfa1-47c6-945d-16119dff147e
+resourceGroup: amss-rp-shared
+registry: ascprodacrglobalrp
+onboardingNotification: spring-dev-team
+dependencyNotification: spring-dev-team
+
+ownership:
+  securityGroups:
+  - groupName: fareast\amssst
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/azurespringapps/paketobuildpacks/build
+    displayName: Cluster Build Base Image
+    description: Cluster Build Base Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/run
+    displayName: Cluster Build Run Image
+    description: Cluster Build Run Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/build-jammy-tiny
+    displayName: Cluster Build Jammy Tiny Build Image
+    description: Cluster Build Jammy Tiny Build Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/build-jammy-base
+    displayName: Cluster Build Jammy Base Build Image
+    description: Cluster Build Jammy Base Build Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/build-jammy-full
+    displayName: Cluster Build Jammy Full Build Image
+    description: Cluster Build Jammy Full Build Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/run-jammy-tiny
+    displayName: Cluster Build Jammy Tiny Run Image
+    description: Cluster Build Jammy Tiny Run Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/run-jammy-base
+    displayName: Cluster Build Jammy Base Run Image
+    description: Cluster Build Jammy Base Run Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/run-jammy-full
+    displayName: Cluster Build Jammy Full Run Image
+    description: Cluster Build Jammy Full Run Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/build-bionic-tiny
+    displayName: Cluster Build Bionic Tiny Build Image
+    description: Cluster Build Bionic Tiny Build Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/build-bionic-base
+    displayName: Cluster Build Bionic Base Build Image
+    description: Cluster Build Bionic Base Build Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/build-bionic-full
+    displayName: Cluster Build Bionic Full Build Image
+    description: Cluster Build Bionic Full Build Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/run-bionic-tiny
+    displayName: Cluster Build Bionic Tiny Run Image
+    description: Cluster Build Bionic Tiny Run Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/run-bionic-base
+    displayName: Cluster Build Bionic Base Run Image
+    description: Cluster Build Bionic Base Run Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketobuildpacks/run-bionic-full
+    displayName: Cluster Build Bionic Full Run Image
+    description: Cluster Build Bionic Full Run Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/paketo-buildpacks/dotnet-core
+    displayName: Cluster Build Dotnet-core Image
+    description: Cluster Build Dotnet-core Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketo-buildpacks/java-azure
+    displayName: Cluster Build Java-azure Image
+    description: Cluster Build Java-azure Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/paketo-buildpacks/java-native-image
+    displayName: Cluster Java-native Image
+    description: Cluster Java-native Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/kpack/controller
+    displayName: Kpack Controller Image
+    description: Kpack Controller Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/kpack/build-init
+    displayName: Kpack Build Init Image
+    description: Kpack Build Init Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/kpack/build-waiter
+    displayName: Kpack Build Waiter Image
+    description: Kpack Build Waiter Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/kpack/rebase
+    displayName: Kpack Rebase Image
+    description: Kpack Rebase Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/kpack/completion
+    displayName: Kpack Completion Image
+    description: Kpack Completion Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/kpack/lifecycle
+    displayName: Kpack Lifecycle Image
+    description: Kpack Lifecycle Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/kpack/webhook
+    displayName: Kpack Webhook Image
+    description: Kpack Webhook Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/tanzu-base-bionic-stack/build
+    displayName: Tanzu Bionic Build Base Image
+    description: Tanzu Bionic Build Base Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/tanzu-base-bionic-stack/run
+    displayName: Tanzu Bionic Run Base Image
+    description: Tanzu Bionic Run Base Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/tanzu-full-bionic-stack/build
+    displayName: Tanzu Bionic Build Full Image
+    description: Tanzu Bionic Build Full Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/tanzu-full-bionic-stack/run
+    displayName: Tanzu Bionic Run Full Image
+    description: Tanzu Bionic Run Full Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/tanzu-base-ubuntu-2204-stack/build
+    displayName: Tanzu Jammy Build Base Image
+    description: Tanzu Jammy Build Base Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/tanzu-base-ubuntu-2204-stack/run
+    displayName: Tanzu Jammy Run Base Image
+    description: Tanzu Jammy Run Base Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/tanzu-full-ubuntu-2204-stack/build
+    displayName: Tanzu Jammy Build Full Image
+    description: Tanzu Jammy Build Full Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/tanzu-full-ubuntu-2204-stack/run
+    displayName: Tanzu Jammy Run Full Image
+    description: Tanzu Jammy Run Full Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/tanzu-tiny-ubuntu-2204-stack/build
+    displayName: Tanzu Jammy Build Tiny Image
+    description: Tanzu Jammy Build Tiny Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/tanzu-tiny-ubuntu-2204-stack/run
+    displayName: Tanzu Jammy Run Tiny Image
+    description: Tanzu Jammy Run Tiny Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg

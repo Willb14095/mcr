@@ -1,0 +1,961 @@
+# These images are hosted by the Azure Container Upstream Publishing team
+# They are mirrored images from registries such as Docker Hub, GCR, Quay, and ECR and others.
+# These are a stopgap measure until a team can be found to build these from source.
+
+# If you are interested in retagging an image to be hosted in MCR, please see instructions at https://aka.ms/cssc-nextsteps
+# How to syndicate to air-gapped clouds (AGC): https://aka.ms/upstream/syndication
+
+version: 2.1
+subscriptionId: 6afb2934-8db2-4493-bb19-e951f1158868
+resourceGroup: upstream-mirror
+registry: upstreammirror
+onboardingNotification: az-upstream-k8s-rel
+dependencyNotification: az-upstream-k8s-rel
+contactEmail: azcu-publishing@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\azcu-approvers
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/mirror/docker/library/alpine
+    displayName: alpine
+    discoveryPortalReadme: README.Unlisted-MirrorAlpine.portal.md
+    description: Alpine mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/alpinelinux/docker-alpine/issues
+    documentationLink: https://github.com/alpinelinux/docker-alpine/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/alpine
+        tags:
+          - 3.13
+          - 3.14
+          - 3.15
+          - 3.16
+  - name: unlisted/mirror/docker/library/busybox
+    displayName: busybox
+    discoveryPortalReadme: README.Unlisted-MirrorBusybox.portal.md
+    description: BusyBox mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: GPL-2.0-only
+    supportLink: https://github.com/docker-library/busybox/issues
+    documentationLink: https://github.com/docker-library/busybox/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/busybox
+        tags:
+          - 1.34
+          - 1.34-glibc
+          - 1.34-uclibc
+          - 1.35
+          - 1.35-glibc
+          - 1.35-uclibc
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /^1\.\d{1,2}$/
+  - name: unlisted/mirror/docker/library/centos
+    displayName: centos
+    discoveryPortalReadme: README.Unlisted-MirrorCentos.portal.md
+    description: Centos mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: GPL-2.0-only
+    supportLink: https://bugs.centos.org
+    documentationLink: https://bugs.centos.org
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/centos
+        tags:
+          - 7
+          - 8
+  - name: unlisted/mirror/docker/library/consul
+    displayName: consul
+    discoveryPortalReadme: README.Unlisted-MirrorConsul.portal.md
+    description: Consul mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MPL-2.0
+    supportLink: https://github.com/hashicorp/docker-consul/issues
+    documentationLink: https://github.com/hashicorp/docker-consul/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/consul
+        tags:
+          - 1.10
+          - 1.11
+          - 1.12
+  - name: unlisted/mirror/docker/library/crate
+    displayName: crate
+    discoveryPortalReadme: README.Unlisted-MirrorCrate.portal.md
+    description: Crate mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/crate/docker-crate/issues
+    documentationLink: https://github.com/crate/docker-crate/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/crate
+        tags:
+          - 4.6
+          - 4.7
+          - 4.8
+  - name: unlisted/mirror/docker/library/debian
+    displayName: debian
+    discoveryPortalReadme: README.Unlisted-MirrorDebian.portal.md
+    description: Debian mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/debuerreotype/docker-debian-artifacts/issues
+    documentationLink: https://github.com/debuerreotype/docker-debian-artifacts/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/debian
+        tags:
+          - bookworm
+          - bookworm-slim
+          - bullseye
+          - bullseye-slim
+          - buster
+          - buster-slim
+  - name: unlisted/mirror/docker/library/fedora
+    displayName: fedora
+    discoveryPortalReadme: README.Unlisted-MirrorFedora.portal.md
+    description: Fedora mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora%20Container%20Images
+    documentationLink: https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora%20Container%20Images
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/fedora
+        tags:
+          - 35
+          - 36
+          - 37
+  - name: unlisted/mirror/docker/library/influxdb
+    displayName: influxdb
+    discoveryPortalReadme: README.Unlisted-MirrorInfluxdb.portal.md
+    description: InfluxDB mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/influxdata/influxdata-docker/issues
+    documentationLink: https://github.com/influxdata/influxdata-docker/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/influxdb
+        tags:
+          - 1.8
+          - 1.9-data
+          - 2.0
+          - 2.1
+          - 2.2
+  - name: unlisted/mirror/docker/library/kapacitor
+    displayName: kapacitor
+    discoveryPortalReadme: README.Unlisted-MirrorKapacitor.portal.md
+    description: Kapacitor mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/influxdata/influxdata-docker/issues
+    documentationLink: https://github.com/influxdata/influxdata-docker/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/kapacitor
+        tags:
+          - 1.6
+  - name: unlisted/mirror/docker/library/nginx
+    displayName: nginx
+    discoveryPortalReadme: README.Unlisted-MirrorNginx.portal.md
+    description: NGINX mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: BSD-2-Clause
+    supportLink: https://github.com/nginxinc/docker-nginx/issues
+    documentationLink: https://github.com/nginxinc/docker-nginx/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/nginx
+        tags:
+          - 1.20
+          - 1.20-alpine
+          - 1.21
+          - 1.21-alpine
+          - 1.22
+          - 1.23
+  - name: unlisted/mirror/docker/library/node
+    displayName: node
+    discoveryPortalReadme: README.Unlisted-MirrorNode.portal.md
+    description: node mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/nodejs/docker-node/issues
+    documentationLink: https://github.com/nodejs/docker-node/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/node
+        tags:
+          - 14
+          - 14-alpine
+          - 14-slim
+          - 16
+          - 16-alpine
+          - 16-buster
+          - 16-bullseye
+          - 16-bullseye-slim
+          - 18
+          - 18-alpine
+          - 18-buster
+          - 18-buster-slim
+          - 18-bullseye-slim
+  - name: unlisted/mirror/docker/library/php
+    displayName: php
+    discoveryPortalReadme: README.Unlisted-MirrorPhp.portal.md
+    description: PHP mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/docker-library/php/issues
+    documentationLink: https://github.com/docker-library/php/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/php
+        tags:
+          - 7.4
+          - 8
+  - name: unlisted/mirror/docker/library/postgres
+    displayName: postgres
+    discoveryPortalReadme: README.Unlisted-MirrorPostgres.portal.md
+    description: PostgreSQL mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/docker-library/postgres/issues
+    documentationLink: https://github.com/docker-library/postgres/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/postgres
+        tags:
+          - 12
+          - 13
+          - 14
+  - name: unlisted/mirror/docker/library/python
+    displayName: python
+    discoveryPortalReadme: README.Unlisted-MirrorPython.portal.md
+    description: Python mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/docker-library/python/issues
+    documentationLink: https://github.com/docker-library/python/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/python
+        tags:
+          - 3.7-bookworm
+          - 3.7-bullseye
+          - 3.7-buster
+          - 3.7-slim
+          - 3.7-slim-bookworm
+          - 3.7-slim-bullseye
+          - 3.7-slim-buster
+          - 3.8-bookworm
+          - 3.8-bullseye
+          - 3.8-buster
+          - 3.8-slim
+          - 3.8-slim-bookworm
+          - 3.8-slim-bullseye
+          - 3.8-slim-buster
+          - 3.9-bookworm
+          - 3.9-bullseye
+          - 3.9-buster
+          - 3.9-slim
+          - 3.9-slim-bookworm
+          - 3.9-slim-bullseye
+          - 3.9-slim-buster
+          - 3.10-bookworm
+          - 3.10-bullseye
+          - 3.10-buster
+          - 3.10-slim
+          - 3.10-slim-bookworm
+          - 3.10-slim-bullseye
+          - 3.10-slim-buster
+          - 3.11
+          - 3.11-bookworm
+          - 3.11-bullseye
+          - 3.11-buster
+          - 3.11-slim
+          - 3.11-slim-bookworm
+          - 3.11-slim-bullseye
+          - 3.11-slim-buster
+  - name: unlisted/mirror/docker/library/telegraf
+    displayName: telegraf
+    discoveryPortalReadme: README.Unlisted-MirrorTelegraf.portal.md
+    description: Telegraf mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/influxdata/influxdata-docker/issues
+    documentationLink: https://github.com/influxdata/influxdata-docker/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/telegraf
+        tags:
+          - 1.21
+          - 1.22
+          - 1.23
+          - 1.24
+          - 1.25
+          - 1.26
+    syndications:
+    - type: cloud
+      destinations:
+        - usnat
+        - ussec
+      tags:
+        - source: /^1\.\d{1,2}$/
+  - name: unlisted/mirror/docker/library/ubuntu
+    displayName: ubuntu
+    discoveryPortalReadme: README.Unlisted-MirrorUbuntu.portal.md
+    description: Ubuntu mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: CC-BY-SA-3.0
+    supportLink: https://bugs.launchpad.net/cloud-images
+    documentationLink: https://bugs.launchpad.net/cloud-images
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/ubuntu
+        tags:
+          - 18.04
+          - 20.04
+          - 22.04
+          - bionic
+          - focal
+          - jammy
+  - name: unlisted/mirror/docker/library/zookeeper
+    displayName: zookeeper
+    discoveryPortalReadme: README.Unlisted-MirrorZookeeper.portal.md
+    description: Zookeeper mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/31z4/zookeeper-docker/issues
+    documentationLink: https://github.com/31z4/zookeeper-docker/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/zookeeper
+        tags:
+          - 3.6
+          - 3.7
+          - 3.8
+  - name: unlisted/mirror/docker/library/almalinux
+    displayName: almalinux
+    discoveryPortalReadme: README.Unlisted-MirrorAlmalinux.portal.md
+    description: AlmaLinux mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://bugs.almalinux.org
+    documentationLink: https://bugs.almalinux.org
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/almalinux
+        tags:
+          - 8
+          - 8.5
+          - 8.6
+          - 8.7
+          - 9
+  - name: unlisted/mirror/docker/library/buildpack-deps
+    displayName: buildpack-deps
+    discoveryPortalReadme: README.Unlisted-MirrorBuildpack-deps.portal.md
+    description: buildpack-deps mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/docker-library/buildpack-deps/issues
+    documentationLink: https://github.com/docker-library/buildpack-deps/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/buildpack-deps
+        tags:
+          - bionic
+          - buster
+          - bullseye
+          - bookworm
+          - focal
+          - jammy
+          - xenial
+          - bullseye-scm
+          - bookworm-scm
+          - buster-scm
+          - stretch-scm
+  - name: unlisted/mirror/docker/library/rabbitmq
+    displayName: rabbitmq
+    discoveryPortalReadme: README.Unlisted-MirrorRabbitmq.portal.md
+    description: RabbitMQ mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/docker-library/rabbitmq/issues
+    documentationLink: https://github.com/docker-library/rabbitmq/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/rabbitmq
+        tags:
+          - 3
+          - 3-alpine
+          - 3-management
+          - 3-management-alpine
+          - 3.12-rc
+          - 3.12-rc-management
+          - 3.11
+          - 3.11-management
+          - 3.10
+          - 3.10-alpine
+          - 3.10-management
+          - 3.10-management-alpine
+          - 3.9
+          - 3.9-alpine
+          - 3.9-management
+          - 3.9-management-alpine
+  - name: unlisted/mirror/docker/library/redis
+    displayName: redis
+    discoveryPortalReadme: README.Unlisted-MirrorRedis.portal.md
+    description: Redis mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: BSD-3-Clause
+    supportLink: https://github.com/docker-library/redis/issues
+    documentationLink: https://github.com/docker-library/redis/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/redis
+        tags:
+          - 6
+          - 7
+  - name: unlisted/mirror/docker/library/rust
+    displayName: rust
+    discoveryPortalReadme: README.Unlisted-MirrorRust.portal.md
+    description: Rust mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT # TODO(sertac): remove dual license until MCR issue is resolved. Actual license: (MIT and Apache-2.0)
+    supportLink: https://github.com/rust-lang/docker-rust/issues
+    documentationLink: https://github.com/rust-lang/docker-rust/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/rust
+        tags:
+          - 1.60
+          - 1.60-slim
+          - 1.64
+          - 1.64-slim
+  - name: unlisted/mirror/docker/library/ruby
+    displayName: ruby
+    discoveryPortalReadme: README.Unlisted-MirrorRuby.portal.md
+    description: Ruby mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: BSD-2-Clause
+    supportLink: https://github.com/docker-library/ruby/issues
+    documentationLink: https://github.com/docker-library/ruby/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/ruby
+        tags:
+          - 2.7
+          - 3.0
+          - 3.1
+  - name: unlisted/mirror/docker/library/memcached
+    displayName: memcached
+    discoveryPortalReadme: README.Unlisted-MirrorMemcached.portal.md
+    description: Memcached mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: BSD-3-Clause
+    supportLink: https://github.com/docker-library/memcached/issues
+    documentationLink: https://github.com/docker-library/memcached/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/memcached
+        tags:
+          - 1.6
+  - name: unlisted/mirror/docker/library/mongo
+    displayName: mongo
+    discoveryPortalReadme: README.Unlisted-MirrorMongo.portal.md
+    description: MongoDB mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/docker-library/mongo/issues
+    documentationLink: https://github.com/docker-library/mongo/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/mongo
+        tags:
+          - 4.2
+          - 5
+  - name: unlisted/mirror/docker/hashicorp/vault
+    displayName: vault
+    discoveryPortalReadme: README.Unlisted-MirrorHashicorpVault.portal.md
+    description: Hashicorp Vault mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MPL-2.0
+    supportLink: https://github.com/hashicorp/vault/issues
+    documentationLink: https://github.com/hashicorp/vault/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/hashicorp/vault
+        tags:
+          - 1.13
+  - name: unlisted/mirror/docker/library/vault
+    displayName: vault (deprecated)
+    discoveryPortalReadme: README.Unlisted-MirrorVault.portal.md
+    description: Hashicorp Vault mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MPL-2.0
+    supportLink: https://github.com/hashicorp/docker-vault/issues
+    documentationLink: https://github.com/hashicorp/docker-vault/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/vault
+        tags:
+          - 1.7.10
+          - 1.8.12
+          - 1.9.7
+          - 1.10.4
+  - name: unlisted/mirror/docker/library/storm
+    displayName: storm
+    discoveryPortalReadme: README.Unlisted-MirrorStorm.portal.md
+    description: Apache Storm mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: MIT
+    supportLink: https://github.com/31z4/storm-docker/issues
+    documentationLink: https://github.com/31z4/storm-docker/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/storm
+        tags:
+          - 1.2
+          - 2.4
+  - name: unlisted/mirror/docker/library/rockylinux
+    displayName: rockylinux
+    discoveryPortalReadme: README.Unlisted-MirrorRockylinux.portal.md
+    description: Rocky Linux mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: BSD-3-Clause
+    supportLink: https://bugs.rockylinux.org
+    documentationLink: https://bugs.rockylinux.org
+    publisherConfiguration:
+      azcu:
+        source: docker.io/library/rockylinux
+        tags:
+          - 8
+  - name: unlisted/mirror/docker/bitnami/kafka
+    displayName: bitnami/kafka
+    discoveryPortalReadme: README.Unlisted-MirrorBitnami-kafka.portal.md
+    description: Bitnami Kafka mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/bitnami/containers/issues
+    documentationLink: https://github.com/bitnami/containers/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/bitnami/kafka
+        tags:
+          - 3.2
+          - 3.0
+          - 2.8
+  - name: unlisted/mirror/docker/confluentinc/cp-kafka
+    displayName: confluentinc/cp-kafka
+    discoveryPortalReadme: README.Unlisted-MirrorConfluentinc-cp-kafka.portal.md
+    description: Confluentinc cp-kafka mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/confluentinc/kafka-images/issues
+    documentationLink: https://github.com/confluentinc/kafka-images/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/confluentinc/cp-kafka
+        tags:
+          - 7.0.1
+  - name: unlisted/mirror/docker/confluentinc/cp-zookeeper
+    displayName: confluentinc/cp-zookeeper
+    discoveryPortalReadme: README.Unlisted-MirrorConfluentinc-cp-zookeeper.portal.md
+    description: Confluentinc cp-zookeeper mirror from docker.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/confluentinc/kafka-images/issues
+    documentationLink: https://github.com/confluentinc/kafka-images/issues
+    publisherConfiguration:
+      azcu:
+        source: docker.io/confluentinc/cp-zookeeper
+        tags:
+          - 7.0.1
+  - name: unlisted/mirror/gcr/distroless/nodejs-debian11
+    displayName: distroless/nodejs-debian11
+    discoveryPortalReadme: README.Unlisted-MirrorDistroless-nodejs-debian11.portal.md
+    description: Distroless NodeJS mirror from gcr.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/GoogleContainerTools/distroless/issues
+    documentationLink: https://github.com/GoogleContainerTools/distroless/issues
+    publisherConfiguration:
+      azcu:
+        source: gcr.io/distroless/nodejs-debian11
+        tags:
+          - 14
+          - 16
+          - 18
+  - name: unlisted/mirror/gcr/distroless/python3-debian11
+    displayName: distroless/python3-debian11
+    discoveryPortalReadme: README.Unlisted-MirrorDistroless-python3-debian11.portal.md
+    description: Distroless Python3 mirror from gcr.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/GoogleContainerTools/distroless/issues
+    documentationLink: https://github.com/GoogleContainerTools/distroless/issues
+    publisherConfiguration:
+      azcu:
+        source: gcr.io/distroless/python3-debian11
+        tags:
+          - latest
+  - name: unlisted/mirror/gcr/distroless/static
+    displayName: distroless/static
+    discoveryPortalReadme: README.Unlisted-MirrorDistroless-static.portal.md
+    description: Distroless Static image from gcr.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/GoogleContainerTools/distroless/issues
+    documentationLink: https://github.com/GoogleContainerTools/distroless/issues
+    publisherConfiguration:
+      azcu:
+        source: gcr.io/distroless/static
+        tags:
+          - debug
+          - latest
+          - nonroot
+  - name: unlisted/mirror/gcr/distroless/cc-debian11
+    displayName: distroless/cc-debian11
+    discoveryPortalReadme: README.Unlisted-MirrorDistroless-cc-debian11.portal.md
+    description: Distroless cc debian11 image from gcr.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/GoogleContainerTools/distroless/issues
+    documentationLink: https://github.com/GoogleContainerTools/distroless/issues
+    publisherConfiguration:
+      azcu:
+        source: gcr.io/distroless/cc-debian11
+        tags:
+          - debug
+          - latest
+          - nonroot
+  - name: unlisted/mirror/ghcr/aquasecurity/trivy-db
+    displayName: aquasecurity/trivy-db
+    discoveryPortalReadme: README.Unlisted-MirrorAquaSecurity-trivy-db.portal.md
+    description: Trivy DB image from ghcr.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/aquasecurity/trivy-db/issues
+    documentationLink: https://github.com/aquasecurity/trivy-db
+    publisherConfiguration:
+      azcu:
+        source: ghcr.io/aquasecurity/trivy-db
+        tool: crane
+        tags:
+          - 2
+    # issue due to 0-byte config
+    # disable until https://msazure.visualstudio.com/AzureContainerRegistry/_workitems/edit/16980780 is addressed
+    # syndications:
+    # - type: cloud
+    #   destinations:
+    #     - usnat
+    #     - ussec
+    #   tags:
+    #     - source: 2
+  - name: unlisted/mirror/nvcr/nvidia/pytorch
+    displayName: nvidia/pytorch
+    discoveryPortalReadme: README.Unlisted-MirrorNvidia-pytorch.portal.md
+    description: Pytorch mirror from nvcr.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Other
+    licenseUrl: https://github.com/pytorch/pytorch/blob/master/LICENSE
+    supportLink: https://github.com/pytorch/pytorch/issues
+    documentationLink: https://github.com/pytorch/pytorch/issues
+    publisherConfiguration:
+      azcu:
+        source: nvcr.io/nvidia/pytorch
+        tool: crane
+        tags:
+          - 22.07-py3
+          - 22.05-py3
+          - 22.04-py3
+          - 22.03-py3
+          - 22.02-py3
+          - 22.01-py3
+          - 21.12-py3
+          - 21.11-py3
+          - 21.10-py3
+          - 21.09-py3
+          - 21.08-py3
+          - 21.07-py3
+          - 21.06-py3
+          - 21.05-py3
+          - 21.04-py3
+          - 21.03-py3
+          - 21.02-py3
+          - 20.12-py3
+          - 20.11-py3
+          - 20.10-py3
+          - 20.09-py3
+          - 20.08-py3
+          - 20.07-py3
+          - 20.06-py3
+          - 20.03-py3
+          - 20.02-py3
+          - 20.01-py3
+  - name: unlisted/mirror/nvcr/nvidia/cuda
+    displayName: nvidia/cuda
+    discoveryPortalReadme: README.Unlisted-MirrorNvidia-cuda.portal.md
+    description: CUDA mirror from nvcr.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: BSD-3-Clause
+    supportLink: https://gitlab.com/nvidia/container-images/cuda/-/issues
+    documentationLink: https://gitlab.com/nvidia/container-images/cuda/-/issues
+    publisherConfiguration:
+      azcu:
+        source: nvcr.io/nvidia/cuda
+        tool: crane
+        tags:
+          - 12.1.0-devel-ubuntu20.04
+          - 12.1.0-base-ubuntu20.04
+          - 12.0.1-base-ubuntu22.04
+          - 12.0.1-base-ubuntu20.04
+          - 12.0.1-devel-ubuntu22.04
+          - 12.0.1-devel-ubuntu20.04
+          - 12.0.1-runtime-ubuntu22.04
+          - 12.0.1-runtime-ubuntu20.04
+          - 12.0.1-cudnn8-runtime-ubuntu22.04
+          - 12.0.1-cudnn8-runtime-ubuntu20.04
+          - 12.0.0-devel-ubuntu20.04
+          - 12.0.0-base-ubuntu20.04
+          - 11.8.0-base-ubuntu22.04
+          - 11.8.0-base-ubuntu20.04
+          - 11.8.0-cudnn8-runtime-ubuntu22.04
+          - 11.8.0-cudnn8-devel-ubuntu20.04
+          - 11.8.0-cudnn8-runtime-ubuntu20.04
+          - 11.7.1-cudnn8-devel-ubuntu20.04
+          - 11.7.1-cudnn8-runtime-ubuntu20.04
+          - 11.7.0-runtime-ubuntu22.04
+          - 11.7.0-devel-ubuntu22.04
+          - 11.7.0-base-ubuntu22.04
+          - 11.7.0-cudnn8-devel-ubuntu20.04
+          - 11.6.2-devel-ubuntu20.04
+          - 11.6.2-devel-ubuntu18.04
+          - 11.6.2-runtime-ubuntu18.04
+          - 11.6.2-cudnn8-devel-ubuntu20.04
+          - 11.6.2-cudnn8-devel-ubuntu18.04
+          - 11.6.2-cudnn8-runtime-ubuntu18.04
+          - 11.6.1-base-ubuntu20.04
+          - 11.6.1-devel-ubuntu18.04
+          - 11.6.1-runtime-ubuntu18.04
+          - 11.6.1-cudnn8-devel-ubuntu18.04
+          - 11.6.1-cudnn8-runtime-ubuntu18.04
+          - 11.5.2-devel-ubuntu20.04
+          - 11.5.2-devel-ubuntu18.04
+          - 11.5.2-runtime-ubuntu18.04
+          - 11.5.2-cudnn8-devel-ubuntu20.04
+          - 11.5.2-cudnn8-devel-ubuntu18.04
+          - 11.5.2-cudnn8-runtime-ubuntu18.04
+          - 11.5.1-devel-ubuntu18.04
+          - 11.5.1-runtime-ubuntu18.04
+          - 11.5.1-cudnn8-devel-ubuntu18.04
+          - 11.5.1-cudnn8-devel-ubuntu20.04
+          - 11.5.1-cudnn8-runtime-ubuntu18.04
+          - 11.4.3-base-ubuntu20.04
+          - 11.4.3-devel-ubuntu18.04
+          - 11.4.3-runtime-ubuntu18.04
+          - 11.4.3-cudnn8-devel-ubuntu18.04
+          - 11.4.3-cudnn8-runtime-ubuntu18.04
+          - 11.4.2-cudnn8-runtime-ubuntu20.04
+          - 11.4.2-cudnn8-devel-ubuntu20.04
+          - 11.4.2-devel-ubuntu18.04
+          - 11.4.2-runtime-ubuntu18.04
+          - 11.4.2-cudnn8-devel-ubuntu18.04
+          - 11.4.2-cudnn8-runtime-ubuntu18.04
+          - 11.4.1-devel-ubuntu18.04
+          - 11.4.1-runtime-ubuntu18.04
+          - 11.4.1-cudnn8-devel-ubuntu18.04
+          - 11.4.1-cudnn8-runtime-ubuntu18.04
+          - 11.3.1-devel-ubuntu20.04
+          - 11.3.1-devel-ubuntu18.04
+          - 11.3.1-runtime-ubuntu18.04
+          - 11.3.1-cudnn8-devel-ubuntu20.04
+          - 11.3.1-cudnn8-devel-ubuntu18.04
+          - 11.3.1-cudnn8-runtime-ubuntu18.04
+          - 11.3.0-cudnn8-devel-ubuntu18.04
+          - 11.2.2-devel-ubuntu18.04
+          - 11.2.2-runtime-ubuntu18.04
+          - 11.2.2-cudnn8-devel-ubuntu18.04
+          - 11.2.2-cudnn8-runtime-ubuntu18.04
+          - 11.2.1-devel-ubuntu18.04
+          - 11.2.1-runtime-ubuntu18.04
+          - 11.2.1-cudnn8-devel-ubuntu18.04
+          - 11.2.1-cudnn8-runtime-ubuntu18.04
+          - 11.1.1-devel-ubuntu18.04
+          - 11.1.1-runtime-ubuntu18.04
+          - 11.1.1-cudnn8-devel-ubuntu18.04
+          - 11.1.1-cudnn8-runtime-ubuntu18.04
+          - 11.0.3-devel-ubuntu18.04
+          - 11.0.3-runtime-ubuntu18.04
+          - 11.0.3-cudnn8-devel-ubuntu18.04
+          - 11.0.3-cudnn8-runtime-ubuntu18.04
+          - 10.2-devel-ubuntu18.04
+          - 10.2-runtime-ubuntu18.04
+          - 10.2-cudnn7-devel-ubuntu18.04
+          - 10.2-cudnn7-runtime-ubuntu18.04
+          - 10.2-cudnn8-devel-ubuntu18.04
+          - 10.2-cudnn8-runtime-ubuntu18.04
+          - 10.1-devel-ubuntu18.04
+          - 10.1-runtime-ubuntu18.04
+          - 10.1-cudnn7-devel-ubuntu18.04
+          - 10.1-cudnn7-runtime-ubuntu18.04
+          - 10.1-cudnn8-devel-ubuntu18.04
+          - 10.1-cudnn8-runtime-ubuntu18.04
+          - 10.0-devel-ubuntu18.04
+          - 10.0-runtime-ubuntu18.04
+          - 10.0-cudnn7-devel-ubuntu18.04
+          - 10.0-cudnn7-runtime-ubuntu18.04
+  - name: unlisted/mirror/nvcr/nvidia/tritonserver
+    displayName: nvidia/tritonserver
+    discoveryPortalReadme: README.Unlisted-MirrorNvidia-tritonserver.portal.md
+    description: Tritonserver mirror from nvcr.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: BSD-3-Clause
+    supportLink: https://github.com/triton-inference-server/server/issues
+    documentationLink: https://github.com/triton-inference-server/server/issues
+    publisherConfiguration:
+      azcu:
+        source: nvcr.io/nvidia/tritonserver
+        tool: crane
+        tags:
+          - 23.03-py3
+          - 23.03-py3-min
+          - 23.02-py3
+          - 23.02-py3-min
+          - 23.01-py3
+          - 23.01-py3-min
+          - 22.12-py3
+          - 22.12-py3-min
+          - 22.11-py3
+          - 22.11-py3-min
+          - 22.10-py3
+          - 22.10-py3-min
+          - 22.09-py3
+          - 22.09-py3-min
+          - 22.08-py3
+          - 22.08-py3-min
+          - 22.07-py3
+          - 22.07-py3-min
+          - 22.05-py3
+          - 22.05-py3-min
+          - 22.04-py3
+          - 22.04-py3-min
+          - 22.03-py3
+          - 22.03-py3-min
+  - name: unlisted/mirror/nvcr/nvidia/tensorflow
+    displayName: nvidia/tensorflow
+    discoveryPortalReadme: README.Unlisted-MirrorNvidia-tensorflow.portal.md
+    description: Tensorflow mirror from nvcr.io
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    logoFile: logo.svg
+    licenseType: Apache-2.0
+    supportLink: https://github.com/tensorflow/tensorflow/issues
+    documentationLink: https://github.com/tensorflow/tensorflow/issues
+    publisherConfiguration:
+      azcu:
+        source: nvcr.io/nvidia/tensorflow
+        tool: crane
+        tags:
+          - 22.04-tf2-py3
+          - 22.04-tf1-py3
+          - 22.03-tf2-py3
+          - 22.03-tf1-py3
+          - 22.02-tf2-py3
+          - 22.02-tf1-py3
+          - 22.01-tf2-py3
+          - 22.01-tf1-py3
+          - 21.12-tf2-py3
+          - 21.12-tf1-py3
+          - 21.11-tf2-py3
+          - 21.11-tf1-py3
+          - 21.10-tf2-py3
+          - 21.10-tf1-py3
+          - 21.09-tf2-py3
+          - 21.09-tf1-py3
+          - 21.08-tf2-py3
+          - 21.08-tf1-py3
+          - 21.07-tf2-py3
+          - 21.07-tf1-py3
+          - 21.06-tf2-py3
+          - 21.06-tf1-py3
+          - 21.05-tf2-py3
+          - 21.05-tf1-py3
+          - 21.04-tf2-py3
+          - 21.04-tf1-py3
+          - 21.03-tf2-py3
+          - 21.03-tf1-py3
+          - 21.02-tf2-py3
+          - 21.02-tf1-py3
+          - 20.12-tf2-py3
+          - 20.12-tf1-py3
+          - 20.11-tf2-py3
+          - 20.11-tf1-py3
+          - 20.10-tf2-py3
+          - 20.10-tf1-py3
+          - 20.09-tf2-py3
+          - 20.09-tf1-py3
+          - 20.08-tf2-py3
+          - 20.08-tf1-py3
+          - 20.07-tf2-py3
+          - 20.07-tf1-py3
+          - 20.06-tf2-py3
+          - 20.06-tf1-py3
+          - 20.03-tf2-py3
+          - 20.03-tf1-py3
+          - 20.02-tf2-py3
+          - 20.02-tf1-py3
+          - 20.01-tf2-py3
+          - 20.01-tf1-py3

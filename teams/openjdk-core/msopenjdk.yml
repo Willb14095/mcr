@@ -1,0 +1,67 @@
+version: 2.1
+subscriptionId: 69476eaa-93fa-4391-afa0-c16bf5305d1e
+resourceGroup: releases
+registry: msopenjdk
+onboardingNotification: msopenjdknotify-mcr
+dependencyNotification: msopenjdknotify-mcr
+contactEmail: openjdk-support@microsoft.com
+
+ownership:
+  securityGroups:
+    - groupName: northamerica\openjdkcontainers
+      permissions:
+        - read
+        - write
+
+productFamily:
+  name: openjdk
+  displayName: OpenJDK
+  shortDescription: Microsoft Build of OpenJDK for Java
+  readMe: README.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  supportLink: https://github.com/microsoft/openjdk-docker/issues
+  documentationLink: http://docs.microsoft.com/java/openjdk/containers
+  categories: [Application Frameworks, Programming Languages]
+  architectures: [x86-64]
+  operatingSystems: [Linux]
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+repos:
+  - name: internal/private/openjdk/jdk
+    displayName: Microsoft Build of OpenJDK (Internal)
+    discoveryPortalReadme: README.openjdk.portal.md
+    readme: README.openjdkinternal.md
+    description: Internal Images for Microsoft Build of OpenJDK for Java
+    projectWebsite: https://www.microsoft.com/openjdk
+    projectRepositoryUrl: https://github.com/microsoft/openjdk-docker
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/568px-Duke_%28Java_mascot%29_waving.svg.png
+    logoFile: duke-java-mascot.svg
+    supportLink: https://github.com/microsoft/openjdk-docker/issues
+    documentationLink: http://docs.microsoft.com/java/openjdk/containers
+    licenseType: Other
+    licenseUrl: https://openjdk.java.net/legal/gplv2+ce.html
+    architectures: [x86-64]
+    operatingSystems: [Linux]
+    categories: [Programming Languages]
+
+  - name: public/openjdk/jdk
+    displayName: Microsoft Build of OpenJDK
+    discoveryPortalReadme: README.openjdk.portal.md
+    readme: README.openjdk.md
+    description: Microsoft Build of OpenJDK for Java
+    projectWebsite: https://www.microsoft.com/openjdk
+    projectRepositoryUrl: https://github.com/microsoft/openjdk-docker
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/568px-Duke_%28Java_mascot%29_waving.svg.png
+    logoFile: duke-java-mascot.svg
+    supportLink: https://github.com/microsoft/openjdk-docker/issues
+    documentationLink: http://docs.microsoft.com/java/openjdk/containers
+    licenseType: Other
+    licenseUrl: https://openjdk.java.net/legal/gplv2+ce.html
+    architectures: [x86-64]
+    operatingSystems: [Linux]
+    categories: [Programming Languages]
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

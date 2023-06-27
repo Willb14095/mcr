@@ -1,0 +1,66 @@
+version: 2.1
+subscriptionId: 2283b5c6-4e80-4a67-b32c-4910a64566e5
+resourceGroup: AzureWatsonAgent
+registry: azurewatson
+onboardingNotification: awvt
+dependencyNotification: awvt
+contactEmail: awvt@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\awvt
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: azure-watson
+  shortDescription: Azure Watson collects, analyzes, and lets users debug Azure service crashes
+  readMe: README.azure-watson.md
+  logoUrl: https://azurewatson.microsoft.com/Content/themes/images/OneWatson_white.png
+  documentationLink: https://aka.ms/azwdocs
+
+repos:
+  - name: public/azure-watson/agent/agent_ub1804
+    displayName: Azure Watson Agent in Ubuntu 1804
+    discoveryPortalReadme: README.azure-watson-agent.portal.md
+    requireAuthForDiscovery: true
+    readme: README.azure-watson.md
+    description: Azure Watson Agent monitors for incoming cores, extracts the metadata, and uploads the core
+    logoUrl: https://azurewatson.microsoft.com/Content/themes/images/OneWatson_white.png
+    logoFile: logo.svg
+    supportLink: https://aka.ms/azwdocs
+    documentationLink: https://aka.ms/azwdocs
+    licenseType: Other
+    licenseUrl: https://github.com/microsoft/License/license.md
+    checkSyncStateBeforeContentUpdate: false
+    categories: [Monitoring]
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /\d+\.\d+\.\d+\.\d+\-\d{6}(?:-arm64)?
+
+  - name: public/azure-watson/agent/agent_mariner
+    displayName: Azure Watson Agent in Mariner
+    discoveryPortalReadme: README.azure-watson-agent.portal.md
+    requireAuthForDiscovery: true
+    readme: README.azure-watson.md
+    description: Azure Watson Agent monitors for incoming cores, extracts the metadata, and uploads the core
+    logoUrl: https://azurewatson.microsoft.com/Content/themes/images/OneWatson_white.png
+    logoFile: logo.svg
+    supportLink: https://aka.ms/azwdocs
+    documentationLink: https://aka.ms/azwdocs
+    licenseType: Other
+    licenseUrl: https://github.com/microsoft/License/license.md
+    checkSyncStateBeforeContentUpdate: false
+    categories: [Monitoring]
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /\d+\.\d+\.\d+\.\d+\-\d{6}(?:-arm64)?

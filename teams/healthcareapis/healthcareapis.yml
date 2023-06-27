@@ -1,0 +1,81 @@
+version: 2.1
+subscriptionId: a1766500-6fd5-4f5c-8515-607798271014
+resourceGroup: HealthPlatformRG
+registry: HealthPlatformRegistry
+onboardingNotification: fhirserverforazure
+dependencyNotification: fhirserverforazure
+contactEmail: resolutesupport@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\resoluteeng
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: healthcareapis
+  shortDescription: Images for Healthcare APIs
+  readMe: README.healthcareapis.md          
+  logoUrl: https://raw.githubusercontent.com/microsoft/fhir-server/main/docs/images/container-logo.svg 
+  documentationLink: https://github.com/microsoft/fhir-server/blob/main/README.md   
+  syndications: 
+    - type: dockerhub
+      enabled: True   
+
+repos:
+  - name: public/healthcareapis/r4-fhir-server
+    displayName: R4 FHIR Server
+    discoveryPortalReadme: README.r4-fhir-server.portal.md
+    readme: README.r4-fhir-server.md
+    description: FHIR Server for Azure is an implementation of the HL7 FHIR spec designed for the Microsoft cloud.
+    logoUrl: https://raw.githubusercontent.com/microsoft/fhir-server/main/docs/images/container-logo.svg
+    logoFile: eeab.svg
+    supportLink: https://github.com/microsoft/fhir-server/issues
+    documentationLink: https://github.com/microsoft/fhir-server/blob/main/README.md
+    licenseType: MIT
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/healthcareapis/r5-fhir-server
+    displayName: R5 FHIR Server
+    discoveryPortalReadme: README.r5-fhir-server.portal.md
+    readme: README.r5-fhir-server.md
+    description: FHIR Server for Azure is an implementation of the HL7 FHIR spec designed for the Microsoft cloud.
+    logoUrl: https://raw.githubusercontent.com/microsoft/fhir-server/main/docs/images/container-logo.svg
+    logoFile: eeab.svg
+    supportLink: https://github.com/microsoft/fhir-server/issues
+    documentationLink: https://github.com/microsoft/fhir-server/blob/main/README.md
+    licenseType: MIT
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+        
+  - name: public/healthcareapis/stu3-fhir-server
+    displayName: STU3 FHIR Server
+    discoveryPortalReadme: README.stu3-fhir-server.portal.md
+    readme: README.stu3-fhir-server.md
+    description: FHIR Server for Azure is an implementation of the HL7 FHIR spec designed for the Microsoft cloud.
+    logoUrl: https://raw.githubusercontent.com/microsoft/fhir-server/main/docs/images/container-logo.svg
+    logoFile: eeab.svg
+    supportLink: https://github.com/microsoft/fhir-server/issues
+    documentationLink: https://github.com/microsoft/fhir-server/blob/main/README.md
+    licenseType: MIT
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/healthcareapis/r4b-fhir-server
+    displayName: R4B FHIR Server
+    discoveryPortalReadme: README.r4b-fhir-server.portal.md
+    readme: README.r4b-fhir-server.md
+    description: FHIR Server for Azure is an implementation of the HL7 FHIR spec designed for the Microsoft cloud.
+    logoUrl: https://raw.githubusercontent.com/microsoft/fhir-server/main/docs/images/container-logo.svg
+    logoFile: eeab.svg
+    supportLink: https://github.com/microsoft/fhir-server/issues
+    documentationLink: https://github.com/microsoft/fhir-server/blob/main/README.md
+    licenseType: MIT
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

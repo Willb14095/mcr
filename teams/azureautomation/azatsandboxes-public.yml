@@ -1,0 +1,46 @@
+version: 2.0
+subscriptionId: 89d5454d-778d-4e0a-b893-2d3f7126b6e9
+resourceGroup: azat-registry-rg
+registry: azatprodregistry
+onboardingNotification: azatimagepublishers
+dependencyNotification: azatimagepublishers
+
+ownership:
+  securityGroups:
+  - groupName: fareast\aacoreengg
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: Azure Automation
+  shortDescription: Product family for Azure Automation sandbox application running as a Docker Container
+  readMe: README.azureautomation.md
+  logoUrl: https://github.com/benc-uk/icon-collection/blob/master/azure-icons/Automation-Accounts.svg
+  supportLink: https://learn.microsoft.com/en-us/azure/automation/troubleshoot/runbooks
+  documentationLink: https://learn.microsoft.com/en-us/azure/automation/overview#process-automation
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+repos:
+  - name: public/automationsandbox/powershell
+    displayName: Azure Automation Container for PowerShell runbooks
+    description: Azure Automation Sandbox Container Image for PowerShell 7.2 runtime
+    logoUrl: https://github.com/benc-uk/icon-collection/blob/master/azure-icons/Automation-Accounts.svg
+    supportLink: https://learn.microsoft.com/en-us/azure/automation/troubleshoot/runbooks
+    documentationLink: https://learn.microsoft.com/en-us/azure/automation/overview#process-automation
+
+  - name: public/automationsandbox/python
+    displayName: Azure Automation Container for Python runbooks
+    description: Azure Automation Sandbox Container Image for Python 3.10 runtime
+    logoUrl: https://github.com/benc-uk/icon-collection/blob/master/azure-icons/Automation-Accounts.svg
+    supportLink: https://learn.microsoft.com/en-us/azure/automation/troubleshoot/runbooks
+    documentationLink: https://learn.microsoft.com/en-us/azure/automation/overview#process-automation
+
+  - name: public/automationsandbox/azclipowershell
+    displayName: Azure Automation Container for AzureCLI runbooks based on Powershell 
+    description: Azure Automation Sandbox Container Image for AzureCLI runtime
+    logoUrl: https://github.com/benc-uk/icon-collection/blob/master/azure-icons/Automation-Accounts.svg
+    supportLink: https://learn.microsoft.com/en-us/azure/automation/troubleshoot/runbooks
+    documentationLink: https://learn.microsoft.com/en-us/azure/automation/overview#process-automation

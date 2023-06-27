@@ -1,0 +1,43 @@
+version: 2.0
+subscriptionId: 6c6683e9-e5fe-4038-8519-ce6ebec2ba15
+resourceGroup: vienna-eastus
+registry: azuremlmcr
+onboardingNotification: miroptprof@microsoft.com
+dependencyNotification: miroptprof@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\miroptprof
+    permissions:
+      - read
+      - write
+  
+repos:
+  - name: public/azureml/aml-wrk-profiler
+    displayName: Azureml Wrk Profiler
+    description: Azure Machine Learning Wrk Profiler
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+  - name: public/azureml/aml-wrk2-profiler
+    displayName: Azureml Wrk2 Profiler
+    description: Azure Machine Learning Wrk2 Profiler
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+  - name: public/azureml/aml-labench-profiler
+    displayName: Azureml Labench Profiler
+    description: Azure Machine Learning Labench Profiler
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+  - name: public/azureml/aml-olive-optimizer
+    displayName: Azureml OLive Optimizer Cpu Version
+    description: Azure Machine Learning OLive Optimizer Cpu Version
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+  - name: public/azureml/aml-olive-optimizer-gpu
+    displayName: Azureml OLive Optimizer Gpu Version
+    description: Azure Machine Learning OLive Optimizer Gpu Version
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+  - name: public/azureml/aml-online-endpoints-deployer
+    displayName: Azureml Online Endpoints Deployer
+    description: Azure Machine Learning Online Endpoints Deployer
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+  - name: public/azureml/aml-online-endpoints-deleter
+    displayName: Azureml Online Endpoints Deleter
+    description: Azure Machine Learning Online Endpoints Deleter
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg

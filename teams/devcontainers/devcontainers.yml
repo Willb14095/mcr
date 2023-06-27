@@ -1,0 +1,241 @@
+version: 2.1
+subscriptionId: ca5f4aa0-bf57-4ffa-a0fd-686dbd1298f1                                                 
+resourceGroup: vso-container-images
+registry: devcon
+onboardingNotification: devcontainers                                                                 
+dependencyNotification: devcontainers
+contactEmail: brmurtau@microsoft.com
+
+# Development Containers
+
+ownership:                                                                                            # REQUIRED Specifies what groups own the repositories listed in this file
+  securityGroups:                                                                                     # REQUIRED Starts the security group section
+  - groupName: redmond\vscr-ci                                                                         # REQUIRED The name of the security group - You can find ones you belong to here: https://idweb/identitymanagement/aspx/groups/MyMemberships.aspx
+    permissions:                                                                                      # REQUIRED The permissions the group has when managing repositories listed in this file. read/write are currently supported
+    - read
+    - write
+
+productFamily:
+  name: devcontainers
+  displayName: Dev Container Images
+  shortDescription: Dev container images in tools and services that support the dev container specification.
+  readMe: README.dev-containers.md
+  logoUrl: https://containers.dev/img/devcontainers-logo.png
+  supportLink: https://github.com/devcontainers/images/issues
+  documentationLink: https://aka.ms/devcontainers/images
+  architectures: [ARM 64, x86-64]
+  operatingSystems: [Linux]
+  syndications:
+    - type: dockerhub
+      enabled: true
+
+repos:
+  - name: public/devcontainers/anaconda
+    displayName: Anaconda Development Container Images
+    discoveryPortalReadme: README.anaconda.portal.md
+    readme: README.anaconda.portal.md
+    description: A dev container spec-supported image for working with Anaconda.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true                                                                           
+      
+  - name: public/devcontainers/base
+    displayName: Base Development Container Images
+    discoveryPortalReadme: README.base.portal.md
+    readme: README.base.portal.md
+    description: A dev container spec-supported image for working with base image.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/cpp
+    displayName: C++ Development Container Images
+    discoveryPortalReadme: README.cpp.portal.md
+    readme: README.cpp.portal.md
+    description: A dev container spec-supported image for working with C++.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/dotnet
+    displayName: .NET Development Container Images
+    discoveryPortalReadme: README.dotnet.portal.md
+    readme: README.dotnet.portal.md
+    description: A dev container spec-supported image for working with .NET.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/go
+    displayName: Go Development Container Images
+    discoveryPortalReadme: README.go.portal.md
+    readme: README.go.portal.md
+    description: A dev container spec-supported image for working with Go.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/java
+    displayName: Java Development Container Images
+    discoveryPortalReadme: README.java.portal.md
+    readme: README.java.portal.md
+    description: A dev container spec-supported image for working with Java.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/javascript-node
+    displayName: Node.js Development Container Images
+    discoveryPortalReadme: README.javascript-node.portal.md
+    readme: README.javascript-node.portal.md
+    description: A dev container spec-supported image for working with JavaScript.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/jekyll
+    displayName: Jekyll Development Container Images
+    discoveryPortalReadme: README.jekyll.portal.md
+    readme: README.jekyll.portal.md
+    description: A dev container spec-supported image for working with Jekyll.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/miniconda
+    displayName: Miniconda Development Container Images
+    discoveryPortalReadme: README.miniconda.portal.md
+    readme: README.miniconda.portal.md
+    description: A dev container spec-supported image for working with Miniconda.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/php
+    displayName: PHP Development Container Images
+    discoveryPortalReadme: README.php.portal.md
+    readme: README.php.portal.md
+    description: A dev container spec-supported image for working with PHP.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/python
+    displayName: Python Development Container Images
+    discoveryPortalReadme: README.python.portal.md
+    readme: README.python.portal.md
+    description: A dev container spec-supported image for working with Python.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/ruby
+    displayName: Ruby Development Container Images
+    discoveryPortalReadme: README.ruby.portal.md
+    readme: README.ruby.portal.md
+    description: A dev container spec-supported image for working with Ruby.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/rust
+    displayName: Rust Development Container Images
+    discoveryPortalReadme: README.rust.portal.md
+    readme: README.rust.portal.md
+    description: A dev container spec-supported image for working with Rust.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/typescript-node
+    displayName: Node.js & Typescript Development Container Images
+    discoveryPortalReadme: README.typescript-node.portal.md
+    readme: README.typescript-node.portal.md
+    description: A dev container spec-supported image for working with TypeScript.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true
+
+  - name: public/devcontainers/universal
+    displayName: Universal Development Container Image
+    discoveryPortalReadme: README.universal.portal.md
+    readme: README.universal.portal.md
+    description: A dev container spec-supported image for working with universal, multi-language image.
+    logoUrl: https://containers.dev/img/devcontainers-logo.png
+    logoFile: devcontainers.svg
+    supportLink: https://github.com/devcontainers/images/issues
+    documentationLink: https://aka.ms/devcontainers/images
+    licenseType: MIT
+    syndications:                                                                                    
+      - type: dockerhub                                                                               
+        contentUpdate: true

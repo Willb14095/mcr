@@ -1,0 +1,29 @@
+version: 2.1
+subscriptionId: ce4a7590-4722-4bcf-a2c6-e473e9f11778
+resourceGroup: azuritepublishing
+registry: xstoreazurite
+onboardingNotification: xazuriteobdnot
+dependencyNotification: xazuritedpdnot
+contactEmail: xazuriteobdnot@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: fareast\AzuriteDev
+    permissions:                                                                                      
+    - read
+    - write
+
+repos:
+- name: public/azure-storage/azurite
+  displayName: Azurite
+  licenseType: MIT
+  description: Official images for Microsoft Azure Storage Azurite
+  logoFile: azurite_icon.svg
+  logoUrl: https://raw.githubusercontent.com/Azure/Azurite/master/icon.png
+  supportLink: https://github.com/azure/azurite/issues
+  documentationLink: https://github.com/Azure/Azurite
+  discoveryPortalReadme: README.azurite.portal.md
+  readme: README.azurite.md
+  syndications:
+      - type: dockerhub
+        contentUpdate: true

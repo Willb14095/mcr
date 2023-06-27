@@ -1,0 +1,561 @@
+version: 2.0
+subscriptionId: 6c6683e9-e5fe-4038-8519-ce6ebec2ba15
+resourceGroup: vienna-eastus
+registry: azuremlmcr
+onboardingNotification: amlmcronboarding
+dependencyNotification: amlmcrdepnot
+
+ownership:
+  securityGroups:
+    - groupName: redmond\trainsdkdevs
+      permissions:
+        - read
+        - write
+    - groupName: redmond\ems-devs
+      permissions:
+        - read
+        - write
+    - groupName: redmond\josecalz_org
+      permissions:
+        - read
+        - write
+
+repos:
+  - name: unlisted/azureml/runtime/cap/cs-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/cs-capability/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/cap/cs-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/msi-endpoint-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/msi-endpoint-capability/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/cap/msi-endpoint-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/data-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/data-capability/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/cap/data-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/dc-metric-filtering-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/dc-metric-filtering-capability/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/cap/dc-metric-filtering-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/exe/execution-preparer/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/exe/execution-preparer/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/exe/execution-wrapper/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/exe/execution-wrapper/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/exe/execution-wrapper/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/hosttools-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/hosttools-capability/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/cap/hosttools-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/interactive-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/interactive-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/itp-compatibility-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/itp-compatibility-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/boot/k8s-bootstrapper/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+          
+  - name: unlisted/azureml/runtime/boot/k8s-bootstrapper/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/boot/k8s-bootstrapper/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/lifecycler/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/lifecycler/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/cap/lifecycler/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/metrics-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/metrics-capability/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/cap/metrics-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/native-data-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/native-data-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/nebula-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/nebula-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/python-example-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/python-example-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/rust-example-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/rust-example-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/snapshot-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/snapshot-capability/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/cap/snapshot-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/boot/singularity-bootstrapper/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/boot/singularity-bootstrapper/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/boot/vm-bootstrapper/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/boot/vm-bootstrapper/installed/windows
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azureml/runtime/boot/vm-bootstrapper/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/training-diagnostic-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/training-diagnostic-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/boot/dotnet-singularity-bootstrapper/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/dotnet-lifecycler/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/sbom-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/sbom-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/secrets-capability/binimage/linux
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/
+
+  - name: unlisted/azureml/runtime/cap/secrets-capability/installed
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^(?:us(?:sec|nat).+-)?stable$/
+          - source: /^(?:us(?:sec|nat).+-)?(?:[0-9]+\.){0,4}[0-9]+(?:-.{8})?$/

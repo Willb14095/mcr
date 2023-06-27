@@ -1,0 +1,31 @@
+version: 2.1
+subscriptionId: f482af20-c550-4fa8-84f4-75ce2e2753c9
+resourceGroup: attestationContainer
+registry: attestationcontainermsrc
+onboardingNotification: CCF-Sec@microsoft.com
+dependencyNotification: CCF-Sec@microsoft.com
+contactEmail: CCF-Sec@microsoft.com
+
+ownership:
+  securityGroups:
+    - groupName: europe\CCF-SEC
+      permissions:
+        - read
+        - write
+
+repos:
+  - name: public/ccf/attestation-container/run
+    displayName: Attestation Container Runtime Image
+    description: Image to run SEV-SNP ACI Attestation Container
+    readme: README.md
+    discoveryPortalReadme: README.portal.md
+    logoUrl: https://raw.githubusercontent.com/microsoft/CCF/main/doc/_static/ccf.svg
+    logoFile: ccf.svg
+    supportLink: https://github.com/microsoft/CCF/issues
+    documentationLink: https://microsoft.github.io/CCF
+    licenseType: Apache-2.0
+    projectWebsite: https://ccf.dev
+    projectRepositoryUrl: https://github.com/microsoft/CCF
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

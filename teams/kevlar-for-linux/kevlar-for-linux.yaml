@@ -1,0 +1,28 @@
+version: 2.0
+subscriptionId: ea5be152-425a-4d09-9be3-2d888fac5f8f                                                 # REQUIRED. The id of the Azure subscription where the registry lives
+resourceGroup: rg-k4l2pubtrstst-acr                                                                      # REQUIRED. The Azure resource group where the registry lives
+registry: k4l2pubtrststimages                                                                                    # REQUIRED. The private ACR where the container image lives
+onboardingNotification: k4l_mcr_onboard_list@microsoft.com                                                         # REQUIRED. An @microsoft.com distribution group for onboarding notifications that include image scanning results. Can be the same DG used for dependencyNotification.
+dependencyNotification: k4l_mcr_depnoti_list@microsoft.com                                                         # OPTIONAL. An @microsoft.com distribution group for onboarding notifications without image scanning results. Can be the same DG used for onboardingNotification.
+
+ownership:                                                                                            # REQUIRED Specifies what groups own the repositories listed in this file
+  securityGroups:                                                                                     # REQUIRED Starts the security group section
+  - groupName: europe\KEVLARLINUXMCR                                                                  # REQUIRED The name of the security group - You can find ones you belong to here: https://idweb/identitymanagement/aspx/groups/MyMemberships.aspx
+    permissions:                                                                                      # REQUIRED The permissions the group has when managing repositories listed in this file. read/write are currently supported
+    - read
+    - write
+
+productFamily:                                                                                        # OPTIONAL. Product family for all below defined repositories. 
+  name: kevlar-for-linux                                                                              # REQUIRED. Name of productfamily
+  shortDescription: Security and compliance tools for Linux in Office group                           # REQUIRED. Short description for productfamily
+  readMe: README.kevlar-for-linux.md                                                                  # REQUIRED. Read me description for product family (Must be >140 characters)
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                     # REQUIRED. Logo url
+  documentationLink: https://aka.ms/kevlar                                                            # OPTIONAL. Documentation link for product family
+
+repos:                                                                                                # REQUIRED. The collection of onboarded repositories
+  - name: unlisted/kevlar-tools/kevlar-handlerclient                                                   # REQUIRED. Repository name. Must include public/ or internal/ somewhere in the repository name
+    displayName: Kevlar for Linux Infrastructure - Kevlar Handler Client                                         # OPTIONAL. The displayname of the product, will get displayed on syndicationtype i.e on docker store product name. Required if contentUpdate = true for dockerhub syndication.
+    readme: README.infra.kevlar-handlerclient.md                                                                 # OPTIONAL. Markdown file that describes how customers can use the image. Required if contentUpdate = true for dockerhub syndication. Should be a minimum of 140 char
+    description: Kevlar for Linux deployment infrastructure - Kevlar Handler Client                              # OPTIONAL. Contents for the short description shown in the Docker Hub page. Required if contentUpdate = true for dockerhub syndication. Should be < 100 char
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   # REQUIRED. Logo url
+    

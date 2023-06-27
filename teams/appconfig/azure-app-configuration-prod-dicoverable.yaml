@@ -1,0 +1,25 @@
+version: 2.1
+subscriptionId: ecf2fe63-9ecb-41eb-a9ca-5c1731e70ab0
+resourceGroup: Prod-ArtifactPublish-ACR
+registry: azcfgacrproduction
+onboardingNotification: appcfgmar
+dependencyNotification: appcfgmar
+contactEmail: appcmar@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\appcmar
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azure-app-configuration/kubernetes-provider
+    displayName: Azure App Configuration Kubernetes Provider
+    description: Kubernetes provider for Azure App Configuration
+    discoveryPortalReadme: README.az-appconfig-kubernetes-provider.portal.md
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: ConfigurationStore.svg
+    supportLink: https://github.com/Azure/AppConfiguration/issues
+    documentationLink: https://aka.ms/azureappconfiguration
+    licenseType: MIT

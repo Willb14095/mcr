@@ -1,0 +1,53 @@
+version: 2.0
+subscriptionId: 93750014-3242-43e6-9da5-7faec95c6ee1
+resourceGroup: amsv2-acr-prod-rg
+registry: azuremonitorforsapsolutionsv2
+onboardingNotification: ams-mcr-notification
+dependencyNotification: ams-mcr-notification
+
+ownership:
+  securityGroups:
+  - groupName: redmond\sapmonitoridcdev
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: Azure Monitor for SAP solutions
+  shortDescription: Docker containers for Azure Monitor for SAP solutions
+  readMe: README.v1.0.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+
+repos:
+  - name: public/azuremonitorforsapsolutions/saphana-provider
+    displayName: Azure Monitor for SAP Solutions - saphana-provider
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/azuremonitorforsapsolutions/sapnetweaver-provider
+    displayName: Azure Monitor for SAP Solutions - sapnetweaver-provider
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/azuremonitorforsapsolutions/prometheusos-provider
+    displayName: Azure Monitor for SAP Solutions - prometheusos-provider
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/azuremonitorforsapsolutions/db2-provider
+    displayName: Azure Monitor for SAP Solutions - db2-provider
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/azuremonitorforsapsolutions/mssqlserver-provider
+    displayName: Azure Monitor for SAP Solutions - mssqlserver-provider
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/azuremonitorforsapsolutions/prometheusha-provider
+    displayName: Azure Monitor for SAP Solutions - prometheusha-provider
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/azuremonitorforsapsolutions/scheduler
+    displayName: Azure Monitor for SAP Solutions - scheduler
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+   
+  - name: public/azuremonitorforsapsolutions/validator
+    displayName: Azure Monitor for SAP Solutions - validator
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

@@ -1,0 +1,22 @@
+version: 2.0
+subscriptionId: 50a98cdf-b1bf-48a2-96fe-e39a4b2aba8a
+resourceGroup: platform-crypto-linux
+registry: platformcrypto
+onboardingNotification: platformcryptodev
+dependencyNotification: platformcryptodev
+
+ownership:
+  securityGroups:
+  - groupName: READMOND\AD-PlatformCrypto-ReadWrite-f3f8
+    permissions:
+    - read
+    - write
+
+repos:
+- name: unlisted/platformcrypto/keysinuse-glibc
+  displayName: KeysInUse Installer - glibc
+  description: Images for installing Keys-In-Use for containers on distros using glibc libc implementation
+
+- name: unlisted/platformcrypto/keysinuse-musl
+  displayName: KeysInUse Installer - musl
+  description: Images for installing Keys-In-Use for containers on distros using musl libc implementation

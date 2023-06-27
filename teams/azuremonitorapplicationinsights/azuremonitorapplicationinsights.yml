@@ -1,0 +1,23 @@
+version: 2.0
+subscriptionId: 9b96ebbd-c57a-42d1-bbe9-b69296e4c7fb
+resourceGroup: containerinsightsprod
+registry: containerinsightsprod
+onboardingNotification: mcr-onboarding-ai
+dependencyNotification: mcr-dependency-ai
+
+ownership:
+  securityGroups:
+  - groupName: Redmond\TeamSword
+    permissions:
+    - read
+    - write
+
+repos:
+
+  - name: public/azuremonitor/applicationinsights/aidev
+    displayName: AzMon Application Insights webhook image for dev use
+    readme: README.notused.md
+    description: AzMon Application Insights webhook (internal use) for AKS & AKS-Engine clusters
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-monitoring
+    documentationLink: https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview

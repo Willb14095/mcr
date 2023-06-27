@@ -1,0 +1,27 @@
+version: 2.1
+subscriptionId: 91d8605f-b80a-4b1c-bca1-6ec55bfd1deb
+resourceGroup: azure-schema-operator
+registry: azureschemaoperator
+onboardingNotification: schemaop
+dependencyNotification: schemaop
+contactEmail: schemaop@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: middleeast\schemaop
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azureschemaoperator/azureschemaoperator
+    displayName: 'Azure Schema Operator'
+    discoveryPortalReadme: README.schemaop.portal.md
+    description: Schema Operator for Azure databases.
+    projectRepositoryUrl: https://github.com/microsoft/azure-schema-operator
+    projectWebsite: https://microsoft.github.io/azure-schema-operator/
+    logoFile: azureschemaoperator.svg
+    supportLink: https://microsoft.github.io/azure-schema-operator/
+    documentationLink: https://microsoft.github.io/azure-schema-operator/
+    licenseType: MIT
+

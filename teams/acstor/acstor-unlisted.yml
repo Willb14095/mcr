@@ -1,0 +1,102 @@
+version: 2.0
+subscriptionId: 49e5aa2a-1175-4df5-bb63-1a44347afd8c
+resourceGroup: acstor-prod-rg
+registry: acstorprodeus
+onboardingNotification: xcontainermcrnotify@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\xcontainerrelease
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/acstor/chart
+    displayName: ACStor Helm Chart
+    description: Helm chart for the Microsoft.AzureContainerStorage extension
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/azuresan-csi-driver
+    displayName: Azure Elastic SAN CSI Driver
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/capacity-provisioner
+    displayName: ACStor Capacity Provisioner
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/etcd-analysis
+    displayName: ACStor Etcd Analysis 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/etcd-backup
+    displayName: ACStor Etcd Backup 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/etcd-backup-fetcher
+    displayName: ACStor Etcd Backup Fetcher
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/etcd-dns-checker
+    displayName: ACStor Etcd DNS Fetcher
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/etcd-operator
+    displayName: ACStor Etcd Operator
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/metrics-exporter
+    displayName: ACStor Metrics Exporter
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/metrics-exporter-pool
+    displayName: ACStor Metrics Exporter Pool
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/node-disk-exporter
+    displayName: ACStor Node Disk Exporter
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/node-disk-manager
+    displayName: ACStor Node Disk Manager
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/node-disk-operator
+    displayName: ACStor Node Disk Operator
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/prom-mdm-converter
+    displayName: ACStor Prometheus-to-MDM Converter
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/mayastor-agent-core
+    displayName: ACStor Core Agent
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/mayastor-api-rest
+    displayName: ACStor REST API Server
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/mayastor-csi-controller
+    displayName: ACStor CSI Controller Plugin
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/mayastor-csi-node
+    displayName: ACStor CSI Node Plugin
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/mayastor-io-engine
+    displayName: ACStor I/O Engine
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/mayastor-io-engine-client
+    displayName: ACStor I/O Engine Client
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/mayastor-jsongrpc
+    displayName: ACStor JSON gRPC Agent
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  - name: public/acstor/mayastor-operator-diskpool
+    displayName: ACStor DiskPool Operator
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

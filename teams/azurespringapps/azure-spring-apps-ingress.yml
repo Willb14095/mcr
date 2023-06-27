@@ -1,0 +1,20 @@
+version: 2.0
+subscriptionId: 203dfa53-bfa1-47c6-945d-16119dff147e
+resourceGroup: amss-rp-shared
+registry: ascprodacrglobalrp
+onboardingNotification: spring-dev-team
+dependencyNotification: spring-dev-team
+
+ownership:
+  securityGroups:
+  - groupName: fareast\amssst
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/azurespringapps/kubernetes-ingress-controller
+    displayName: Kubernetes Ingress Controller Image
+    description: Kubernetes Ingress Controller Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  

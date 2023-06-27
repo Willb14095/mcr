@@ -1,0 +1,51 @@
+version: 2.0
+subscriptionId: 5f004364-663b-45ce-bf32-f04b6fdbac59
+resourceGroup: aks-oss-images
+registry: AKSOSSCR
+onboardingNotification: aks-caravel
+dependencyNotification: aks-caravel
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-Read_Write-CG-23637
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/aks/fleet/hub-net-controller-manager
+    displayName: 'AKS multi-cluster networking controller deployed in hub cluster'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/fleet-networking
+    documentationLink: https://github.com/Azure/fleet-networking
+  - name: public/aks/fleet/member-net-controller-manager
+    displayName: 'AKS multi-cluster networking controller deployed in member cluster'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/fleet-networking
+    documentationLink: https://github.com/Azure/fleet-networking
+  - name: public/aks/fleet/mcs-controller-manager
+    displayName: 'AKS multi-cluster MCS controller'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/fleet-networking
+    documentationLink: https://github.com/Azure/fleet-networking
+
+  - name: public/aks/fleet/hub-agent
+    displayName: 'AKS multi-cluster fleet controller deployed in hub cluster'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/fleet
+    documentationLink: https://github.com/Azure/fleet
+  - name: public/aks/fleet/member-agent
+    displayName: 'AKS multi-cluster fleet controller deployed in member cluster'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/fleet
+    documentationLink: https://github.com/Azure/fleet
+  - name: public/aks/fleet/refresh-token
+    displayName: 'AKS multi-cluster refresh token service deployed in member cluster'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/fleet
+    documentationLink: https://github.com/Azure/fleet
+  - name: public/aks/fleet/fleet-workload
+    displayName: 'AKS multi-cluster fleet workload deployed in hub cluster'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/fleet
+    documentationLink: https://github.com/Azure/fleet

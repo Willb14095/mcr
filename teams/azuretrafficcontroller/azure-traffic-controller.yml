@@ -1,0 +1,42 @@
+version: 2.0
+subscriptionId: 1f606fb7-48cb-4e6e-ae5d-f09bca0eeebd
+resourceGroup: trafficControllerProdACR
+registry: trafficcontrollerprod
+onboardingNotification: kubicdev
+dependencyNotification: kubicdev
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-BRKT-22822
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/application-lb/charts/gateway-controller
+    displayName: Azure Application LB Gateway Controller Helm Chart
+    description: Helm chart to deploy gateway controller that manages Azure Application LB.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/application-lb/images/gateway-controller
+    displayName: Azure Application LB Gateway Controller Image
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/application-lb/images/gateway-controller-crds
+    displayName: Azure Application LB Gateway Controller CRD Image
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/application-lb/images/gateway-controller-bootstrap
+    displayName: Azure Application LB Gateway Controller Bootstrap Image
+    description: No Description
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

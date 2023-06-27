@@ -1,0 +1,28 @@
+version: 2.1
+subscriptionId: d2e52c98-eb50-49bb-8b22-27581e724f66
+resourceGroup: VSDockerResourceGroup
+registry: VSDockerContainerRegistry
+onboardingNotification: cppazsphere@microsoft.com
+contactEmail: cppazsphere@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\cppazsphere
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azurespheresdk
+    displayName: Azure Sphere SDK
+    discoveryPortalReadme: README.azurespheresdk.portal.md
+    readme: README.azurespheresdk.md
+    description: The SDK to develop applications for Azure Sphere IoT devices
+    logoUrl: https://raw.githubusercontent.com/MicrosoftDocs/azure-sphere-issues/main/AzureSphere.png
+    logoFile: AzureSphere.svg
+    supportLink: https://docs.microsoft.com/en-us/azure-sphere/resources/support
+    documentationLink: https://docs.microsoft.com/en-us/azure-sphere
+    licenseType: MIT
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

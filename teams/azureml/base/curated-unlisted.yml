@@ -1,0 +1,490 @@
+version: 2.0
+subscriptionId: 6c6683e9-e5fe-4038-8519-ce6ebec2ba15
+resourceGroup: vienna-eastus
+registry: azuremlmcr
+onboardingNotification: amlmcronboarding
+dependencyNotification: amlmcrdepnot
+
+ownership:
+  securityGroups:
+  - groupName: redmond\trainsdkdevs
+    permissions:
+      - read
+      - write
+  - groupName: redmond\ems-devs
+    permissions:
+      - read
+      - write
+
+repos:
+
+# Image build on compute curated image
+  - name: unlisted/azureml/curated/image-build
+    displayName: AzureML curated environment for environment builds
+    description: Used by EMS to build environments
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# DESIGNER
+  - name: unlisted/azureml/curated/designer
+    displayName: AzureML Designer image
+    description: AzureML Designer image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: unlisted/azureml/curated/designer-cv
+    displayName: AzureML Designer CV image
+    description: AzureML Designer CV image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+          
+  - name: unlisted/azureml/curated/designer-cv-transform
+    displayName: AzureML Designer CV Transofrm image
+    description: AzureML Designer CV Transform image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/          
+
+  - name: unlisted/azureml/curated/designer-io
+    displayName: AzureML Designer IO image
+    description: AzureML Designer IO image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/    
+
+  - name: unlisted/azureml/curated/designer-pytorch
+    displayName: AzureML Designer PyTorch image
+    description: AzureML Designer PyTorch image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/    
+    
+  - name: unlisted/azureml/curated/designer-pytorch-train
+    displayName: AzureML Designer PyTorch Train image
+    description: AzureML Designer PyTorch Train image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/    
+          
+  - name: unlisted/azureml/curated/designer-r
+    displayName: AzureML Designer R image
+    description: AzureML Designer R image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/   
+          
+  - name: unlisted/azureml/curated/designer-recommender
+    displayName: AzureML Designer Recommender image
+    description: AzureML Designer Recommender image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/   
+          
+  - name: unlisted/azureml/curated/designer-vowpalwabbit
+    displayName: AzureML Designer VowpalWabbit image
+    description: AzureML Designer VowpalWabbit image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/    
+          
+  - name: unlisted/azureml/curated/designer-transform
+    displayName: AzureML Designer Transform image
+    description: AzureML Designer Transform image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/            
+
+# SIDECAR
+  - name: unlisted/azureml/curated/sidecar
+    displayName: AzureML Sidecar image
+    description: AzureML Sidecar image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/sidecar-windows
+    displayName: AzureML Sidecar Windows image
+    description: AzureML Sidecar Windows image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/sidecar-dynamic-dependencies
+    displayName: AzureML Sidecar with Dynamic Dependencies image
+    description: AzureML Sidecar with Dynamic Dependencies image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/sidecar-dynamic-dependencies-windows
+    displayName: AzureML Windows Sidecar with Dynamic Dependencies image
+    description: AzureML Windows Sidecar with Dynamic Dependencies image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/sidecar-preview
+    displayName: AzureML Sidecar Preview image
+    description: AzureML Sidecar Preview image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/sidecar-windows-preview
+    displayName: AzureML Windows Sidecar Preview image
+    description: AzureML Windows Sidecar Preview image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# Feature Store
+  - name: unlisted/azureml/curated/feature-store
+    displayName: AzureML Feature Store image
+    description: AzureML Feature Store image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# Component
+  - name: unlisted/azureml/curated/component
+    displayName: AzureML Component image
+    description: AzureML Component image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# mldesigner-minimal
+  - name: unlisted/azureml/curated/mldesigner-minimal
+    displayName: AzureML mldesigner minimal image
+    description: AzureML mldesigner minimal image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# mldesigner
+  - name: unlisted/azureml/curated/mldesigner
+    displayName: AzureML mldesigner image
+    description: AzureML mldesigner image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# AutoML
+  - name: unlisted/azureml/curated/azureml-automl
+    displayName: AzureML AutoML image
+    description: AzureML AutoML image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/azureml-automl-dnn
+    displayName: AzureML AutoML DNN image
+    description: AzureML AutoML DNN image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/azureml-automl-gpu
+    displayName: AzureML AutoML GPU image
+    description: AzureML AutoML GPU image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/azureml-automl-dnn-gpu
+    displayName: AzureML AutoML DNN GPU image
+    description: AzureML AutoML DNN GPU image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/azureml-automl-dnn-forecasting-gpu
+    displayName: AzureML AutoML DNN Forecasting GPU image
+    description: AzureML AutoML DNN Forecasting GPU image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/azureml-automl-dnn-text-gpu
+    displayName: AzureML AutoML DNN Text GPU image
+    description: AzureML AutoML DNN Text GPU image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/azureml-automl-dnn-text-gpu-ptca
+    displayName: AzureML AutoML DNN Text GPU PTCA image
+    description: AzureML AutoML DNN Text GPU PTCA image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/azureml-automl-dnn-vision-gpu
+    displayName: AzureML AutoML DNN Vision GPU image
+    description: AzureML AutoML DNN Vision GPU image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# AutoML in Asset Registry
+  - name: unlisted/azureml/curated/automl
+    displayName: AutoML image
+    description: AutoML image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/automl-dnn
+    displayName: AutoML DNN image
+    description: AutoML DNN image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/automl-gpu
+    displayName: AutoML GPU image
+    description: AutoML GPU image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/automl-dnn-gpu
+    displayName: AutoML DNN GPU image
+    description: AutoML DNN GPU image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/automl-dnn-forecasting-gpu
+    displayName: AutoML DNN Forecasting GPU image
+    description: AutoML DNN Forecasting GPU image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/automl-dnn-text-gpu
+    displayName: AutoML DNN Text GPU image
+    description: AutoML DNN Text GPU image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/automl-dnn-text-ptca-gpu
+    displayName: AutoML DNN Text GPU PTCA image
+    description: AutoML DNN Text GPU PTCA image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: unlisted/azureml/curated/automl-dnn-vision-gpu
+    displayName: AutoML DNN Vision GPU image
+    description: AutoML DNN Vision GPU image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/       

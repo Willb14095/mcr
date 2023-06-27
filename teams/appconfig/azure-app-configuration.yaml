@@ -1,0 +1,42 @@
+version: 2.0
+subscriptionId: 0ea10386-d51d-41da-bf31-ad1b4dabc0d4
+resourceGroup: Dogfood-ArtifactPublish-ACR
+registry: azcfgacrdogfood
+onboardingNotification: appcfgmar
+dependencyNotification: appcfgmar
+
+ownership:
+  securityGroups:
+  - groupName: redmond\appcmar
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: internal/azure-app-configuration/dogfood/kubernetes-provider
+    displayName: App Configuration Kubernetes Provider (internal)
+    description: Kubernetes provider for Azure App Configuration
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/support/
+    documentationLink: https://learn.microsoft.com/en-us/azure/azure-app-configuration/
+
+  - name: internal/azure-app-configuration/dogfood/helmchart/kubernetes-provider
+    displayName: App Configuration Kubernetes Provider Helm Chart (internal)
+    description: Helm chart for the Kubernetes provider of Azure App Configuration
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/support/
+    documentationLink: https://learn.microsoft.com/en-us/azure/azure-app-configuration/
+
+  - name: internal/azure-app-configuration/candidate/kubernetes-provider
+    displayName: App Configuration Kubernetes Provider (release candidate)
+    description: Kubernetes provider for Azure App Configuration
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/AppConfiguration/issues
+    documentationLink: https://aka.ms/azureappconfiguration
+
+  - name: internal/azure-app-configuration/candidate/helmchart/kubernetes-provider
+    displayName: App Configuration Kubernetes Provider Helm Chart (release candidate)
+    description: Helm chart for the Kubernetes provider of Azure App Configuration
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/AppConfiguration/issues
+    documentationLink: https://aka.ms/azureappconfiguration

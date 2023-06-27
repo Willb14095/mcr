@@ -1,0 +1,40 @@
+version: 2.0
+subscriptionId: 203dfa53-bfa1-47c6-945d-16119dff147e
+resourceGroup: amss-rp-shared
+registry: ascprodacrglobalrp
+onboardingNotification: spring-dev-team
+dependencyNotification: spring-dev-team
+
+ownership:
+  securityGroups:
+  - groupName: fareast\amssst
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/azurespringapps/cloud-eureka-server
+    displayName: Cloud Eureka Server Image
+    description: Cloud Eureka Server Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/cloud-config-server
+    displayName: Cloud Config Server Image
+    description: Cloud Config Server Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/auth-service
+    displayName: Auth Service Image
+    description: Auth Service Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/cloud-gateway
+    displayName: Cloud Gateway Image
+    description: Cloud Gateway Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: unlisted/azurespringapps/asc-log-streaming
+    displayName: Log Stream Image
+    description: Log Stream Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  

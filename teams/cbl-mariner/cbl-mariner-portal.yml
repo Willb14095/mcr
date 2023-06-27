@@ -1,0 +1,202 @@
+version: 2.1
+subscriptionId: ae6ab47f-1fc9-4b67-8f82-4636119119c9
+resourceGroup: MarinerContainerRG
+registry: cblmarineracr2mcr
+onboardingNotification: Mariner-MCR-Notification
+dependencyNotification: Mariner-MCR-Notification
+contactEmail: marinerqa@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\marinermcrpublishing
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/cbl-mariner/base/core
+    displayName: CBL-Mariner Base
+    discoveryPortalReadme: README.cbl-mariner-base.portal.md
+    description: The official CBL-Mariner base core image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/distroless/minimal
+    displayName: CBL-Mariner Distroless Minimal
+    discoveryPortalReadme: README.cbl-mariner-distroless.portal.md
+    description: The official CBL-Mariner distroless minimal image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/distroless/base
+    displayName: CBL-Mariner Distroless Base
+    discoveryPortalReadme: README.cbl-mariner-distroless.portal.md
+    description: The official CBL-Mariner distroless base image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/distroless/debug
+    displayName: CBL-Mariner Distroless Debug
+    discoveryPortalReadme: README.cbl-mariner-distroless.portal.md
+    description: The official CBL-Mariner distroless debug image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{8}\-amd64$/
+
+  - name: public/cbl-mariner/base/azure-cli
+    displayName: CBL-Mariner Azure CLI
+    discoveryPortalReadme: README.cbl-mariner-azure-cli.portal.md
+    description: The official CBL-Mariner azure-cli image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/influxdb
+    displayName: CBL-Mariner InfluxDB
+    discoveryPortalReadme: README.cbl-mariner-influxdb.portal.md
+    description: The official CBL-Mariner influxdb image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/nginx
+    displayName: CBL-Mariner Nginx
+    discoveryPortalReadme: README.cbl-mariner-nginx.portal.md
+    description: The official CBL-Mariner nginx image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/nodejs
+    displayName: CBL-Mariner NodeJS
+    discoveryPortalReadme: README.cbl-mariner-nodejs.portal.md
+    description: The official CBL-Mariner nodejs image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/openmpi
+    displayName: CBL-Mariner Openmpi
+    discoveryPortalReadme: README.cbl-mariner-openmpi.portal.md
+    description: The official CBL-Mariner openmpi image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/php
+    displayName: CBL-Mariner PHP
+    discoveryPortalReadme: README.cbl-mariner-php.portal.md
+    description: The official CBL-Mariner php image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/postgres
+    displayName: CBL-Mariner Postgres
+    discoveryPortalReadme: README.cbl-mariner-postgres.portal.md
+    description: The official CBL-Mariner postgres image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/prometheus
+    displayName: CBL-Mariner Prometheus
+    discoveryPortalReadme: README.cbl-mariner-prometheus.portal.md
+    description: The official CBL-Mariner Prometheus image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/prometheus-adapter
+    displayName: CBL-Mariner Prometheus Adapter
+    discoveryPortalReadme: README.cbl-mariner-prometheus-adapter.portal.md
+    description: The official CBL-Mariner Prometheus Adapter image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/python
+    displayName: CBL-Mariner Python
+    discoveryPortalReadme: README.cbl-mariner-python.portal.md
+    description: The official CBL-Mariner python image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/distroless/python
+    displayName: CBL-Mariner Distroless Python
+    discoveryPortalReadme: README.cbl-mariner-python.portal.md
+    description: The official CBL-Mariner distroless python image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/pytorch
+    displayName: CBL-Mariner Pytorch
+    discoveryPortalReadme: README.cbl-mariner-pytorch.portal.md
+    description: The official CBL-Mariner pytorch image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/rabbitmq-server
+    displayName: CBL-Mariner Rabbitmq Server
+    discoveryPortalReadme: README.cbl-mariner-rabbitmq-server.portal.md
+    description: The official CBL-Mariner rabbitmq-server image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/ruby
+    displayName: CBL-Mariner Ruby
+    discoveryPortalReadme: README.cbl-mariner-ruby.portal.md
+    description: The official CBL-Mariner ruby image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/rust
+    displayName: CBL-Mariner Rust
+    discoveryPortalReadme: README.cbl-mariner-rust.portal.md
+    description: The official CBL-Mariner rust image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT
+
+  - name: public/cbl-mariner/base/tensorflow
+    displayName: CBL-Mariner TensorFlow
+    discoveryPortalReadme: README.cbl-mariner-tensorflow.portal.md
+    description: The official CBL-Mariner tensorflow image for containers
+    logoFile: mariner-logo.svg
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+    licenseType: MIT

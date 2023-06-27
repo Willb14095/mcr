@@ -1,0 +1,47 @@
+version: 2.1
+subscriptionId: 7ccb4c82-4b82-496a-9c58-87b8b4ced0bc
+resourceGroup: sqlpublicregistry
+registry: sqlpublic
+onboardingNotification: sqllinuxPM@microsoft.com
+dependencyNotification: sqllinuxPM@microsoft.com
+contactEmail: sqllinuxPM@microsoft.com
+
+ownership:  
+  securityGroups:                                                                                    
+    - groupName: redmond\sqlservermcr                                                                     
+      permissions:                                                                                      
+      - read
+      - write
+
+repos:
+  - name: public/mssql/server
+    displayName: Microsoft SQL Server - Ubuntu based images
+    discoveryPortalReadme: README.mssql-server.portal.md
+    readme: README.mssql-server.md
+    description: Official images for Microsoft SQL Server based on Ubuntu
+    logoUrl: https://iconcloud.design/search/SQL%20Server/2c8a4dd7a-de64dd68d
+    logoFile: SQL Server.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS#LicenseModel
+    projectWebsite: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview
+    supportLink: https://learn.microsoft.com/en-us/troubleshoot/sql/general/support-policy-sql-server#obtain-support-from-microsoft
+    documentationLink: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-deployment
+    categories: [Databases]
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/mssql/rhel/server
+    displayName: Microsoft SQL Server - RHEL based images
+    discoveryPortalReadme: README.mssql-server-rhel.portal.md
+    readme: README.mssql-server-rhel.md
+    description: Official images for Microsoft SQL Server based on Red Hat Enterprise Linux
+    logoUrl: https://iconcloud.design/search/SQL%20Server/2c8a4dd7a-de64dd68d
+    logoFile: SQL Server.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/SQLServer/EAEAS#LicenseModel
+    projectWebsite: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview
+    supportLink: https://learn.microsoft.com/en-us/troubleshoot/sql/general/support-policy-sql-server#obtain-support-from-microsoft
+    documentationLink: https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-deployment
+    categories: [Databases]
+   

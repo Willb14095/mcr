@@ -1,0 +1,834 @@
+version: 2.0
+subscriptionId: 6c6683e9-e5fe-4038-8519-ce6ebec2ba15
+resourceGroup: vienna-eastus
+registry: azuremlmcr
+onboardingNotification: amlmcronboarding
+dependencyNotification: amlmcrdepnot
+
+ownership:
+  securityGroups:
+  - groupName: redmond\trainsdkdevs
+    permissions:
+      - read
+      - write
+  - groupName: redmond\ems-devs
+    permissions:
+      - read
+      - write
+
+repos:
+# LightGBM images
+  - name: public/azureml/curated/lightgbm-3.2-ubuntu18.04-py37-cpu
+    displayName: AzureML LightGBM 3.2 curated image
+    description: AzureML LightGBM 3.2 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/lightgbm-3.3
+    displayName: AzureML LightGBM 3.3 curated image
+    description: AzureML LightGBM 3.3 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+# PyTorch images
+  - name: public/azureml/curated/pytorch-1.10-ubuntu18.04-py38-cuda11-gpu
+    displayName: AzureML PyTorch 1.10 curated image
+    description: AzureML PyTorch 1.10 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+          
+  - name: public/azureml/curated/acpt-pytorch-1.11-py38-cuda11.5-gpu
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.5
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/acpt-pytorch-1.11-py38-cuda11.3-gpu
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.3
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/acpt-pytorch-1.12-py39-cuda11.6-gpu
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.6
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/acpt-pytorch-1.12-py38-cuda11.6-gpu
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.6
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  
+  - name: public/azureml/curated/acpt-pytorch-1.13-py38-cuda11.7-gpu
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.7
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/pta-pytorch-1.11-py38-cuda11.5-gpu
+    displayName: AzureML PyTorch - Deepspeed+ORT+SCCL+CUDA11.5+Nebula
+    description: AzureML PyTorch 1.11.0, Ubuntu 20.04, Python 3.8
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/pta-pytorch-1.11-py38-cuda11.3-gpu
+    displayName: AzureML PyTorch - Deepspeed+ORT+SCCL+CUDA11.3+Nebula
+    description: AzureML PyTorch 1.11.0, Ubuntu 20.04, Python 3.8
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/pytorch-1.11-ubuntu20.04-py38-cuda11-gpu
+    displayName: AzureML PyTorch 1.11 curated image
+    description: AzureML PyTorch 1.11 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+          
+  - name: public/azureml/curated/pytorch-1.7-ubuntu18.04-py37-cuda11-gpu
+    displayName: AzureML PyTorch 1.7 curated image
+    description: AzureML PyTorch 1.7 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+  - name: public/azureml/curated/pytorch-1.8-ubuntu18.04-py37-cuda11-gpu
+    displayName: AzureML PyTorch 1.8 curated image
+    description: AzureML PyTorch 1.8 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+  - name: public/azureml/curated/pytorch-1.9-ubuntu18.04-py37-cuda11-gpu
+    displayName: AzureML PyTorch 1.9 curated image
+    description: AzureML PyTorch 1.9 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+# Sklearn images
+  - name: public/azureml/curated/sklearn-0.24-ubuntu18.04-py37-cpu
+    displayName: AzureML Sklearn 0.24 curated image
+    description: AzureML Sklearn 0.24 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+  - name: public/azureml/curated/sklearn-1.0-ubuntu20.04-py38-cpu
+    displayName: AzureML Sklearn 1.0 curated image
+    description: AzureML Sklearn 1.0 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+          
+  - name: public/azureml/curated/sklearn-1.1-ubuntu20.04-py38-cpu
+    displayName: AzureML Sklearn 1.1 curated image
+    description: AzureML Sklearn 1.1 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+# TensorFlow images
+  - name: public/azureml/curated/tensorflow-2.4-ubuntu18.04-py37-cuda11-gpu
+    displayName: AzureML TensorFlow 2.4 curated image
+    description: AzureML TensorFlow 2.4 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+  - name: public/azureml/curated/tensorflow-2.5-ubuntu20.04-py38-cuda11-gpu
+    displayName: AzureML TensorFlow 2.5 curated image
+    description: AzureML TensorFlow 2.5 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+  - name: public/azureml/curated/tensorflow-2.6-ubuntu20.04-py38-cuda11-gpu
+    displayName: AzureML TensorFlow 2.6 curated image
+    description: AzureML TensorFlow 2.6 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+  - name: public/azureml/curated/tensorflow-2.7-ubuntu20.04-py38-cuda11-gpu
+    displayName: AzureML TensorFlow 2.7 curated image
+    description: AzureML TensorFlow 2.7 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  
+  - name: public/azureml/curated/tensorflow-2.8-ubuntu20.04-py38-cuda11-gpu
+    displayName: AzureML TensorFlow 2.8 curated image
+    description: AzureML TensorFlow 2.8 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+          
+  - name: public/azureml/curated/tensorflow-2.9-ubuntu20.04-py38-cuda11-gpu
+    displayName: AzureML TensorFlow 2.9 curated image
+    description: AzureML TensorFlow 2.9 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# Responsible AI images
+  - name: public/azureml/curated/responsibleai-vision-ubuntu20.04-py38-cpu
+    displayName: AzureML Responsible AI Vision curated image
+    description: AzureML Responsible AI Vision curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/responsibleai-text-ubuntu20.04-py38-cpu
+    displayName: AzureML Responsible AI Text curated image
+    description: AzureML Responsible AI Text curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/responsibleai-ubuntu20.04-py38-cpu
+    displayName: AzureML Responsible AI curated image
+    description: AzureML Responsible AI curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/responsibleai-0.21-ubuntu20.04-py38-cpu
+    displayName: AzureML Responsible AI 0.21 curated image
+    description: AzureML Responsible AI 0.21 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/responsibleai-0.20-ubuntu20.04-py38-cpu
+    displayName: AzureML Responsible AI 0.20 curated image
+    description: AzureML Responsible AI 0.20 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/responsibleai-0.19-ubuntu20.04-py38-cpu
+    displayName: AzureML Responsible AI 0.19 curated image
+    description: AzureML Responsible AI 0.19 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/responsibleai-0.18-ubuntu20.04-py38-cpu
+    displayName: AzureML Responsible AI 0.18 curated image
+    description: AzureML Responsible AI 0.18 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# Inference Minimal Images
+  - name: public/azureml/curated/minimal-ubuntu18.04-py37-cpu-inference
+    displayName: AzureML minimal inference CPU curated image
+    description: Azure Machine Learning minimal/Ubuntu 18.04/Python 3.7 CPU curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  
+  - name: public/azureml/curated/minimal-ubuntu18.04-py37-cuda11.0.3-gpu-inference
+    displayName: AzureML minimal inference GPU curated image
+    description: Azure Machine Learning minimal/Ubuntu 18.04/Python 3.7/Cuda 11.0.3 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/minimal-ubuntu20.04-py38-cpu-inference
+    displayName: AzureML minimal inference Ubuntu20.04 CPU curated image
+    description: Azure Machine Learning minimal/Ubuntu 20.04/Python 3.8 CPU curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  
+  - name: public/azureml/curated/minimal-ubuntu20.04-py38-cuda11.6.2-gpu-inference
+    displayName: AzureML minimal inference Ubuntu20.04 GPU curated image
+    description: Azure Machine Learning minimal/Ubuntu 20.04/Python 3.8/Cuda 11.6.2 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# Asset Registry
+# PyTorch registry images
+  - name: public/azureml/curated/pytorch-1.11-cuda11.5
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.5
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/pytorch-1.11-cuda11.3
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.3
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/pytorch-1.12-py39-cuda11.6
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.6
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/pytorch-1.12-cuda11.6
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.6
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/pytorch-1.13-cuda11.7
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.7
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: public/azureml/curated/acpt-pytorch-1.11-cuda11.5
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.5
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/acpt-pytorch-1.11-cuda11.3
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.3
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/acpt-pytorch-1.12-py39-cuda11.6
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.6
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/acpt-pytorch-1.12-cuda11.6
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.6
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/acpt-pytorch-1.13-cuda11.7
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.7
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: public/azureml/curated/acpt-pytorch-2.0-cuda11.7
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.7
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  - name: public/azureml/curated/acpt-pytorch-1.13-cuda11.3
+    displayName: AzureML PyTorch - Deepspeed+ORT+MSCCL+CUDA11.3
+    description: Recommended Environment for Deep learning with PyTorch
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+# Sklearn registry images
+  - name: public/azureml/curated/sklearn-1.0
+    displayName: AzureML Sklearn 1.0 curated image
+    description: AzureML Sklearn 1.0 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+          
+  - name: public/azureml/curated/sklearn-1.1
+    displayName: AzureML Sklearn 1.1 curated image
+    description: AzureML Sklearn 1.1 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+# TensorFlow registry images
+  - name: public/azureml/curated/tensorflow-2.6-cuda11
+    displayName: AzureML TensorFlow 2.6 curated image
+    description: AzureML TensorFlow 2.6 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+ 
+  - name: public/azureml/curated/tensorflow-2.7-cuda11
+    displayName: AzureML TensorFlow 2.7 curated image
+    description: AzureML TensorFlow 2.7 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+  
+  - name: public/azureml/curated/tensorflow-2.8-cuda11
+    displayName: AzureML TensorFlow 2.8 curated image
+    description: AzureML TensorFlow 2.8 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+          
+  - name: public/azureml/curated/tensorflow-2.9-cuda11
+    displayName: AzureML TensorFlow 2.9 curated image
+    description: AzureML TensorFlow 2.9 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/tensorflow-2.11-cuda11
+    displayName: AzureML TensorFlow 2.11 curated image
+    description: AzureML TensorFlow 2.11 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/tensorflow-2.12-cuda11
+    displayName: AzureML TensorFlow 2.12 curated image
+    description: AzureML TensorFlow 2.12 curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/model-evaluation
+    displayName: AzureML Model Evaluation Image
+    description: AzureML Model Evaluation Image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  # ACFT images
+  - name: public/azureml/curated/acft-accelerator
+    displayName: AzureML ACFT Accelerator image for Finetuning
+    description: AzureML ACFT Accelerator image for Finetuning
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/acft-hf-nlp-gpu
+    displayName: AzureML ACFT HF NLP GPU image for Finetuning
+    description: AzureML ACFT HF NLP GPU image for Finetuning
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/acft-hf-diffusion-gpu
+    displayName: AzureML ACFT HF Diffusion GPU image for Finetuning
+    description: AzureML ACFT HF Diffusion GPU image for Finetuning
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: unlisted/azureml/curated/model-management
+    displayName: Image used by model management components
+    description: Image used by model management components
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  - name: public/azureml/curated/python-sdk-v2
+    displayName: Image with Azure ML SDK for Python v2
+    description: Image with Azure ML SDK for Python v2
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+          
+  # Data Labeling images    
+  - name: public/azureml/curated/data-labeling
+    displayName: AML Data Labeling curated image
+    description: AML Data Labeling curated image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/
+
+  # PromptFlow RunTime image
+  - name: public/azureml/curated/promptflow-runtime
+    displayName: AzureML PromptFlow RunTime image
+    description: AzureML PromptFlow RunTime image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: /^\d+$/

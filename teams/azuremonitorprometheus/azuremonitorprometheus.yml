@@ -1,0 +1,62 @@
+version: 2.0
+subscriptionId: 11a2995a-a312-4638-96b2-42c84c1e8ca1
+resourceGroup: Prom_Official_Release_ACR
+registry: promofficialrelease
+onboardingNotification: iisvceng@microsoft.com
+dependencyNotification: iisvceng@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\iisvceng
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azuremonitor/prometheus/promdev/prom-remotewrite
+    displayName: Azure Monitor Prometheus remote write image
+    readme: README.sampleimage.md
+    description: Azure Monitor sidecar for publishing Prometheus metrics via remote write funtionality
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-monitoring
+    documentationLink: https://aka.ms/prom/remotewrite
+
+  - name: internal/azuremonitor/prometheus/promdev/prom-remotewrite
+    displayName: Azure Monitor Prometheus remote write image
+    readme: README.sampleimage.md
+    description: Azure Monitor sidecar for publishing Prometheus metrics via remote write funtionality
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-monitoring
+    documentationLink: https://aka.ms/prom/remotewrite
+
+  - name: internal/azuremonitor/auth-proxy/prod/aad-auth-proxy/images/aad-auth-proxy
+    displayName: Azure Monitor AAD Auth Proxy
+    readme: README.sampleimage.md
+    description: Azure Monitor auth proxy for query/ingestion of prom metrics
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-monitoring
+    documentationLink: https://aka.ms/prom/aadauthproxy
+
+  - name: internal/azuremonitor/auth-proxy/prod/aad-auth-proxy/helmchart/aad-auth-proxy
+    displayName: Azure Monitor AAD Auth Proxy HELM chart
+    readme: README.sampleimage.md
+    description: Azure Monitor auth proxy HELM chart for query/ingestion of prom metrics
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-monitoring
+    documentationLink: https://aka.ms/prom/aadauthproxy
+
+  - name: public/azuremonitor/auth-proxy/prod/aad-auth-proxy/images/aad-auth-proxy
+    displayName: Azure Monitor AAD Auth Proxy
+    readme: README.sampleimage.md
+    description: Azure Monitor auth proxy for query/ingestion of prom metrics
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-monitoring
+    documentationLink: https://aka.ms/prom/aadauthproxy
+
+  - name: public/azuremonitor/auth-proxy/prod/aad-auth-proxy/helmchart/aad-auth-proxy
+    displayName: Azure Monitor AAD Auth Proxy HELM chart
+    readme: README.sampleimage.md
+    description: Azure Monitor auth proxy HELM chart for query/ingestion of prom metrics
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://stackoverflow.com/questions/tagged/azure-monitoring
+    documentationLink: https://aka.ms/prom/aadauthproxy

@@ -1,0 +1,19 @@
+version: 2.0
+subscriptionId: 6b085460-5f21-477e-ba44-1035046e9101
+resourceGroup: AzureVerifiedTerraformModule
+registry: AzureTerraform
+onboardingNotification: tfverifiedmod@microsoft.com
+
+ownership:
+  securityGroups:
+    - groupName: fareast\tfverifiedmod
+      permissions:
+        - read
+        - write
+
+repos:
+  - name: public/azterraform
+    displayName: Azure Terraform Repo
+    description: Terraform module test.
+    logoUrl: https://docs.microsoft.com/en-us/azure/media/index/azure_dev-7.svg
+    documentationLink: https://github.com/Azure/tfmod-scaffold/blob/master/README.md

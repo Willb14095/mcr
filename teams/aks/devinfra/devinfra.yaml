@@ -1,0 +1,510 @@
+version: 2.0
+subscriptionId: 89954b57-27c4-4d64-8594-881007d7ade6
+resourceGroup: DevInfraGlobalResources-prod
+registry: aksdevinfraprodprod
+onboardingNotification: k8sdev
+dependencyNotification: k8sdev
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-Read_Write-CG-23637
+    permissions:
+    - read
+    - write
+
+repos:
+  # Workaround for hcp-tunnel-front
+  - name: public/aks/hcp/hcp-tunnel-front-lite
+    displayName: aks hcp-tunnel-front images without Go binaries
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/msi/addon-token-adapter
+    displayName: aks msi addon token adapter image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/msi/addon-token-reconciler
+    displayName: aks msi addon token reconciler image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  # Unit Test
+  - name: public/aks/devinfra/unittest
+    displayName: aks base unittest images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  # Base Image (Build)
+  - name: public/aks/devinfra/base-os-builder
+    displayName: aks base builder images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-builder-cache
+    displayName: aks base builder images with go mod cache
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  # Base Image
+  - name: public/aks/devinfra/base-os-runtime
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  # Base Image For AKS Command
+  - name: public/aks/devinfra/base-os-bash
+    displayName: aks base bash images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-curl
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-rc\.\d{1,2}$/
+
+  - name: public/aks/devinfra/base-os-runtime-dnsutils
+    displayName: aks base dnsutils images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/devinfra/base-os-runtime-nettools
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-nginx
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-openssh
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-openvpn
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-python3
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/devinfra/base-os-runtime-static
+    displayName: aks base runtime images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/ccp/nspfilter
+    displayName: aks nspfilter images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  # deislabs/ratify
+  - name: public/aks/devinfra/ratify
+    displayName: deislabs ratify images for devinfra clusters
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    
+  - name: public/aks/devinfra/ratify-crds
+    displayName: deislabs ratify images for devinfra clusters
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  # devinfra cluster image gc
+  - name: public/aks/devinfra/aksimagegc
+    displayName: aks base image gc images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*(-linux-amd64)?$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/devinfra/deploybox
+    displayName: aks base image gc images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+
+  - name: public/aks/devinfra/echoserver
+    displayName: aks devinfra echoserver images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/ccp-auto-thrust
+    displayName: aks ccp-auto-thrust images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/admissionsenforcer
+    displayName: aks admissionsenforcer images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/ccp-webhook
+    displayName: aks ccp-webhook images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/hcp-tunnel-end
+    displayName: aks hcp-tunnel-end images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/hcp-tunnel-front
+    displayName: aks hcp-tunnel-front images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/tunnel-openvpn
+    displayName: aks tunnel-openvpn images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/msi-adapter
+    displayName: aks msi-adapter images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/etcd
+    displayName: aks etcd images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+          - source: /^releases-\d*\.\d*\.\d*\.\d*$/
+
+  - name: public/aks/ccp/etcd-backup
+    displayName: aks etcd-backup images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/etcd-backup-fetcher
+    displayName: aks etcd-backup-fetcher images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/etcd-dns-checker
+    displayName: aks etcd-dns-checker images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/etcd-operator
+    displayName: aks etcd-operator images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/etcd-analysis
+    displayName: aks etcd-analysis images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/ccp-initializer
+    displayName: aks ccp-initializer images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/aks-kube-addon-manager
+    displayName: aks kube addon manager images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/ccp-kube-controller-manager-init
+    displayName: aks ccp-kube-controller-manager-init images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/customer-net-probe
+    displayName: aks customer-net-probe images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/private-connect-balancer
+    displayName: aks private-connect-balancer images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/private-connect-router
+    displayName: aks private-connect-router images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/ccp/private-connect-initializer
+    displayName: aks private-connect-initializer images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/aks-node-ca-watcher
+    displayName: aks node ca watcher
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+
+  - name: public/aks/ccp/overlay-vpa-webhook-generation
+    displayName: aks overlay-vpa-webhook-generation images
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://azure.microsoft.com/en-us/services/kubernetes-service/
+    documentationLink: https://docs.microsoft.com/en-us/azure/aks/
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/

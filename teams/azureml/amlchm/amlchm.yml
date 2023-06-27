@@ -1,0 +1,35 @@
+version: 2.0
+subscriptionId: 6c6683e9-e5fe-4038-8519-ce6ebec2ba15
+resourceGroup: amlarc-eastus-rg
+registry: amlarc
+onboardingNotification: amlarcdri@microsoft.com
+dependencyNotification: amlarcdri@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\amlarcdri
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azureml/amlchm/docker/healthmanager
+    displayName: Common Health Manager
+    description: Common Health Manager is built to collect node issues, perform analysis and initiate node repair
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureml/amlchm/docker/node-problem-detector
+    displayName: Node Problem Detector
+    description: Node Problem Detector is built to detect node problems
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureml/amlchm/docker/nodechecker
+    displayName: Node Checker
+    description: Node Checker contains a set of test cases.NodeProblemDetector uses it to find node problems.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureml/amlchm/docker/nodechecker-cuda12
+    displayName: Node Checker for cuda12
+    description: Node Checker contains a set of test cases.NodeProblemDetector uses it to find node problems.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+  - name: public/azureml/amlchm/docker/workload-manager
+    displayName: Workload Manager
+    description: Workload Manager takes care of draining out the workload if a running node has problems
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b

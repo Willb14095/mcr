@@ -1,0 +1,21 @@
+version: 2.0
+subscriptionId: d723ece9-1a94-4b88-8aa1-68e5cc8d360b
+resourceGroup: arck8sdiagnoser-rg
+registry: arck8sdiagnoser
+onboardingNotification: k8connect
+dependencyNotification: k8connect
+
+ownership:
+  securityGroups:
+  - groupName: fareast\k8connect
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/arck8sdiagnoser
+    displayName: Azure Arc Kubernetes Diagnoser
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc

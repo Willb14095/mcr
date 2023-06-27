@@ -1,0 +1,39 @@
+version: 2.0
+subscriptionId: 360f1ea9-ce0e-4441-ab8b-a18aae98809b
+resourceGroup: eywa
+registry: terravibesmcr
+onboardingNotification: terravibes
+dependencyNotification: terravibes
+
+ownership:
+  securityGroups:
+  - groupName: redmond\terravibes
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/farmai/terravibes/services-base
+    displayName: Base image for the Project FarmVibes.AI Services
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    operatingSystems: [Linux]
+  - name: unlisted/farmai/terravibes/worker-base
+    displayName: Base image for the Project FarmVibes.AI Worker
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    operatingSystems: [Linux]
+  - name: unlisted/farmai/terravibes/api-orchestrator
+    displayName: The image used by the Project FarmVibes.AI Orchestrator and REST API
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    operatingSystems: [Linux]
+  - name: unlisted/farmai/terravibes/cache
+    displayName: The image used by the Project FarmVibes.AI Cache
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    operatingSystems: [Linux]
+  - name: unlisted/farmai/terravibes/worker
+    displayName: The image used by both the Project FarmVibes.AI worker and cache
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    operatingSystems: [Linux]
+  - name: unlisted/farmai/terravibes/comet-api
+    displayName: Image used for the Comet API
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    operatingSystems: [Linux]

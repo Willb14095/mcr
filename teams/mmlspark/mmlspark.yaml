@@ -1,0 +1,78 @@
+version: 2.1
+subscriptionId: e342c2c0-f844-4b18-9208-52c8c234c30e
+resourceGroup: marhamil-mmlspark
+registry: mmlsparkmcr
+onboardingNotification: mmlspark-mcr
+dependencyNotification: mmlspark-mcr
+contactEmail: mmlspark-mcr@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\mmlspark
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: mmlspark
+  displayName: MML Spark
+  shortDescription: Microsoft Machine Learning for Apache Spark
+  readMe: README.mmlspark.md
+  logoUrl: https://mmlspark.azureedge.net/icons/mmlspark.svg
+  supportLink: https://github.com/Azure/mmlspark/issues
+  documentationLink: https://aka.ms/spark
+  syndications:
+  - type: dockerhub
+    enabled: True
+repos:
+- name: public/mmlspark/release
+  displayName: MMLSpark
+  licenseType: MIT
+  description: Microsoft Machine Learning for Apache Spark
+  logoFile: mmlspark.svg
+  supportLink: https://github.com/Azure/mmlspark/issues
+  documentationLink: https://aka.ms/spark
+  discoveryPortalReadme: README.mmlspark.portal.md
+  readme: README.mmlspark.md
+- name: public/mmlspark/build-demo
+  description: Continuously released demo image for MMLSpark build
+  displayName: MMLSpark Demo Build
+  logoFile: mmlspark.svg
+  licenseType: MIT
+  discoveryPortalReadme: README.mmlspark.portal.md
+  readme: README.mmlspark.md
+- name: public/mmlspark/build-minimal
+  description: Continuously released minimal image for MMLSpark build
+  displayName: MMLSpark Minimal Build
+  logoFile: mmlspark.svg
+  licenseType: MIT
+  discoveryPortalReadme: README.mmlspark.portal.md
+  readme: README.mmlspark.md
+- name: public/mmlspark/spark2.4
+  description: Spark 2.4 docker image for helm chart
+  displayName: Spark 2.4
+  logoFile: mmlspark.svg
+  licenseType: MIT
+  discoveryPortalReadme: README.mmlspark.portal.md
+  readme: README.mmlspark.md
+- name: public/mmlspark/spark
+  description: Spark docker image for helm chart
+  displayName: Spark
+  logoFile: mmlspark.svg
+  licenseType: MIT
+  discoveryPortalReadme: README.mmlspark.portal.md
+  readme: README.mmlspark.md
+- name: public/mmlspark/livy
+  description: livy docker image for helm chart
+  displayName: Livy
+  logoFile: mmlspark.svg
+  licenseType: MIT
+  discoveryPortalReadme: README.mmlspark.portal.md
+  readme: README.mmlspark.md
+- name: public/mmlspark/zeppelin
+  description: Zeppelin docker image for helm chart
+  displayName: Zeppelin
+  logoFile: mmlspark.svg
+  licenseType: MIT
+  discoveryPortalReadme: README.mmlspark.portal.md
+  readme: README.mmlspark.md

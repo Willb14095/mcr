@@ -1,0 +1,21 @@
+version: 2.0
+subscriptionId: c6172e2c-bffa-45d4-84aa-e0542690b444                                                  # REQUIRED. The id of the Azure subscription where the registry lives
+resourceGroup: E2E-Prod-EUS                                                                           # REQUIRED. The Azure resource group where the registry lives
+registry: acre2eprodeastus                                                                            # REQUIRED. The private ACR where the container image lives
+onboardingNotification: ascdetectionmcrnotf                                                           # REQUIRED. An @microsoft.com distribution group for onboarding notifications that include image scanning results. Can be the same DG used for dependencyNotification.
+
+ownership:
+  securityGroups:
+  - groupName: middleeast\romedetectioneng
+    permissions:
+    - read
+    - write
+
+repos:                                                                                                # REQUIRED. The collection of onboarded repositories
+  # In cluster tests
+  - name: public/azuredefender/stable/in-cluster-tests
+    displayName: Microsoft Azure Defender In Cluster Tests
+    description: Microsoft Azure Defender In Cluster Tests
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

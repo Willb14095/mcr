@@ -1,0 +1,21 @@
+version: 2.0
+subscriptionId: c6172e2c-bffa-45d4-84aa-e0542690b444
+resourceGroup: E2E-Prod-EUS
+registry: acre2eprodeastus
+onboardingNotification: ascdetectionmcrnotf
+
+ownership:
+  securityGroups:
+  - groupName: middleeast\romedetectioneng
+    permissions:
+    - read
+    - write
+
+repos:
+  # In cluster tests
+  - name: public/mdc/stable/in-cluster-tests
+    displayName: MDC In Cluster Tests
+    description: Microsoft Defender for Cloud In Cluster Tests
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

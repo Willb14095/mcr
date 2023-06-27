@@ -1,0 +1,22 @@
+# These images are maintained by the OneBranch team
+# For more information, please contact us at onebranchsup@microsoft.com.
+
+version: 2.0
+subscriptionId: e9d570ed-cf13-4347-83e3-3938b8d65a41
+resourceGroup: OB-Container-Pipeline-1-Prep
+registry: onebranch
+onboardingNotification: OneBranch-MCR-Notification
+dependencyNotification: OneBranch-MCR-Notification
+
+ownership:                                                                                            
+  securityGroups:                                                                                     
+  - groupName: redmond\OneBranch_MCR_Publishing
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/onebranch/cbl-mariner/build
+    displayName: OneBranch - Mariner Build Container 
+    description: Built on top of mariner/base/core, this container has essential linux build and dev tools
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png

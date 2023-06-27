@@ -1,0 +1,34 @@
+version: 2.1
+subscriptionId: 5f004364-663b-45ce-bf32-f04b6fdbac59
+resourceGroup: aks-oss-images
+registry: AKSOSSCR
+onboardingNotification: periscope
+dependencyNotification: periscope
+contactEmail: periscope@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-Read_Write-CG-23637
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/aks/periscope
+    displayName: 'AKS Periscope (Linux)'
+    discoveryPortalReadme: README.periscope.portal.md
+    description: Quick troubleshooting for your Azure Kubernetes Service (AKS) cluster.
+    logoUrl: https://user-images.githubusercontent.com/33297523/69174241-4075a980-0ab6-11ea-9e33-76afc588e7fb.png
+    logoFile: periscope.svg
+    supportLink: https://github.com/Azure/aks-periscope
+    documentationLink: https://github.com/Azure/aks-periscope
+    licenseType: MIT
+  - name: public/aks/periscope-win
+    displayName: 'AKS Periscope (Windows)'
+    discoveryPortalReadme: README.periscope.portal.md
+    description: Quick troubleshooting for your Azure Kubernetes Service (AKS) cluster.
+    logoUrl: https://user-images.githubusercontent.com/33297523/69174241-4075a980-0ab6-11ea-9e33-76afc588e7fb.png
+    logoFile: periscope.svg
+    supportLink: https://github.com/Azure/aks-periscope
+    documentationLink: https://github.com/Azure/aks-periscope
+    licenseType: MIT

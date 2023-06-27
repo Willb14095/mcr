@@ -1,0 +1,96 @@
+version: 2.0
+subscriptionId: ed397ee3-9d34-46cf-815d-7e3e24c0e116
+resourceGroup: wincssc-rg
+registry: wincssc
+onboardingNotification: WinCSSC
+dependencyNotification: WinCSSC
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\WinCSSC-Onboarding
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: internal/private/windows-cssc/python
+    displayName: The windows base image with Python (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/private/windows-cssc/python
+    displayName: The windows base image with Python (unlisted only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: internal/private/windows-cssc/python3.7.2nanoserver
+    displayName: The nano server base image with Python (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: internal/private/windows-cssc/python3.7.2servercore
+    displayName: The server core base image with Python (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: internal/private/windows-cssc/python3.7.2server
+    displayName: The server base image with Python (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: internal/private/windows-cssc/python3.7.2windows
+    displayName: The windows base image with Python (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/private/windows-cssc/python3.7.2nanoserver
+    displayName: The nano server base image with Python (unlisted only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/private/windows-cssc/python3.7.2servercore
+    displayName: The server core base image with Python (unlisted only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/private/windows-cssc/python3.7.2server
+    displayName: The server base image with Python (unlisted only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/private/windows-cssc/python3.7.2windows
+    displayName: The windows base image with Python (unlisted only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: internal/private/windows-cssc/python3.7nanoserver
+    displayName: The nano server base image with Python (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: internal/private/windows-cssc/python3.7servercore
+    displayName: The server core base image with Python (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: internal/private/windows-cssc/python3.7server
+    displayName: The server base image with Python (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: internal/private/windows-cssc/python3.7windows
+    displayName: The windows base image with Python (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/private/windows-cssc/python3.7nanoserver
+    displayName: The nano server base image with Python (unlisted only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/private/windows-cssc/python3.7servercore
+    displayName: The server core base image with Python (unlisted only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/private/windows-cssc/python3.7server
+    displayName: The server base image with Python (unlisted only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/private/windows-cssc/python3.7windows
+    displayName: The windows base image with Python (unlisted only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  # internal test
+  - name: internal/private/windows-cssc/python3e85856c
+    displayName: The windows base image with Python (internal only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  # unlisted test
+  - name: unlisted/private/windows-cssc/python3e85856c
+    displayName: The windows base image with Python (unlisted only)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg

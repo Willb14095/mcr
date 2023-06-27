@@ -1,0 +1,28 @@
+version: 2.0
+subscriptionId: 5f004364-663b-45ce-bf32-f04b6fdbac59
+resourceGroup: aks-oss-images
+registry: AKSOSSCR
+onboardingNotification: ip-masq-agent-v2
+dependencyNotification: ip-masq-agent-v2
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-Read_Write-CG-23637
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/aks/ip-masq-agent-v2
+    displayName: 'ip-masq-agent-v2 MCR image'
+    supportLink: https://github.com/Azure/ip-masq-agent-v2
+    documentationLink: https://github.com/Azure/ip-masq-agent-v2
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d\d?$/

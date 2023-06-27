@@ -1,0 +1,39 @@
+version: 2.0
+subscriptionId: 4207e8c7-aa0c-4447-8525-461ce58cdc25
+resourceGroup: azurearcfork8s
+registry: azurearcfork8s
+onboardingNotification: AKubeConfig
+dependencyNotification: AKubeConfig
+
+ownership:
+  securityGroups:
+  - groupName: redmond\clusterconfigteam
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azurek8sbilling/billing-operator
+    displayName: Microsoft.ExtensionsUsage Extension Billing Operator
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+  - name: public/azurek8sbilling/billing-operator-webhook
+    displayName: Microsoft.ExtensionsUsage Extension Billing Operator Webhook
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+  - name: public/azurek8sbilling/fluent-bit
+    displayName: Microsoft.ExtensionsUsage Extension Fluent Bit Logging Scraper
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+  - name: public/azurek8sbilling/chart
+    displayName: Microsoft.ExtensionsUsage Extension Helm Chart
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc

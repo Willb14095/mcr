@@ -1,0 +1,104 @@
+version: 2.0
+subscriptionId: c4fdda6e-bfbd-4b8e-9703-037b3a45bf37
+resourceGroup: acc_samples_mcr-rg
+registry: accsamplesmcr
+onboardingNotification: acc_samples_mcr
+
+ownership:
+  securityGroups:
+  - groupName: redmond\ostcftedev
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/acc/samples/helloworld-outproc
+    displayName: OE hello world out-of-proc
+    description: Helloworld out-of-proc
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/attested-tls-inproc
+    displayName: In proc atttested-tls
+    description: No description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/attested-tls-outproc
+    displayName: Out of proc attested-tls
+    description: No description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/layered-attested-tls-outproc
+    displayName: Icelake layered attestation
+    description: No description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/acc-perl
+    displayName: ACC Perl
+    description: MCR upload of the perl library
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/attested-tls-psw
+    displayName: Icelake layered attestation
+    description: No description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/cvm-attestation
+    displayName: CVM Attestation Client
+    description: CVM attestation client
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/cvm-python-attestation
+    displayName: CVM Python Attestation API
+    description: CVM Python Attestation API
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/count-primes
+    displayName: OE count primes
+    description: Open enclave application that counts primes
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/helloworld-inproc
+    displayName: OE helloworld in-proc
+    description: OE helloworld in-proc
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/attestation-outproc
+    displayName: OE out-of-proc attestation sample
+    description: OE out-of-proc attestation sample
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  
+  - name: public/acc/samples/attestation-inproc
+    displayName: OE in-proc attestation sample
+    description: OE in-proc attestation sample
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/acc/samples/accstress
+    displayName: stress workload
+    description: stress workload
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

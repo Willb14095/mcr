@@ -1,0 +1,21 @@
+version: 2.0
+subscriptionId: 74449c9b-4b39-44e0-bf4e-8d0237dc6252
+resourceGroup: ClusterConfig-Prod-1ES
+registry: arcmktplaceformcr
+onboardingNotification: AKubeConfig
+dependencyNotification: AKubeConfig
+
+ownership:
+  securityGroups:
+  - groupName: redmond\clusterconfigteam
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/container-package-app
+    displayName: Azure Marketplace CNAB packaging tool
+    description: Allow publisher to package their helm charts and artifacts as CNAB bundle and upload to their ACR.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc

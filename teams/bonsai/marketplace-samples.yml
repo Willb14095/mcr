@@ -1,0 +1,86 @@
+version: 2.0
+subscriptionId: 7c3a6770-f643-4a37-a6d0-863a2bf9dec4
+resourceGroup: bonsai-prod-ext-sim
+registry: bonsaisimprod
+onboardingNotification: bonsai-mcr@service.microsoft.com
+dependencyNotification: bonsai-mcr@service.microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\RAM_869b2bf3-6b2c-4592-ae31-edc6b4b857fa
+    permissions:
+    - read
+    - write
+
+repos:
+- name: public/bonsai/energymanagementdemo
+  displayName: Energy Management SA demo
+  description: Energy Management demo using MathWorks 2021a image
+
+- name: public/bonsai/factorylogisticsdemo
+  displayName: Factory Logisitics SA demo
+  description: Factory Logistics demo using AnyLogic 8.7
+
+- name: public/bonsai/productdeliverydemo
+  displayName: Product Delivery demo
+  description: Product Delivery demo using AnyLogic 8.7
+
+- name: public/bonsai/chemicalprocessingdemo
+  displayName: Chemical Processing demo
+  description: Chemical Processing demo using MathWorks 2021a image
+
+- name: public/bonsai/simpletank
+  displayName: Simple Tank demo
+  description: Simple Tank demo using VP Link
+
+- name: public/bonsai/QuadTankVpLink
+  displayName: Quad Tank demo
+  description: Quad Tank demo using VP Link
+
+- name: public/bonsai/EnzymeReactorVpLink
+  displayName: Enzyme Reactor demo
+  description: Enzyme Reactor demo using VP Link
+
+- name: public/bonsai/extruder
+  displayName: Extruder demo
+  description: Extruder demo 
+
+- name: public/bonsai/extrudersample
+  displayName: Extruder UI sample
+  description: Extruder UI sample
+
+- name: public/bonsai/microgridsample
+  displayName: Microgrid UI sample
+  description: Microgrid UI sample
+
+- name: public/bonsai/samples/cstr
+  displayName: CSTR demo
+  description: CSTR demo using Simulink
+ 
+- name: public/bonsai/samples/hospital_scheduler
+  displayName: Hospital Scheduler demo
+  description: Hospital Scheduler demo using SimPy by Neal Analytics
+
+- name: public/bonsai/samples/factory_scheduling
+  displayName: Factory Scheduling demo
+  description: Factory scheduling demo by Wood PLC
+
+- name: public/bonsai/samples/material_handling
+  displayName: Material Handling demo
+  description: Material Handling demo by EngIT
+
+- name: public/bonsai/samples/lunar_lander
+  displayName: Lunar Lander demo
+  description: Lunar Lander demo by Bonsai
+
+- name: public/bonsai/samples/job_scheduling
+  displayName: Job Scheduling demo
+  description: Job Scheduling demo by FlexSim
+
+- name: public/bonsai/samples/inventory_management
+  displayName: Inventory Management demo
+  description: Inventory Management demo by Cosmo Tech
+
+- name: public/bonsai/samples/vplink_lunar_lander
+  displayName: Lunar Lander demo
+  description: Lunar Lander demo by VP Link

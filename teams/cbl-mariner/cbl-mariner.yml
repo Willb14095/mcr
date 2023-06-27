@@ -1,0 +1,193 @@
+# These images are maintained by the CBL-Mariner team
+# For more information, please contact us at marinerqa@microsoft.com.
+
+version: 2.0
+subscriptionId: ae6ab47f-1fc9-4b67-8f82-4636119119c9
+resourceGroup: MarinerContainerRG
+registry: cblmarineracr2mcr
+onboardingNotification: Mariner-MCR-Notification
+dependencyNotification: Mariner-MCR-Notification
+
+ownership:
+  securityGroups:
+  - groupName: redmond\marinermcrpublishing
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/cbl-mariner/base/kubevirt/virt-api
+    displayName: CBL-Mariner Kubevirt virt-api container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/kubevirt artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/kubevirt/virt-controller
+    displayName: CBL-Mariner Kubevirt virt-controller container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/kubevirt artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/kubevirt/virt-handler
+    displayName: CBL-Mariner Kubevirt virt-handler container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/kubevirt artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/kubevirt/virt-launcher
+    displayName: CBL-Mariner Kubevirt virt-launcher container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/kubevirt artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/kubevirt/virt-operator
+    displayName: CBL-Mariner Kubevirt virt-operator container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/kubevirt artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/cert-manager-acmesolver
+    displayName: CBL-Mariner cert-manager acmesolver
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides the cert-manager acmesolver binary.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/cert-manager-cainjector
+    displayName: CBL-Mariner cert-manager cainjector
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides the cert-manager cainjector binary.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/cert-manager-controller
+    displayName: CBL-Mariner cert-manager controller
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides the cert-manager controller binary.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/cert-manager-cmctl
+    displayName: CBL-Mariner cert-manager cmctl
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides the cert-manager cmctl binary.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/cert-manager-webhook
+    displayName: CBL-Mariner cert-manager webhook
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides the cert-manager webhook binary.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/multus
+    displayName: CBL-Mariner Multus container
+    readme: README.cbl-mariner.md
+    description: Multus is a container based on CBL-Mariner base that provides multiple interfaces in containers.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme  
+
+  - name: public/cbl-mariner/base/kubevirt/cdi-apiserver
+    displayName: CBL-Mariner Kubevirt cdi-apiserver container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/cdi artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/kubevirt/cdi-cloner
+    displayName: CBL-Mariner Kubevirt cdi-cloner container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/cdi artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/kubevirt/cdi-controller
+    displayName: CBL-Mariner Kubevirt cdi-controller container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/cdi artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/kubevirt/cdi-importer
+    displayName: CBL-Mariner Kubevirt cdi-importer container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/cdi artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/kubevirt/cdi-operator
+    displayName: CBL-Mariner Kubevirt cdi-operator container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/cdi artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/kubevirt/cdi-uploadproxy
+    displayName: CBL-Mariner Kubevirt cdi-uploadproxy container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/cdi artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/kubevirt/cdi-uploadserver
+    displayName: CBL-Mariner Kubevirt cdi-uploadserver container
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides a part of the kubevirt/cdi artifacts.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/csi-driver-lvm-csi-lvmplugin-provisioner
+    displayName: CBL-Mariner csi-driver-lvm csi-lvmplugin-provisioner
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base offering csi-driver-lvm csi-lvmplugin-provisioner binary.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/csi-driver-lvm-lvmplugin
+    displayName: CBL-Mariner csi-driver-lvm lvmplugin
+    readme: README.cbl-mariner.md
+    description: A container based on CBL-Mariner base that provides the csi-driver-lvm lvmplugin binary.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/base/sriov-network-device-plugin
+    displayName: CBL-Mariner sriov-network-device-plugin container
+    readme: README.cbl-mariner.md
+    description: Plugin for discovering and advertising networking resources with SR-IOV virtual functions.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme
+
+  - name: public/cbl-mariner/marinara
+    displayName: CBL-Mariner Distroless Builder Image
+    readme: README.cbl-mariner.md
+    description: The official CBL-Mariner based distroless container image builder.
+    logoUrl: https://github.com/microsoft/CBL-Mariner/blob/1.0/SPECS/calamares/mariner-logo.png
+    documentationLink: https://github.com/microsoft/CBL-Mariner#readme
+    supportLink: https://github.com/microsoft/CBL-Mariner#readme

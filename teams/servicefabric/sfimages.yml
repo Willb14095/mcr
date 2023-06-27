@@ -1,0 +1,46 @@
+version: 2.0
+subscriptionId: 593652d4-6044-467d-b4e1-f76d7c6ece95                                                  # REQUIRED. The id of the Azure subscription where the registry lives
+resourceGroup: atlascontainerregistry                                                                    # REQUIRED. The Azure resource group where the registry lives
+registry: MsftAtlas                                                                              # REQUIRED. The private ACR where the container image lives
+onboardingNotification: sfmcrnotification                                                         # REQUIRED. An @microsoft.com distribution alias for onboarding notifications that include image scanning results
+dependencyNotification: sfmcrnotification                                                       # OPTIONAL. An @microsoft.com distribution alias for onboarding notifications without image scanning results
+
+ownership:                                                                                            # REQUIRED Specifies what groups own the repositories listed in this file
+  securityGroups:                                                                                     # REQUIRED Starts the security group section
+  - groupName: redmond\winfabindia                                                                         # REQUIRED The name of the security group - You can find ones you belong to here: https://idweb/identitymanagement/aspx/groups/MyMemberships.aspx
+    permissions:                                                                                      # REQUIRED The permissions the group has when managing repositories listed in this file. read/write are currently supported
+    - read
+    - write
+
+productFamily:                                                                                        # OPTIONAL. Product family for all below defined repositories. 
+  name: Service Fabric images                                                                                 # REQUIRED. Name of productfamily
+  shortDescription: Images extending functionality of SF runtime.                                              # REQUIRED. Short description for productfamily
+  readMe: README.sfprodfamily.md                                                                     # REQUIRED. Read me description for product family (Must be >140 characters)
+  logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b                     # REQUIRED. Logo url
+  supportLink: https://aka.ms/servicefabric            # OPTIONAL. Support link for product family
+  documentationLink: https://aka.ms/servicefabric                                                        # OPTIONAL. Documentation link for product family
+  syndications:                                                                                       # OPTIONAL. Syndication for productfamily
+  - type: dockerhub                                                                                 # REQUIRED. The type of syndication. Only dockerhub is currently allowed
+    enabled: False                                                                                   # OPTIONAL. Default value is true if not defined
+
+repos:                                                                                                # REQUIRED. The collection of onboarded repositories
+- name: public/service-fabric/reverse-proxy                                                            # REQUIRED. Repository name. Must include public/ or internal/ somewhere in the repository name
+  displayName: Service Fabric Reverse Proxy                                                            # REQUIRED. The displayname of the product, will get displayed on syndicationtype i.e on docker store product name
+  readme: README.sfreverseproxy.md                                                                     # REQUIRED. Markdown file that describes how customers can use the image. Used only when contentUpdate = true for a syndication type. Should be a minimum of 140 char
+  description: Official image for running Reverse Proxy on Service Fabric.                             # OPTIONAL. Contents for the short description shown in the Docker Hub page. Used only when contentUpdate = true for a syndication type. Should be < 100 char
+  logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b                   # REQUIRED. Logo url
+  supportLink: https://github.com/Microsoft/service-fabric-reverse-proxy          # OPTIONAL. Support link for product
+  documentationLink: https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy                                                      # OPTIONAL. Documentation link for product
+  syndications:                                                                                     # OPTIONAL. Used to enable syndication beyond MCR. Not available for internal images
+  - type: dockerhub                                                                               # REQUIRED. The type of syndication. Only dockerhub is currently allowed
+    contentUpdate: true                                                                          # OPTIONAL. True, if the README should be syndicated; false, otherwise
+    
+- name: public/service-fabric/onebox                                                    # REQUIRED. Repository name. Must include public/ or internal/ somewhere in the repository name
+  displayName: Service Fabric Onebox                                              # REQUIRED. The displayname of the product, will get displayed on syndicationtype i.e on docker store product name
+  readme: README.sfonebox.md                                                                     # REQUIRED. Markdown file that describes how customers can use the image. Used only when contentUpdate = true for a syndication type. Should be a minimum of 140 char
+  description: Official images to run Service Fabric Linux cluster on your Linux, Mac or Windows machine.                    # OPTIONAL. Contents for the short description shown in the Docker Hub page. Used only when contentUpdate = true for a syndication type. Should be < 100 char
+  logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b                 
+  documentationLink: https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reverseproxy                                                      # OPTIONAL. Documentation link for product
+  syndications:                                                                                     # OPTIONAL. Used to enable syndication beyond MCR. Not available for internal images
+  - type: dockerhub                                                                               # REQUIRED. The type of syndication. Only dockerhub is currently allowed
+    contentUpdate: true                                                                          # OPTIONAL. True, if the README should be syndicated; false, otherwise

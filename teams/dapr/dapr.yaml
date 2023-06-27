@@ -1,0 +1,77 @@
+version: 2.0
+subscriptionId: f46be18e-65af-44b3-8188-2eed09c2d8fa
+resourceGroup: dapr-mcr
+registry: daprms
+onboardingNotification: dapr-mcr
+dependencyNotification: dapr-mcr
+
+ownership:
+  securityGroups:
+    - groupName: redmond\TM-Dapr-RW-f6a1
+      permissions:
+        - read
+        - write
+
+repos:
+  # Dapr images for Kubernetes
+  # Includes Dapr extension for AKS
+  - name: public/daprio/dapr
+    displayName: "Dapr dapr"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/daprd
+    displayName: "Dapr daprd"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/sentry
+    displayName: "Dapr sentry"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/placement
+    displayName: "Dapr placement"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/injector
+    displayName: "Dapr injector"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/operator
+    displayName: "Dapr operator"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/dashboard
+    displayName: "Dapr dashboard"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/metrics
+    displayName: "Dapr metrics"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  # Dapr images for Azure Container Apps
+  - name: unlisted/dapr-capps/dapr
+    displayName: "Dapr dapr for k4apps"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: unlisted/dapr-capps/daprd
+    displayName: "Dapr daprd for k4apps"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: unlisted/dapr-capps/sentry
+    displayName: "Dapr sentry for k4apps"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: unlisted/dapr-capps/placement
+    displayName: "Dapr placement for k4apps"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: unlisted/dapr-capps/operator
+    displayName: "Dapr operator for k4apps"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: unlisted/dapr-capps/metrics
+    displayName: "Dapr metrics for k4apps"
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  # Helm chart and CRDs for AKS extension
+  - name: public/daprio/helmchart/dapr-aks-extension
+    displayName: Dapr ARC Extension on AKS
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/docker/dapr-crds
+    displayName: Dapr CRD YAML files with Kubectl
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+
+  # Samples
+  - name: public/daprio/samples/dotnet-azurefunction
+    displayName: Dapr Azure Functions dotnet sample image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/daprio/samples/dotnet-workflows
+    displayName: Dapr Workflows dotnet sample image
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

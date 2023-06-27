@@ -1,0 +1,74 @@
+version: 2.0
+subscriptionId: 6c6683e9-e5fe-4038-8519-ce6ebec2ba15
+resourceGroup: amlmir-mcr
+registry: amlmir
+onboardingNotification: mir_mcr_onboarding
+dependencyNotification: mir_mcr_dependency
+
+ownership:
+  securityGroups:
+  - groupName: fareast\mir_mcr_contributor
+    permissions:
+    - read
+    - write
+  - groupName: fareast\mirbj
+    permissions:
+    - read
+
+repos:
+  - name: public/azureml/realtime-fe
+    displayName: Azure Machine Learning Front End for Realtime Inferencing
+    description: Azure Machine Learning Front End for Realtime Inferencing
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.20190429.2
+          - source: 1.20191031.2.master
+          - source: 1.20200831.1.master
+          - source: 1.20200408.2.master
+          - source: 1.20220322.2.master
+          - source: 1.20210421.1
+          - source: /^\d\.\d{8}\.\d+$/
+
+  - name: public/azureml/azureml-fe-envoy
+    displayName: Azure Machine Learning Front End for Realtime Inferencing Envoy
+    description: Azure Machine Learning Front End for Realtime Inferencing Envoy Image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.20221101.1
+          - source: /^\d\.\d{8}\.\d+$/
+
+  - name: public/azureml/azureml-fe-xds
+    displayName: Azure Machine Learning Front End for Realtime Inferencing XDS
+    description: Azure Machine Learning Front End for Realtime Inferencing Discovery Service Image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.20221101.1
+          - source: /^\d\.\d{8}\.\d+$/
+
+  - name: public/azureml/azureml-fe-clb
+    displayName: Azure Machine Learning Front End for Realtime Inferencing CLB
+    description: Azure Machine Learning Front End for Realtime Inferencing Coordinated Load Balancer Image
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.20221101.1
+          - source: /^\d\.\d{8}\.\d+$/

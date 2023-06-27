@@ -1,0 +1,30 @@
+version: 2.1
+subscriptionId: b9c77f10-b438-4c32-9819-eef8a654e478
+resourceGroup: hawaii-demo-rg
+registry: hawaiiacr
+onboardingNotification: sqldab
+dependencyNotification: sqldab
+contactEmail: sqldab@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\sqldab
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azure-databases/data-api-builder
+    displayName: Data API builder for Azure Databases
+    readme: README.data-api-builder.md
+    discoveryPortalReadme: README.data-api-builder.portal.md
+    description: Data API builder provides modern REST and GraphQL endpoints to your Azure Databases.
+    logoUrl: https://mcrflowprodcentralus.blob.core.windows.net/defaultlogo/Microsoft_logo.svg?sp=r&st=2019-01-19T00:10:26Z&se=2033-11-04T07:10:26Z&spr=https&sv=2018-03-28&sig=dRn%2BJsqcKwsVdAMcdkzPAbydqSC%2BzBS9BwJUI9AflR4%3D&sr=b
+    logoFile: Microsoft_logo.svg
+    licenseType: MIT
+    projectWebsite: https://github.com/Azure/data-api-builder
+    documentationLink: https://go.microsoft.com/fwlink/?linkid=2224253
+    supportLink: https://github.com/Azure/data-api-builder/blob/main/SUPPORT.md  
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

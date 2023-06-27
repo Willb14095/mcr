@@ -1,0 +1,31 @@
+version: 2.1
+subscriptionId: 910d9cee-44b6-4242-ab71-ebe693ed8cc6
+resourceGroup: mcr-test-global-rg
+registry: mcrflowtest
+onboardingNotification: mcrflowtestnot
+dependencyNotification: mcrflowtestnot
+disableOnboardingNotifications: true
+contactEmail: mcreng@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\mcrdev
+    permissions:
+    - read
+    - write
+
+repos:        
+  - name: public/mcr/hello-world
+    displayName: Mcr Hello World
+    readme: README.hello-world.md
+    discoveryPortalReadme: README.hello-world.portal.md
+    description: Hello World! (an example of minimal Dockerization).
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    logoFile: Microsoft_logo.svg
+    licenseType: MIT
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    categories: [Monitoring]
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

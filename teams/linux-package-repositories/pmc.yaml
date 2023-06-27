@@ -1,0 +1,20 @@
+version: 2.0
+subscriptionId: ae06cb0d-47c5-420b-ac59-8e84bef194bb                                                  # REQUIRED. The id of the Azure subscription where the registry lives
+resourceGroup: pmcprod                                                                                # REQUIRED. The Azure resource group where the registry lives
+registry: pmccliprod                                                                                  # REQUIRED. The private ACR where the container image lives
+onboardingNotification: aztuxrepo                                                                     # REQUIRED. An @microsoft.com distribution group for onboarding notifications that include image scanning results. Can be the same DG used for dependencyNotification.
+dependencyNotification:                                                                               # OPTIONAL. An @microsoft.com distribution group for onboarding notifications without image scanning results. Can be the same DG used for onboardingNotification.
+
+ownership:                                                                                            # REQUIRED Specifies what groups own the repositories listed in this file
+  securityGroups:                                                                                     # REQUIRED Starts the security group section
+  - groupName: redmond\aztuxrepo_sg                                                                   # REQUIRED The name of the security group - You can find ones you belong to here: https://idweb/identitymanagement/aspx/groups/MyMemberships.aspx
+    permissions:                                                                                      # REQUIRED The permissions the group has when managing repositories listed in this file. read/write are currently supported
+    - read
+    - write
+
+repos:                                                                                                # REQUIRED. The collection of onboarded repositories
+  - name: unlisted/pmc/pmc-cli                                                                        # REQUIRED. Repository name. Must include public/ or internal/ somewhere in the repository name
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg                   # REQUIRED. Logo url
+    supportLink: https://github.com/microsoft/linux-package-repositories                              # OPTIONAL. Support link for product
+    documentationLink: https://github.com/microsoft/linux-package-repositories                        # OPTIONAL. Documentation link for product
+    checkSyncStateBeforeContentUpdate: false                                                          # OPTIONAL. False, set it to true to block any content update in syndication until all tags are in sync between MCR and ACR

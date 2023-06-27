@@ -1,0 +1,29 @@
+version: 2.1
+subscriptionId: bcb5671b-44bf-4c90-8387-1786289b3f2d
+resourceGroup: GoLang
+registry: golangimages
+onboardingNotification: golangdev-mcr-notify
+dependencyNotification: golangdev-mcr-deps
+contactEmail: golangdev@microsoft.com
+
+ownership:
+  securityGroups:
+    - groupName: redmond\golangdev
+      permissions:
+        - read
+        - write
+
+repos:
+  # "Primary" images contain Go built by Microsoft, where the major.minor.patch
+  # version is updated according to Go release cycle, and new Microsoft build
+  # revisions may be pushed more frequently.
+  - name: public/oss/go/microsoft/golang
+    displayName: golang
+    discoveryPortalReadme: README.golang.portal.md
+    requireAuthForDiscovery: true
+    description: Microsoft build of the Go toolset
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg
+    logoFile: logo-go-blue.svg
+    supportLink: https://eng.ms/docs/more/languages-at-microsoft/go/articles/support
+    documentationLink: https://eng.ms/docs/more/languages-at-microsoft/go/articles/overview
+    licenseType: BSD-3-Clause

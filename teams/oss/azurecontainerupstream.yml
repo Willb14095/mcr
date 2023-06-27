@@ -1,0 +1,3188 @@
+# These images are maintained by the Azure Container Upstream Publishing team
+# How to onboard a new image: https://aka.ms/upstream/publishing-onboarding
+# How to syndicate to air-gapped clouds (AGC): https://aka.ms/upstream/syndication
+
+version: 2.1
+subscriptionId: 6afb2934-8db2-4493-bb19-e951f1158868
+resourceGroup: kubernetes
+registry: k8supstream
+onboardingNotification: az-upstream-k8s-rel
+dependencyNotification: az-upstream-k8s-rel
+contactEmail: azcu-publishing@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\azcu-approvers
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/oss/azcu/go-dev
+    displayName: go-dev
+    description: Golang Development Environment
+    supportLink: https://github.com/deis/docker-go-dev/issues
+    documentationLink: https://github.com/deis/docker-go-dev
+    discoveryPortalReadme: README.azurecontainerupstream-go-dev.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/appscode/guard
+    displayName: AppsCode Guard
+    description: Guard provides an AAD auth provider
+    supportLink: https://github.com/appscode/guard/issues
+    documentationLink: https://github.com/appscode/guard
+    discoveryPortalReadme: README.azurecontainerupstream-AppsCode-Guard.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 0.4.0
+          - source: v0.5.0
+          - source: v0.6.0
+          - source: v0.6.1
+          - source: v0.6.2
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubeguard/guard
+    displayName: AppsCode Guard
+    description: Guard provides an AAD auth provider
+    supportLink: https://github.com/kubeguard/guard/issues
+    documentationLink: https://github.com/kubeguard/guard
+    discoveryPortalReadme: README.azurecontainerupstream-KubeGuard-Guard.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/calico/apiserver
+    displayName: Calico API Server
+    description: Calico API Server
+    supportLink: https://github.com/projectcalico/calico
+    documentationLink: https://github.com/projectcalico/calico
+    discoveryPortalReadme: README.azurecontainerupstream-Calico-API-Server.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/calico/cni
+    displayName: Calico CNI plugin
+    description: Calico CNI plugin
+    supportLink: https://github.com/projectcalico/calico
+    documentationLink: https://github.com/projectcalico/calico
+    discoveryPortalReadme: README.azurecontainerupstream-Calico-CNI-plugin.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v3.5.0_v0.0.5
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: v3.8.0
+          - source: v3.8.9
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/calico/node
+    displayName: Calico Node plugin
+    description: Calico Node plugin
+    supportLink: https://github.com/projectcalico/calico
+    documentationLink: https://github.com/projectcalico/calico
+    discoveryPortalReadme: README.azurecontainerupstream-Calico-Node-plugin.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v3.5.0_v0.0.5
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: v3.8.0
+          - source: v3.8.9
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/calico/typha
+    displayName: Calico Typha plugin
+    description: Calico Typha plugin
+    supportLink: https://github.com/projectcalico/calico
+    documentationLink: https://github.com/projectcalico/calico
+    discoveryPortalReadme: README.azurecontainerupstream-Calico-Typha-plugin.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v3.5.0_v0.0.5
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: v3.8.0
+          - source: v3.8.9
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/calico/pod2daemon-flexvol
+    displayName: pod2daemon-flexvol
+    description: Secure connections from K8s Pods to local daemons using FlexVolume + Unix Domain Socket
+    supportLink: https://github.com/projectcalico/calico
+    documentationLink: https://github.com/projectcalico/calico
+    discoveryPortalReadme: README.azurecontainerupstream-pod2daemon-flexvol.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v3.8.0
+          - source: v3.8.9
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/calico/csi
+    displayName: calico-csi
+    description: Calico CSI
+    supportLink: https://github.com/projectcalico/calico
+    documentationLink: https://github.com/projectcalico/calico
+    discoveryPortalReadme: README.azurecontainerupstream-Calico-CSI.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/calico/node-driver-registrar
+    displayName: calico-node-driver-registrar
+    description: Calico Node Driver Registrar
+    supportLink: https://github.com/projectcalico/calico
+    documentationLink: https://github.com/projectcalico/calico
+    discoveryPortalReadme: README.azurecontainerupstream-Calico-Node-Driver-Registrar.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/calico/ctl
+    displayName: Calico Ctl
+    description: Calico Ctl
+    supportLink: https://github.com/projectcalico/calico
+    documentationLink: https://github.com/projectcalico/calico
+    discoveryPortalReadme: README.azurecontainerupstream-Calico-Ctl.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/calico/kube-controllers
+    displayName: Calico Kube Controllers
+    description: Calico Kube Controllers
+    supportLink: https://github.com/projectcalico/calico
+    documentationLink: https://github.com/projectcalico/calico
+    discoveryPortalReadme: README.azurecontainerupstream-Calico-Kube-Controllers.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/cilium/cilium
+    displayName: Cilium Agent
+    description: Manages node-scope responsibilities for Cilium CNI plugin
+    supportLink: https://github.com/cilium/cilium/issues
+    documentationLink: https://github.com/cilium/cilium/tree/master/daemon
+    discoveryPortalReadme: README.azurecontainerupstream-Cilium-Agent.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}([\.\-]\d)?$/
+
+  - name: public/oss/cilium/operator
+    displayName: Cilium Operator
+    description: Manages cluster-scope responsibilities for Cilium CNI plugin
+    supportLink: https://github.com/cilium/cilium/issues
+    documentationLink: https://github.com/cilium/cilium/tree/master/operator
+    discoveryPortalReadme: README.azurecontainerupstream-Cilium-Operator.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/cilium/operator-generic
+    displayName: Cilium Operator Generic
+    description: Manages cluster-scope responsibilities for Cilium CNI plugin without cloud-specific IPAM.
+    supportLink: https://github.com/cilium/cilium/issues
+    documentationLink: https://github.com/cilium/cilium/tree/master/operator
+    discoveryPortalReadme: README.azurecontainerupstream-Cilium-Operator-Generic.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}([\.\-]\d)?$/
+
+  - name: public/oss/kinvolk/inspektor-gadget
+    displayName: Inspektor Gadget
+    description: Collection of tools (or gadgets) to debug and inspect Kubernetes resources and applications
+    supportLink: https://github.com/kinvolk/inspektor-gadget/issues
+    documentationLink: https://kinvolk.io/docs/inspektor-gadget/latest
+    discoveryPortalReadme: README.azurecontainerupstream-Inspektor-Gadget.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kinvolk/kubectl-gadget
+    displayName: Kubectl-Gadget
+    description: Kubectl plugin for Inspektor Gadget
+    supportLink: https://github.com/kinvolk/inspektor-gadget/issues
+    documentationLink: https://kinvolk.io/docs/inspektor-gadget/latest
+    discoveryPortalReadme: README.azurecontainerupstream-Kubectl-Gadget.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?-linux-amd64$/
+
+  - name: public/oss/coreos/etcd-operator
+    displayName: CoreOS ETCD-Operator
+    description: CoreOS ETCD-Operator
+    supportLink: https://github.com/coreos/etcd-operator/issues
+    documentationLink: https://github.com/coreos/etcd-operator
+    discoveryPortalReadme: README.azurecontainerupstream-CoreOS-ETCD-Operator.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/etcd-io/etcd
+    displayName: etcd
+    description: etcd
+    supportLink: https://github.com/etcd-io/etcd/issues
+    documentationLink: https://github.com/etcd-io/etcd
+    discoveryPortalReadme: README.azurecontainerupstream-etcd.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/flannel-io/flannel
+    displayName: Flannel
+    description: Layer 3 network fabric designed for Kubernetes
+    supportLink: https://github.com/flannel-io/flannel
+    documentationLink: https://github.com/flannel-io/flannel
+    discoveryPortalReadme: README.azurecontainerupstream-Flannel.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/autoscaler/addon-resizer
+    displayName: Addon-Reizer
+    description: AutoScaler Addon Resizer
+    supportLink: https://github.com/kubernetes/autoscaler/issues
+    documentationLink: https://github.com/kubernetes/autoscaler/tree/master/addon-resizer
+    discoveryPortalReadme: README.azurecontainerupstream-Addon-Reizer.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.7_v0.0.5
+          - source: /^\d\.\d{1,2}_[vf]?\d\.\d{1,2}\.\d{1,2}$/
+          - source: 1.8.1_v0.0.5
+          - source: 1.8.4_v0.0.5
+          - source: 1.8.5_v0.0.5
+          - source: /^\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^\d\.\d{1,2}$/
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/autoscaler/cluster-autoscaler
+    displayName: Cluster Autoscaler
+    description: Cluster Autoscaler
+    supportLink: https://github.com/kubernetes/autoscaler/issues
+    documentationLink: https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler
+    discoveryPortalReadme: README.azurecontainerupstream-Cluster-Autoscaler.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.14.9-aks
+          - source: v1.15.4_f0.0.4
+          - source: v1.15.6
+          - source: v1.15.7-hotfix.20200731-aks
+          - source: v1.15.7-hotfix.20200821-aks
+          - source: v1.15.7-hotfix.20200828-aks
+          - source: v1.15.7-hotfix.20201002-aks
+          - source: v1.16.3_f0.0.4
+          - source: v1.16.5
+          - source: v1.16.6-aks
+          - source: v1.16.6-hotfix.20200821-aks
+          - source: v1.16.6-hotfix.20200828-aks
+          - source: v1.16.6-hotfix.20201002-aks
+          - source: v1.17.2
+          - source: v1.17.0_f0.0.4
+          - source: v1.17.3-aks
+          - source: v1.17.3-hotfix.20200821-aks
+          - source: v1.17.3-hotfix.20200828-aks
+          - source: v1.17.3-hotfix.20201002-aks
+          - source: v1.18.0
+          - source: v1.18.2-aks
+          - source: v1.18.2-hotfix.20200828-aks
+          - source: v1.18.2-hotfix.20201002-aks
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-aks$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}-aks\.?\d?$/
+
+  - name: public/oss/kubernetes/autoscaler/cluster-proportional-autoscaler
+    displayName: Cluster Proportional Autoscaler
+    description: Cluster Proportional Autoscaler
+    supportLink: https://github.com/kubernetes-incubator/cluster-proportional-autoscaler/issues
+    documentationLink: https://github.com/kubernetes-incubator/cluster-proportional-autoscaler
+    discoveryPortalReadme: README.azurecontainerupstream-Cluster-Proportional-Autoscaler.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.2.0_v0.0.5
+          - source: 1.3.0_v0.0.5
+          - source: 1.7.1-hotfix.20200403
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-aks$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}-aks\.?\d?$/
+
+  - name: public/oss/kubernetes/autoscaler/vpa-recommender
+    displayName: Vertical Pod Autoscaler Recommender
+    description: Vertical Pod Autoscaler Recommender
+    supportLink: https://github.com/kubernetes/autoscaler/issues
+    documentationLink: https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler/pkg/recommender
+    discoveryPortalReadme: README.azurecontainerupstream-Vertical-Pod-Autoscaler-Recommender.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/autoscaler/vpa-updater
+    displayName: Vertical Pod Autoscaler Updater
+    description: Vertical Pod Autoscaler Updater
+    supportLink: https://github.com/kubernetes/autoscaler/issues
+    documentationLink: https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler/pkg/updater
+    discoveryPortalReadme: README.azurecontainerupstream-Vertical-Pod-Autoscaler-Updater.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+
+
+  - name: public/oss/kubernetes/autoscaler/vpa-admission-controller
+    displayName: Vertical Pod Autoscaler Admission Controller
+    description: Vertical Pod Autoscaler Admission Controller
+    supportLink: https://github.com/kubernetes/autoscaler/issues
+    documentationLink: https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler/pkg/admission-controller
+    discoveryPortalReadme: README.azurecontainerupstream-Vertical-Pod-Autoscaler-Admission-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/azure-cloud-controller-manager
+    displayName: Azure Cloud Controller Manager
+    description: Out of tree cloud provider
+    supportLink: https://github.com/kubernetes/cloud-provider-azure/issues
+    documentationLink: https://github.com/kubernetes/cloud-provider-azure
+    discoveryPortalReadme: README.azurecontainerupstream-Azure-Cloud-Controller-Manager.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.7.2
+          - source: v0.6.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/azure-cloud-node-manager
+    displayName: Azure Cloud Provider Node Manager
+    description: Out of tree cloud provider
+    supportLink: https://github.com/kubernetes/cloud-provider-azure/issues
+    documentationLink: https://github.com/kubernetes/cloud-provider-azure
+    discoveryPortalReadme: README.azurecontainerupstream-Azure-Cloud-Provider-Node-Manager.portal.md
+    requireAuthForDiscovery: true
+    readme: README.azure-cloud-node-manager.md
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.7.2
+          - source: v0.6.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/cloud-controller-manager
+    displayName: Cloud Controller Manager
+    description: Cloud Controller Manager
+    supportLink: https://github.com/kubernetes/kubernetes/issues
+    documentationLink: https://kubernetes.io/docs/reference/command-line-tools-reference/cloud-controller-manager/
+    discoveryPortalReadme: README.azurecontainerupstream-Cloud-Controller-Manager.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/coredns
+    displayName: CoreDNS
+    description: CoreDNS
+    supportLink: https://coredns.io/community/
+    documentationLink: https://coredns.io/
+    discoveryPortalReadme: README.azurecontainerupstream-CoreDNS.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.6.6
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/defaultbackend
+    displayName: Default Backend
+    description: DefaultBackend handles urls that the ingress controller doesnt understand
+    supportLink: https://github.com/kubernetes/ingress-gce/issues
+    documentationLink: https://github.com/kubernetes/ingress-gce
+    discoveryPortalReadme: README.azurecontainerupstream-Default-Backend.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.4
+          - source: /^\d\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/exechealthz
+    displayName: ExecHealthz
+    description: ExecHealthz
+    supportLink: https://github.com/kubernetes/contrib/issues
+    documentationLink: https://github.com/kubernetes-retired/contrib/tree/master/exec-healthz
+    discoveryPortalReadme: README.azurecontainerupstream-ExecHealthz.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.2
+          - source: 1.2_v0.0.5
+          - source: /^v?\d\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}_v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/external-dns
+    displayName: ExternalDNS
+    description: ExternalDNS
+    supportLink: https://github.com/kubernetes-incubator/external-dns/issues
+    documentationLink: https://github.com/kubernetes-incubator/external-dns
+    discoveryPortalReadme: README.azurecontainerupstream-ExternalDNS.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.6.0-hotfix-20200228
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix-\d{8}\.?\d?$/
+
+  - name: public/oss/kubernetes/heapster
+    displayName: Heapster
+    description: Heapster
+    supportLink: https://github.com/kubernetes-retired/heapster/issues
+    documentationLink: https://github.com/kubernetes-retired/heapster
+    discoveryPortalReadme: README.azurecontainerupstream-Heapster.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.5.4
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+ # This configuration is to add back the 1.15.11 hyperkube-amd64 image to mcr.
+  # It is specifically meant to address this ICM _ https://portal.microsofticm.com/imp/v3/incidents/details/233332003/home
+  # 1 year from now @ 3/2022 we should determine if this configuration can be removed and delete the image from mcr.
+  - name: public/oss/kubernetes/hyperkube-amd64
+    displayName: hyperkube-amd64
+    description: HyperKube for amd64
+    supportLink: https://github.com/kubernetes/kubernetes/issues
+    documentationLink: https://github.com/kubernetes/kubernetes
+    discoveryPortalReadme: README.azurecontainerupstream-hyperkube-amd64.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/hyperkube
+    displayName: HyperKube
+    description: HyperKube
+    supportLink: https://github.com/kubernetes/kubernetes/issues
+    documentationLink: https://github.com/kubernetes/kubernetes
+    discoveryPortalReadme: README.azurecontainerupstream-HyperKube.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.15.11-hotfix.20200529.1
+          - source: v1.15.11-hotfix.20200824.1
+          - source: v1.15.12-hotfix.20200623.1
+          - source: v1.15.12-hotfix.20200824.1
+          - source: v1.16.10-hotfix.20200623.1
+          - source: v1.16.10-hotfix.20200824.1
+          - source: v1.16.13-hotfix.20200824.1
+          - source: v1.17.7-hotfix.20200624
+          - source: v1.18.2.1
+          - source: v1.18.4-hotfix.20200624
+          - source: v1.15.11-hotfix.20200714.1
+          - source: v1.15.12-hotfix.20200714.1
+          - source: v1.16.10-hotfix.20200714.1
+          - source: v1.16.10-hotfix.20200917
+          - source: v1.16.13-hotfix.20200714.1
+          - source: v1.16.13-hotfix.20200917
+          - source: v1.16.14-hotfix.20200901
+          - source: v1.16.15-hotfix.20200903
+          - source: v1.17.3-hotfix.20200601
+          - source: v1.17.7-hotfix.20200714.1
+          - source: v1.17.7-hotfix.20200917
+          - source: v1.17.9-hotfix.20200714.1
+          - source: v1.17.9-hotfix.20200824.1
+          - source: v1.17.9-hotfix.20200917
+          - source: v1.17.11-hotfix.20200901
+          - source: v1.18.4
+          - source: v1.18.4-hotfix.20200624
+          - source: v1.18.6
+          - source: v1.18.6-hotfix.20200723
+          - source: v1.18.6-hotfix.20200917
+          - source: v1.18.8-hotfix.20200917
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-aks$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}-aks\.?\d?$/
+
+  - name: public/oss/kubernetes/ingress/nginx-ingress-controller
+    displayName: Nginx Ingress Controller
+    description: Nginx Ingress Controller
+    supportLink: https://github.com/kubernetes/ingress-nginx/issues
+    documentationLink: https://github.com/kubernetes/ingress-nginx
+    discoveryPortalReadme: README.azurecontainerupstream-Nginx-Ingress-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 0.19.0
+          - source: 0.20.0
+          - source: 0.30.0
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/contour/contour
+    displayName: Contour
+    description: Contour
+    supportLink: https://github.com/projectcontour/contour/issues
+    documentationLink: https://github.com/projectcontour/contour/
+    discoveryPortalReadme: README.azurecontainerupstream-Contour.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/ingress/kube-webhook-certgen
+    displayName: Kube Webhook Certgen
+    description: Kubernetes webhook certificate generator and patcher
+    supportLink: https://github.com/kubernetes/ingress-nginx/issues
+    documentationLink: https://github.com/kubernetes/ingress-nginx/tree/main/images/kube-webhook-certgen
+    discoveryPortalReadme: README.azurecontainerupstream-Kube-Webhook-Certgen.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.3.1
+          - source: /^[v]?\d\.\d{1,2}\.\d{1,2}([.-]\d{1,2})?$/
+
+  - name: public/oss/kubernetes/ip-masq-agent
+    displayName: IP Masq Agent
+    description: IP Masq Agent
+    supportLink: https://github.com/kubernetes-sigs/ip-masq-agent/issues
+    documentationLink: https://github.com/kubernetes-sigs/ip-masq-agent
+    discoveryPortalReadme: README.azurecontainerupstream-IP-Masq-Agent.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v2.0.0_v0.0.5
+          - source: v2.5.0
+          - source: v2.5.0.2
+          - source: v2.5.0.3
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d\d?$/
+
+  - name: public/oss/kubernetes/k8s-dns-dnsmasq
+    displayName: DNS Masq
+    description: DNS Masq
+    supportLink: https://github.com/kubernetes/dns/issues
+    documentationLink: https://github.com/kubernetes/dns
+    discoveryPortalReadme: README.azurecontainerupstream-DNS-Masq.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/k8s-dns-dnsmasq-nanny
+    displayName: DNS Masq Nanny
+    description: DNS Masq Nanny
+    supportLink: https://github.com/kubernetes/dns/issues
+    documentationLink: https://github.com/kubernetes/dns
+    discoveryPortalReadme: README.azurecontainerupstream-DNS-Masq-Nanny.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.15.0
+          - source: 1.15.0_v0.0.5
+          - source: 1.15.4
+          - source: 1.15.4_v0.0.5
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/kubernetes/k8s-dns-kube-dns
+    displayName: KubeDNS
+    description: KubeDNS
+    supportLink: https://github.com/kubernetes/dns/issues
+    documentationLink: https://github.com/kubernetes/dns
+    discoveryPortalReadme: README.azurecontainerupstream-KubeDNS.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.15.0
+          - source: 1.15.0_v0.0.5
+          - source: 1.15.4
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/kubernetes/k8s-dns-sidecar
+    displayName: KubeDNS Sidecar
+    description: KubeDNS Sidecar
+    supportLink: https://github.com/kubernetes/dns/issues
+    documentationLink: https://github.com/kubernetes/dns
+    discoveryPortalReadme: README.azurecontainerupstream-KubeDNS-Sidecar.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.14.10
+          - source: 1.14.10_v0.0.5
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/kubernetes/k8s-dns-node-cache
+    displayName: KubeDNS Node Cache
+    description: KubeDNS Node Cache
+    supportLink: https://github.com/kubernetes/dns/issues
+    documentationLink: https://github.com/kubernetes/dns
+    discoveryPortalReadme: README.azurecontainerupstream-KubeDNS-Node-Cache.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}([\.\-]\d)?$/
+
+  - name: public/oss/kubernetes/kubectl
+    displayName: kubectl client
+    description: kubectl client images
+    supportLink: https://github.com/kubernetes/kubernetes/issues
+    documentationLink: https://github.com/kubernetes/kubernetes
+    discoveryPortalReadme: README.azurecontainerupstream-kubectl-client.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.17.3-hotfix.20200601
+          - source: v1.17.7-hotfix.20200624
+          - source: v1.17.9-hotfix.20200714
+          - source: v1.17.11-hotfix.20200901
+          - source: v1.18.2
+          - source: v1.18.4-hotfix.20200624
+          - source: v1.18.6-hotfix.20200723
+          - source: v1.18.8-hotfix.20200924
+          - source: v1.19.1-hotfix.20200923
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-aks$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}-aks\.?\d?$/
+
+  - name: public/oss/kubernetes/kube-addon-manager
+    displayName: Addon Manager
+    description: Addon Manager
+    supportLink: https://github.com/kubernetes/kubernetes/issues
+    documentationLink: https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/addon-manager
+    discoveryPortalReadme: README.azurecontainerupstream-Addon-Manager.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v9.0.1_v0.0.5
+          - source: v9.0.2_v0.0.5
+          - source: /^v?\d\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}(\.\d{1,2}){0,2}$/
+
+  - name: public/oss/kubernetes/conformance
+    displayName: Kubernetes Conformance
+    description: Kubernetes Conformance
+    supportLink: https://github.com/kubernetes/kubernetes/issues
+    documentationLink: https://github.com/kubernetes/kubernetes
+    discoveryPortalReadme: README.azurecontainerupstream-Conformance.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/kube-apiserver
+    displayName: Kubernetes API Server
+    description: Kubernetes API Server
+    supportLink: https://github.com/kubernetes/kubernetes/issues
+    documentationLink: https://github.com/kubernetes/kubernetes
+    discoveryPortalReadme: README.azurecontainerupstream-API-Server.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.17.3-hotfix.20200601
+          - source: v1.17.7-hotfix.20200624
+          - source: v1.17.9-hotfix.20200714
+          - source: v1.17.11-hotfix.20200901
+          - source: v1.18.2
+          - source: v1.18.4-hotfix.20200624
+          - source: v1.18.6-hotfix.20200723
+          - source: v1.18.8-hotfix.20200924
+          - source: v1.19.1-hotfix.20200923
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-aks$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}-aks\.?\d?$/
+
+  - name: public/oss/kubernetes/kube-controller-manager
+    displayName: Kubernetes Controller Manager
+    description: Kubernetes Controller Manager
+    supportLink: https://github.com/kubernetes/kubernetes/issues
+    documentationLink: https://github.com/kubernetes/kubernetes
+    discoveryPortalReadme: README.azurecontainerupstream-Controller-Manager.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.17.3-hotfix.20200601
+          - source: v1.17.7-hotfix.20200917
+          - source: v1.17.9-hotfix.20200917
+          - source: v1.17.11-hotfix.20200901
+          - source: v1.18.2
+          - source: v1.18.4-hotfix.20200624
+          - source: v1.18.6-hotfix.20200917
+          - source: v1.18.8-hotfix.20200924
+          - source: v1.19.1-hotfix.20200923
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-aks$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}-aks\.?\d?$/
+
+  - name: public/oss/kubernetes/kube-proxy
+    displayName: Kube Proxy
+    description: Kube Proxy
+    supportLink: https://github.com/kubernetes/kubernetes/issues
+    documentationLink: https://github.com/kubernetes/kubernetes
+    discoveryPortalReadme: README.azurecontainerupstream-Kube-Proxy.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.17.3-hotfix.20200601
+          - source: v1.17.7-hotfix.20200714
+          - source: v1.17.9-hotfix.20200824
+          - source: v1.17.11-hotfix.20200901
+          - source: v1.18.2-hotfix.20200624
+          - source: v1.18.4-hotfix.20200626
+          - source: v1.18.6-hotfix.20200723
+          - source: v1.18.8-hotfix.20200924
+          - source: v1.19.1-hotfix.20200923
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-aks$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}-aks\.?\d?$/
+
+  - name: public/oss/kubernetes/kube-scheduler
+    displayName: Kube Scheduler
+    description: Kube Scheduler
+    supportLink: https://github.com/kubernetes/kubernetes/issues
+    documentationLink: https://github.com/kubernetes/kubernetes
+    discoveryPortalReadme: README.azurecontainerupstream-Kube-Scheduler.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.17.3-hotfix.20200601
+          - source: v1.17.7-hotfix.20200624
+          - source: v1.17.9-hotfix.20200714
+          - source: v1.17.11-hotfix.20200901
+          - source: v1.18.2
+          - source: v1.18.4-hotfix.20200624
+          - source: v1.18.6-hotfix.20200723
+          - source: v1.18.8-hotfix.20200924
+          - source: v1.19.1-hotfix.20200923
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-aks$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}-aks\.?\d?$/
+
+  - name: public/oss/kubernetes/kube-state-metrics
+    displayName: Kube State Metrics
+    description: Kube State Metrics
+    supportLink: https://github.com/kubernetes/kube-state-metrics/issues
+    documentationLink: https://github.com/kubernetes/kube-state-metrics
+    discoveryPortalReadme: README.azurecontainerupstream-Kube-State-Metrics.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.2.0
+          - source: v1.8.0
+          - source: v1.9.7
+          - source: /^v\d\.\d{1,2}\.\d{1,2}([.-]\d{1,2})?$/
+
+  - name: public/oss/kubernetes/kubernetes-dashboard
+    displayName: Kubernetes Dashboard
+    description: Kubernetes Dashboard
+    supportLink: https://github.com/kubernetes/dashboard/issues
+    documentationLink: https://github.com/kubernetes/dashboard
+    discoveryPortalReadme: README.azurecontainerupstream-Kubernetes-Dashboard.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.10.1
+          - source: v2.0.1
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/dashboard
+    displayName: Kubernetes Dashboard
+    description: Kubernetes Dashboard
+    supportLink: https://github.com/kubernetes/dashboard/issues
+    documentationLink: https://github.com/kubernetes/dashboard
+    discoveryPortalReadme: README.azurecontainerupstream-Kubernetes-Dashboard.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v2.0.0-rc3
+          - source: v2.0.0-rc7
+          - source: v2.0.1
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-rc\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-beta\d{1,2}$/
+
+  - name: public/oss/kubernetes/metrics-server
+    displayName: Metrics Server
+    description: Metrics Server
+    supportLink: https://github.com/kubernetes-incubator/metrics-server/issues
+    documentationLink: https://github.com/kubernetes-incubator/metrics-server
+    discoveryPortalReadme: README.azurecontainerupstream-Metrics-Server.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.2.1_v0.0.5
+          - source: v0.3.6
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/metrics-scraper
+    displayName: Metrics Scraper
+    description: Metrics Scraper
+    supportLink: https://github.com/kubernetes-sigs/dashboard-metrics-scraper/issues
+    documentationLink: https://github.com/kubernetes-sigs/dashboard-metrics-scraper
+    discoveryPortalReadme: README.azurecontainerupstream-Metrics-Scraper.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/pause
+    displayName: Kubernetes Pause
+    description: Multi-Arch Kubernetes Pause image
+    supportLink: https://github.com/azure/container-compute-upstream/issues
+    documentationLink: https://dev.azure.com/AzureContainerUpstream/Kubernetes/_git/pause-image
+    discoveryPortalReadme: README.azurecontainerupstream-Kubernetes-Pause.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.2.0
+          - source: 1.3.1
+          - source: 3.1
+          - source: 3.2
+          - source: /^\d\.\d{1,2}$/
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^\d\.\d{1,2}-hotfix\.\d{8}$/
+          - source: /^\d\.\d{1,2}-hotfix\.\d{8}-linux-amd64$/
+          - source: /^\d\.\d{1,2}-hotfix\.\d{8}-linux-arm64$/
+          - source: /^\d\.\d{1,2}-windows-.\w+-amd64$/
+          - source: /^\d\.\d{1,2}-hotfix\.\d{8}-windows-1809-amd64$/
+          - source: /^\d\.\d{1,2}-hotfix\.\d{8}-windows-20H2-amd64$/
+          - source: /^\d\.\d{1,2}-hotfix\.\d{8}-windows-ltsc2022-amd64$/
+
+  - name: public/oss/kubernetes/rescheduler
+    displayName: Kubernetes Rescheduler
+    description: Kubernetes Rescheduler
+    supportLink: https://github.com/kubernetes-retired/contrib/issues
+    documentationLink: https://github.com/kubernetes-retired/contrib/tree/master/rescheduler
+    discoveryPortalReadme: README.azurecontainerupstream-Kubernetes-Rescheduler.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.4.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: v0.4.0_v0.0.5
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}_[vf]\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/tiller
+    displayName: Kubernetes Tiller
+    description: Tiller
+    supportLink: https://github.com/helm/helm/issues
+    documentationLink: https://github.com/helm/helm
+    discoveryPortalReadme: README.azurecontainerupstream-Kubernetes-Tiller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v2.13.1
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kontena/kubelet-rubber-stamp
+    displayName: Kubelet Rubber Stamp
+    description: CSR auto approver operator to help bootstrapping kubelet serving certificates easily
+    supportLink: https://github.com/kontena/kubelet-rubber-stamp
+    documentationLink: https://github.com/kontena/kubelet-rubber-stamp
+    discoveryPortalReadme: README.azurecontainerupstream-Kubelet-Rubber-Stamp.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/windows-gmsa-webhook
+    displayName: Kubernetes Windows GMSA
+    description: Kubernetes Windows GMSA
+    supportLink: https://github.com/kubernetes-sigs/windows-gmsa/issues
+    documentationLink: https://github.com/kubernetes-sigs/windows-gmsa
+    discoveryPortalReadme: README.azurecontainerupstream-Kubernetes-Windows-GMSA.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.2.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/csi-provisioner
+    displayName: CSI Provisioner
+    description: Watches PersistentVolumeClaim objects and triggers CreateVolume/DeleteVolume against a CSI endpoint
+    supportLink: https://github.com/kubernetes-csi/external-provisioner/issues
+    documentationLink: https://github.com/kubernetes-csi/external-provisioner
+    discoveryPortalReadme: README.azurecontainerupstream-CSI-Provisioner.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v2.1.0
+          - source: v1.6.1
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/csi-attacher
+    displayName: CSI Attacher
+    description: Watches VolumeAttachment objects and triggers ControllerPublish/Unpublish against a CSI endpoint
+    supportLink: https://github.com/kubernetes-csi/external-attacher/issues
+    documentationLink: https://github.com/kubernetes-csi/external-attacher
+    discoveryPortalReadme: README.azurecontainerupstream-CSI-Attacher.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v2.2.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/csi-cluster-driver-registrar
+    displayName: CSI Cluster Driver Registrar
+    description: Registers the CSI driver with the Kubernetes cluster
+    supportLink: https://github.com/kubernetes-csi/cluster-driver-registrar/issues
+    documentationLink: https://github.com/kubernetes-csi/cluster-driver-registrar
+    discoveryPortalReadme: README.azurecontainerupstream-CSI-Cluster-Driver-Registrar.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes-csi/csi-snapshotter
+    displayName: CSI Snapshotter
+    description: Watches Snapshot CRD objects and triggers CreateSnapshot/DeleteSnapshot against a CSI endpoint
+    supportLink: https://github.com/kubernetes-csi/external-snapshotter/issues
+    documentationLink: https://github.com/kubernetes-csi/external-snapshotter
+    discoveryPortalReadme: README.azurecontainerupstream-CSI-Snapshotter.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v3.0.3
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/snapshot-controller
+    displayName: CSI Snapshot Controller
+    description: Watches Snapshot CRD objects and triggers CreateSnapshot/DeleteSnapshot against a CSI endpoint
+    supportLink: https://github.com/kubernetes-csi/external-snapshotter/issues
+    documentationLink: https://github.com/kubernetes-csi/external-snapshotter
+    discoveryPortalReadme: README.azurecontainerupstream-CSI-Snapshot-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v3.0.3
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/csi-node-driver-registrar
+    displayName: CSI Node Driver Registrar
+    description: Registers a CSI driver with the kubelet using the kubelet plugin registration mechanism
+    supportLink: https://github.com/kubernetes-csi/node-driver-registrar/issues
+    documentationLink: https://github.com/kubernetes-csi/node-driver-registrar
+    discoveryPortalReadme: README.azurecontainerupstream-CSI-Node-Driver-Registrar.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v3.0.3
+          - source: v2.0.1
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/livenessprobe
+    displayName: CSI Livenessprobe
+    description: Enables integration with Kubernetes Liveness Probe.
+    supportLink: https://github.com/kubernetes-csi/livenessprobe/issues
+    documentationLink: https://github.com/kubernetes-csi/livenessprobe
+    discoveryPortalReadme: README.azurecontainerupstream-CSI-Livenessprobe.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v2.2.0
+          - source: v2.1.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/csi-resizer
+    displayName: CSI Resizer
+    description: Watches PersistentVolumeClaims objects and triggers controller side expansion operations
+    supportLink: https://github.com/kubernetes-csi/external-resizer/issues
+    documentationLink: https://github.com/kubernetes-csi/external-resizer
+    discoveryPortalReadme: README.azurecontainerupstream-CSI-Resizer.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.1.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/azuredisk-csi
+    displayName: K8s Azure Disk CSI Driver
+    description: This driver allows Kubernetes to use azure disk volume.
+    supportLink: https://github.com/kubernetes-sigs/azuredisk-csi-driver/issues
+    documentationLink: https://github.com/kubernetes-sigs/azuredisk-csi-driver
+    discoveryPortalReadme: README.azurecontainerupstream-K8s-Azure-Disk-CSI-Driver.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.1.1
+          - source: v0.9.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/azdiskschedulerextender-csi
+    displayName: K8s Azure Disk CSI Driver Scheduler Extender
+    description: This component works with the Azure Disk CSI Driver V2 to ensure optimal pod placement.
+    supportLink: https://github.com/kubernetes-sigs/azuredisk-csi-driver/issues
+    documentationLink: https://github.com/kubernetes-sigs/azuredisk-csi-driver
+    discoveryPortalReadme: README.azurecontainerupstream-K8s-Azure-Disk-CSI-Driver-Scheduler-Extender.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/azurefile-csi
+    displayName: K8s AzureFile CSI Driver
+    description: This driver allows Kubernetes to use azure disk volume.
+    supportLink: https://github.com/kubernetes-sigs/azurefile-csi-driver/issues
+    documentationLink: https://github.com/kubernetes-sigs/azurefile-csi-driver
+    discoveryPortalReadme: README.azurecontainerupstream-K8s-AzureFile-CSI-Driver.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.0.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes-csi/blob-csi
+    displayName: K8s Blob CSI Driver
+    description: Azure Blob Storage CSI driver
+    supportLink: https://github.com/kubernetes-sigs/blob-csi-driver/issues
+    documentationLink: https://github.com/kubernetes-sigs/blob-csi-driver
+    discoveryPortalReadme: README.azurecontainerupstream-K8s-Blob-CSI-Driver.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.4.1
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/nvidia/k8s-device-plugin
+    displayName: Nvidia Kubernetes Plugin
+    description: Nvidia Kubernetes Plugin
+    supportLink: https://github.com/NVIDIA/k8s-device-plugin/issues
+    documentationLink: https://github.com/NVIDIA/k8s-device-plugin
+    discoveryPortalReadme: README.azurecontainerupstream-Nvidia-Kubernetes-Plugin.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 1.11
+          - source: 1.0.0-beta6
+          - source: /^v?\d\.\d{1,2}$/
+          - source: /^v?\d+\.\d+\.\d+$/
+
+  - name: public/oss/open-policy-agent/gatekeeper
+    displayName: Open Policy Agent Gatekeeper
+    description: Open Policy Agent Gatekeeper
+    supportLink: https://github.com/open-policy-agent/gatekeeper/issues
+    documentationLink: https://github.com/open-policy-agent/gatekeeper
+    discoveryPortalReadme: README.azurecontainerupstream-Open-Policy-Agent-Gatekeeper.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v3.1.0
+          - source: v3.1.1
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-rc\.\d{1,2}$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}-beta\.\d{1,2}$/
+
+  - name: public/oss/open-policy-agent/gatekeeper-crds
+    displayName: Open Policy Agent Gatekeeper CRDs
+    description: Open Policy Agent Gatekeeper CRDs
+    supportLink: https://github.com/open-policy-agent/gatekeeper/issues
+    documentationLink: https://github.com/open-policy-agent/gatekeeper
+    discoveryPortalReadme: README.azurecontainerupstream-Open-Policy-Agent-Gatekeeper-CRDs.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/open-policy-agent/kube-mgmt
+    displayName: Open Policy Agent kube-mgmt
+    description: Open Policy Agent kube-mgmt
+    supportLink: https://github.com/open-policy-agent/kube-mgmt/issues
+    documentationLink: https://github.com/open-policy-agent/kube-mgmt
+    discoveryPortalReadme: README.azurecontainerupstream-Open-Policy-Agent-kube-mgmt.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/open-policy-agent/opa
+    displayName: Open Policy Agent
+    description: Open Policy Agent
+    supportLink: https://github.com/open-policy-agent/opa/issues
+    documentationLink: https://github.com/open-policy-agent/opa
+    discoveryPortalReadme: README.azurecontainerupstream-Open-Policy-Agent.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/tutum/curl
+    displayName: tutum Curl
+    description: tutum Curl
+    supportLink: https://github.com/tutumcloud/curl/issues
+    documentationLink: https://github.com/tutumcloud/curl
+    discoveryPortalReadme: README.azurecontainerupstream-tutum-Curl.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/virtual-kubelet/virtual-kubelet
+    displayName: Virtual Kubelet
+    description: Virtual Kubelet
+    supportLink: https://github.com/virtual-kubelet/virtual-kubelet/issues
+    documentationLink: https://github.com/virtual-kubelet/virtual-kubelet
+    discoveryPortalReadme: README.azurecontainerupstream-Virtual-Kubelet.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: latest
+          - source: 1.2.1.1
+          - source: /^\d\.\d{1,2}$/
+          - source: /^\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/virtual-kubelet/init-validation
+    displayName: Virtual Kubelet Init-Validation
+    description: Virtual Kubelet Init Container
+    supportLink: https://github.com/virtual-kubelet/azure-aci/issues
+    documentationLink: https://github.com/virtual-kubelet/azure-aci
+    discoveryPortalReadme: README.azurecontainerupstream-Virtual-Kubelet.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/cncf/artwork/master/projects/virtualkubelet/icon/color/virtualkubelet-icon-color.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/traefik/traefik
+    displayName: Traefik Ingress Controller
+    description: Traefik, The Cloud Native Edge Router
+    supportLink: https://github.com/traefik/traefik/issues
+    documentationLink: https://doc.traefik.io/traefik/
+    discoveryPortalReadme: README.azurecontainerupstream-Traefik-Ingress-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/prometheus/prometheus
+    displayName: Prometheus metrics server
+    description: Prometheus metrics server
+    supportLink: https://github.com/prometheus/prometheus/issues
+    documentationLink: https://github.com/prometheus/prometheus
+    discoveryPortalReadme: README.azurecontainerupstream-Prometheus-metrics-server.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/prometheus/node-exporter
+    displayName: Prometheus Node Exporter
+    description: Prometheus Node Exporter
+    supportLink: https://github.com/prometheus/node_exporter/issues
+    documentationLink: https://github.com/prometheus/node_exporter
+    discoveryPortalReadme: README.azurecontainerupstream-Prometheus-Node-Exporter.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/prometheus/windows-exporter
+    displayName: Prometheus Windows Exporter
+    description: Prometheus Windows Exporter
+    supportLink: https://github.com/prometheus-community/windows_exporter/issues
+    documentationLink: https://github.com/prometheus-community/windows_exporter
+    discoveryPortalReadme: README.azurecontainerupstream-Prometheus-Windows-Exporter.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/prometheus/alertmanager
+    displayName: Prometheus alertmanager
+    description: Prometheus alertmanager
+    supportLink: https://github.com/prometheus/alertmanager/issues
+    documentationLink: https://github.com/prometheus/alertmanager
+    discoveryPortalReadme: README.azurecontainerupstream-Prometheus-alertmanager.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/prometheus/prometheus-operator
+    displayName: Prometheus operator
+    description: Prometheus operator
+    supportLink: https://github.com/coreos/prometheus-operator/issues
+    documentationLink: https://github.com/coreos/prometheus-operator
+    discoveryPortalReadme: README.azurecontainerupstream-Prometheus-operator.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/prometheus/prometheus-config-reloader
+    displayName: Prometheus config reloader
+    description: Prometheus config reloader
+    supportLink: https://github.com/coreos/prometheus-operator/issues
+    documentationLink: https://github.com/coreos/prometheus-operator
+    discoveryPortalReadme: README.azurecontainerupstream-Prometheus-config-reloader.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/prometheus/pushgateway
+    displayName: Prometheus Pushgateway
+    description: Prometheus Pushgateway
+    supportLink: https://github.com/prometheus/pushgateway
+    documentationLink: https://github.com/prometheus/pushgateway
+    discoveryPortalReadme: README.azurecontainerupstream-Prometheus-Pushgateway.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/thanos/thanos
+    displayName: Thanos
+    description: Highly available Prometheus setup with long term storage capabilities.
+    supportLink: https://github.com/thanos-io/thanos/issues
+    documentationLink: https://github.com/thanos-io/thanos
+    discoveryPortalReadme: README.azurecontainerupstream-Thanos.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/configmap-reload
+    displayName: Kubernetes ConfigMap Reload
+    description: Kubernetes ConfigMap Reload
+    supportLink: https://github.com/jimmidyson/configmap-reload/issues
+    documentationLink: https://github.com/jimmidyson/configmap-reload
+    discoveryPortalReadme: README.azurecontainerupstream-Kubernetes-ConfigMap-Reload.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/weaveworks/kured
+    displayName: Kured - Deprecated
+    description: Kured (Deprecated)
+    supportLink: https://github.com/weaveworks/kured/issues
+    documentationLink: https://github.com/weaveworks/kured
+    discoveryPortalReadme: README.azurecontainerupstream-Kured-Deprecated.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/kubereboot/kured
+    displayName: Kured
+    description: Kured
+    supportLink: https://github.com/kubereboot/kured/issues
+    documentationLink: https://github.com/kubereboot/kured
+    discoveryPortalReadme: README.azurecontainerupstream-Kured.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/envoyproxy/envoy
+    displayName: Envoy Proxy
+    description: Envoy Proxy
+    supportLink: https://github.com/envoyproxy/envoy/issues
+    documentationLink: https://github.com/envoyproxy/envoy
+    discoveryPortalReadme: README.azurecontainerupstream-Envoy-Proxy.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.15.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/envoyproxy/envoy-distroless
+    displayName: Envoy Proxy Distroless
+    description: Envoy Proxy Distroless
+    supportLink: https://github.com/envoyproxy/envoy/issues
+    documentationLink: https://github.com/envoyproxy/envoy
+    discoveryPortalReadme: README.azurecontainerupstream-Envoy-Proxy.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/envoyproxy/envoy-fips
+    displayName: Envoy FIPS compliant
+    description: Envoy FIPS compliant
+    supportLink: https://github.com/envoyproxy/envoy/issues
+    documentationLink: https://github.com/envoyproxy/envoy
+    discoveryPortalReadme: README.azurecontainerupstream-Envoy-FIPS-compliant.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/envoyproxy/ratelimit
+    displayName: Envoy ratelimit
+    description: Envoy ratelimit
+    supportLink: https://github.com/envoyproxy/ratelimit/issues
+    documentationLink: https://github.com/envoyproxy/ratelimit
+    discoveryPortalReadme: README.azurecontainerupstream-Envoy-ratelimit.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/envoyproxy/envoy-windows
+    displayName: Envoy Proxy Windows
+    description: Envoy Proxy Windows
+    supportLink: https://github.com/envoyproxy/envoy/issues
+    documentationLink: https://github.com/envoyproxy/envoy
+    discoveryPortalReadme: README.azurecontainerupstream-Envoy-Proxy-Windows.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/fluxcd/flux
+    displayName: Flux
+    description: Flux
+    supportLink: https://github.com/fluxcd/flux/issues
+    documentationLink: https://github.com/fluxcd/flux
+    discoveryPortalReadme: README.azurecontainerupstream-Flux.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/fluxcd/helm-operator
+    displayName: Flux Helm Operator
+    description: Flux Helm Operator
+    supportLink: https://github.com/fluxcd/helm-operator/issues
+    documentationLink: https://github.com/fluxcd/helm-operator
+    discoveryPortalReadme: README.azurecontainerupstream-Flux-Helm-Operator.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/fluxcd/helm-operator-chart
+    displayName: Flux Helm Operator Chart
+    description: Flux Helm Operator Chart
+    supportLink: https://github.com/fluxcd/helm-operator/issues
+    documentationLink: https://github.com/fluxcd/helm-operator
+    discoveryPortalReadme: README.azurecontainerupstream-Flux-Helm-Operator-Chart.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/fluxcd/helm-controller
+    displayName: Flux Helm Controller
+    description: Flux Helm Controller
+    supportLink: https://github.com/fluxcd/helm-controller/issues
+    documentationLink: https://github.com/fluxcd/helm-controller
+    discoveryPortalReadme: README.azurecontainerupstream-Flux-Helm-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.9.0 #example of current tag and first time using it in these clouds
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/fluxcd/kustomize-controller
+    displayName: Flux Kustomize Controller
+    description: Flux Kustomize Controller
+    supportLink: https://github.com/fluxcd/kustomize-controller/issues
+    documentationLink: https://github.com/fluxcd/kustomize-controller
+    discoveryPortalReadme: README.azurecontainerupstream-Flux-Kustomize-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/fluxcd/source-controller
+    displayName: Flux Source Controller
+    description: Flux Source Controller
+    supportLink: https://github.com/fluxcd/source-controller/issues
+    documentationLink: https://github.com/fluxcd/source-controller
+    discoveryPortalReadme: README.azurecontainerupstream-Flux-Source-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.11.0 #example of current tag and first time using it in these clouds
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/fluxcd/notification-controller
+    displayName: Flux Notification Controller
+    description: Flux Notification Controller
+    supportLink: https://github.com/fluxcd/notification-controller/issues
+    documentationLink: https://github.com/fluxcd/notification-controller
+    discoveryPortalReadme: README.azurecontainerupstream-Flux-Notification-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/fluxcd/image-reflector-controller
+    displayName: Flux Image Reflector Controller
+    description: Flux Image Reflector Controller
+    supportLink: https://github.com/fluxcd/image-reflector-controller/issues
+    documentationLink: https://github.com/fluxcd/image-reflector-controller
+    discoveryPortalReadme: README.azurecontainerupstream-Flux-Image-Reflector-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/fluxcd/image-automation-controller
+    displayName: Flux Image Automation Controller
+    description: Flux Image Automation Controller
+    supportLink: https://github.com/fluxcd/image-automation-controller/issues
+    documentationLink: https://github.com/fluxcd/image-automation-controller
+    discoveryPortalReadme: README.azurecontainerupstream-Flux-Image-Automation-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/azure/throttled
+    displayName: Throttled
+    description: IOPS monitoring daemon
+    supportLink: https://github.com/azure/throttled/issues
+    documentationLink: https://github.com/azure/throttled
+    discoveryPortalReadme: README.azurecontainerupstream-Throttled.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/kube-rbac-proxy
+    displayName: kube-rbac-proxy
+    description: kube-rbac-proxy
+    supportLink: https://github.com/brancz/kube-rbac-proxy/issues
+    documentationLink: https://github.com/brancz/kube-rbac-proxy
+    discoveryPortalReadme: README.azurecontainerupstream-kube-rbac-proxy.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.5.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}([.-]\d{1,2})?$/
+
+  - name: public/oss/appscode/voyager
+    displayName: AppsCode Voyager
+    description: AppsCode Voyager ingress
+    supportLink: https://github.com/voyagermesh/voyager/issue
+    documentationLink: https://github.com/voyagermesh/voyager
+    discoveryPortalReadme: README.azurecontainerupstream-AppsCode-Voyager.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/appscode/haproxy
+    displayName: AppsCode HAProxy
+    description: AppsCode HAProxy
+    supportLink: https://github.com/voyagermesh/voyager/issue
+    documentationLink: https://github.com/voyagermesh/voyager
+    discoveryPortalReadme: README.azurecontainerupstream-AppsCode-HAProxy.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/metallb/controller
+    displayName: MetalLB Controller
+    description: MetalLB Controller
+    supportLink: https://github.com/metallb/metallb/issue
+    documentationLink: https://github.com/metallb/metallb
+    discoveryPortalReadme: README.azurecontainerupstream-MetalLB-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/metallb/speaker
+    displayName: MetalLB Speaker
+    description: MetalLB Speaker
+    supportLink: https://github.com/metallb/metallb/issue
+    documentationLink: https://github.com/metallb/metallb
+    discoveryPortalReadme: README.azurecontainerupstream-MetalLB-Speaker.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/rancher/local-path-provisioner
+    displayName: Rancher Local Path Provisioner
+    description: Local Path Provisioner
+    supportLink: https://github.com/rancher/local-path-provisioner/issue
+    documentationLink: https://github.com/rancher/local-path-provisioner
+    discoveryPortalReadme: README.azurecontainerupstream-Rancher-Local-Path-Provisioner.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/intel/intel-vpu-plugin
+    displayName: Intel Device Plugins for Kubernetes
+    description: Intel Device Plugins for Kubernetes
+    supportLink: https://github.com/intel/intel-device-plugins-for-kubernetes/issue
+    documentationLink: https://github.com/intel/intel-device-plugins-for-kubernetes
+    discoveryPortalReadme: README.azurecontainerupstream-Intel-Device-Plugins-for-Kubernetes.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/azure/aad-pod-identity/mic
+    displayName: K8s AAD Pod Identity MIC
+    description: AAD Pod Identity Managed Identity Controller(MIC) image
+    supportLink: https://github.com/Azure/aad-pod-identity/issues
+    documentationLink: https://github.com/Azure/aad-pod-identity
+    discoveryPortalReadme: README.azurecontainerupstream-K8s-AAD-Pod-Identity-MIC.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.6.3
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/azure/aad-pod-identity/nmi
+    displayName: K8s AAD Pod Identity NMI
+    description: AAD Pod Identity Node Managed Identity(NMI) image
+    supportLink: https://github.com/Azure/aad-pod-identity/issues
+    documentationLink: https://github.com/Azure/aad-pod-identity
+    discoveryPortalReadme: README.azurecontainerupstream-K8s-AAD-Pod-Identity-NMI.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.6.3
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/azure/aad-pod-identity/demo
+    displayName: K8s AAD Pod Identity Demo
+    description: AAD Pod Identity demo image
+    supportLink: https://github.com/Azure/aad-pod-identity/issues
+    documentationLink: https://github.com/Azure/aad-pod-identity
+    discoveryPortalReadme: README.azurecontainerupstream-K8s-AAD-Pod-Identity-Demo.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/azure/aad-pod-identity/identityvalidator
+    displayName: K8s AAD Pod Identity IdentityValidator
+    description: AAD Pod Identity IdentityValidator image used for e2e tests
+    supportLink: https://github.com/Azure/aad-pod-identity/issues
+    documentationLink: https://github.com/Azure/aad-pod-identity
+    discoveryPortalReadme: README.azurecontainerupstream-K8s-AAD-Pod-Identity-IdentityValidator.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/azure/secrets-store/provider-azure
+    displayName: Secrets Store CSI Driver Provider Azure
+    description: Secrets Store CSI Driver Provider Azure
+    supportLink: https://github.com/Azure/secrets-store-csi-driver-provider-azure/issues
+    documentationLink: https://github.com/Azure/secrets-store-csi-driver-provider-azure
+    discoveryPortalReadme: README.azurecontainerupstream-Secrets-Store-CSI-Driver-Provider-Azure.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 0.0.9
+          - source: /^\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/azure/secrets-store/canary/preview/provider-azure-arc
+    displayName: Secrets Store CSI Driver Provider Azure Arc Helm Chart - Canary
+    description: Secrets Store CSI Driver Provider Azure Arc Helm Chart - Canary
+    supportLink: https://github.com/Azure/secrets-store-csi-driver-provider-azure/issues
+    documentationLink: https://github.com/Azure/secrets-store-csi-driver-provider-azure
+    discoveryPortalReadme: README.azurecontainerupstream-Secrets-Store-CSI-Driver-Provider-Azure-Arc-Helm-Chart---Canary.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/azure/secrets-store/preview/provider-azure-arc
+    displayName: Secrets Store CSI Driver Provider Azure Arc Helm Chart - Preview
+    description: Secrets Store CSI Driver Provider Azure Arc Helm Chart - Preview
+    supportLink: https://github.com/Azure/secrets-store-csi-driver-provider-azure/issues
+    documentationLink: https://github.com/Azure/secrets-store-csi-driver-provider-azure
+    discoveryPortalReadme: README.azurecontainerupstream-Secrets-Store-CSI-Driver-Provider-Azure-Arc-Helm-Chart---Preview.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/azure/secrets-store/stable/provider-azure-arc
+    displayName: Secrets Store CSI Driver Provider Azure Arc Helm Chart - Stable
+    description: Secrets Store CSI Driver Provider Azure Arc Helm Chart - Stable
+    supportLink: https://github.com/Azure/secrets-store-csi-driver-provider-azure/issues
+    documentationLink: https://github.com/Azure/secrets-store-csi-driver-provider-azure
+    discoveryPortalReadme: README.azurecontainerupstream-Secrets-Store-CSI-Driver-Provider-Azure-Arc-Helm-Chart---Stable.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/azure/secrets-store/provider-azure-arc-conformance
+    displayName: Secrets Store CSI Driver Provider Azure Arc Conformance
+    description: Secrets Store CSI Driver Provider Azure Arc Conformance
+    supportLink: https://github.com/Azure/secrets-store-csi-driver-provider-azure/issues
+    documentationLink: https://github.com/Azure/secrets-store-csi-driver-provider-azure
+    discoveryPortalReadme: README.azurecontainerupstream-Secrets-Store-CSI-Driver-Provider-Azure-Arc-Conformance.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes-csi/secrets-store/driver
+    displayName: Secrets Store CSI Driver
+    description: Secrets Store CSI Driver
+    supportLink: https://github.com/kubernetes-sigs/secrets-store-csi-driver/issues
+    documentationLink: https://github.com/kubernetes-sigs/secrets-store-csi-driver
+    discoveryPortalReadme: README.azurecontainerupstream-Secrets-Store-CSI-Driver.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.0.16
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/kubernetes-csi/secrets-store/driver-crds
+    displayName: Secrets Store CSI Driver CRDs
+    description: Secrets Store CSI Driver CRDs
+    supportLink: https://github.com/kubernetes-sigs/secrets-store-csi-driver/issues
+    documentationLink: https://github.com/kubernetes-sigs/secrets-store-csi-driver
+    discoveryPortalReadme: README.azurecontainerupstream-Secrets-Store-CSI-Driver-CRDs.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/kubernetes/apiserver-network-proxy/agent
+    displayName: API Server Network Proxy Agent
+    description: API Server Network Proxy Agent
+    supportLink: https://github.com/kubernetes-sigs/apiserver-network-proxy/issues
+    documentationLink: https://github.com/kubernetes-sigs/apiserver-network-proxy
+    discoveryPortalReadme: README.azurecontainerupstream-API-Server-Network-Proxy-Agent.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}\.?\d?$/
+
+  - name: public/oss/kubernetes/apiserver-network-proxy/server
+    displayName: API Server Network Proxy Server
+    description: API Server Network Proxy Server
+    supportLink: https://github.com/kubernetes-sigs/apiserver-network-proxy/issues
+    documentationLink: https://github.com/kubernetes-sigs/apiserver-network-proxy
+    discoveryPortalReadme: README.azurecontainerupstream-API-Server-Network-Proxy-Server.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v0.0.30
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}-hotfix\.\d{8}\.?\d?$/
+
+  - name: public/oss/linkerd/controller
+    displayName: LinkerD Controller
+    description: LinkerD Service Mesh
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 2.8.1
+          - source: 2.10.1
+          - source: 2.11.1
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/linkerd/proxy
+    displayName: LinkerD Proxy
+    description: LinkerD Service Mesh
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-Proxy.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 2.8.1
+          - source: 2.11.1
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+          - source: 2.10.2.3
+          - source: /^\d\.\d{1,2}\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/linkerd/web
+    displayName: LinkerD Web
+    description: LinkerD Service Mesh
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-Web.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 2.8.1
+          - source: 2.10.2
+          - source: 2.11.1
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/linkerd/policy-controller
+    displayName: LinkerD Policy-Controller
+    description: LinkerD Service Mesh
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-Policy-Controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 2.11.1
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/linkerd/cni-plugin
+    displayName: LinkerD CNI-Plugin
+    description: LinkerD Service Mesh
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-CNI-Plugin.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 2.8.1
+          - source: 2.11.1
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+          - source: 2.10.2.3
+          - source: /^\d\.\d{1,2}\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/linkerd/debug
+    displayName: LinkerD Debug
+    description: LinkerD Service Mesh
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-Debug.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 2.8.1
+          - source: 2.11.1
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+          - source: 2.10.2.7
+          - source: /^\d\.\d{1,2}\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/linkerd/cli-bin
+    displayName: LinkerD CLI
+    description: LinkerD Service Mesh
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-CLI.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 2.8.1
+          - source: 2.10.2
+          - source: 2.11.1
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/linkerd/grafana
+    displayName: LinkerD Grafana
+    description: LinkerD Service Mesh
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-Grafana.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 2.8.1
+          - source: 2.10.2
+          - source: 2.11.1
+          - source: /^\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/linkerd/tap
+    displayName: LinkerD Tap
+    description: LinkerD Service Mesh
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-Tap.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/linkerd/metrics-api
+    displayName: LinkerD Metrics-Api
+    description: LinkerD Service Mesh
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-Metrics-Api.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/linkerd/proxy-init
+    displayName: LinkerD Proxy Init
+    description: LinkerD Proxy Init Container
+    supportLink: https://github.com/linkerd/linkerd2/issues
+    documentationLink: https://linkerd.io/2/overview/
+    discoveryPortalReadme: README.azurecontainerupstream-LinkerD-Proxy-Init.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: v1.3.3
+          - source: v1.5.0
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/fluent/fluent-bit
+    displayName: Fluent-bit
+    description: Fluent-bit log aggregator
+    supportLink: https://github.com/fluent/fluent-bit/issues
+    documentationLink: https://docs.fluentbit.io/manual/
+    discoveryPortalReadme: README.azurecontainerupstream-Fluent-bit.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/fluent/fluentd-kubernetes-daemonset-azureblob
+    displayName: Fluentd azureblob
+    description: Fluentd log aggregator for azureblob
+    supportLink: https://github.com/fluent/fluentd-kubernetes-daemonset/issues
+    documentationLink: https://github.com/fluent/fluentd-kubernetes-daemonset
+    discoveryPortalReadme: README.azurecontainerupstream-Fluentd-azureblob.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/openkruise/kruise-manager
+    displayName: Kruise
+    description: Kruise Kubernetes Controllers
+    supportLink: https://github.com/openkruise/kruise/issues
+    documentationLink: https://github.com/openkruise/kruise
+    discoveryPortalReadme: README.azurecontainerupstream-OpenKruise-Kruise-Manager.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/tigera/operator
+    displayName: Tigera
+    description: Tigera Operator for Calico
+    supportLink: https://github.com/tigera/operator/issues
+    documentationLink: https://github.com/tigera/operator
+    discoveryPortalReadme: README.azurecontainerupstream-Tigera.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/azure/kms/keyvault
+    displayName: Azure Key Vault K8s KMS plugin
+    description: Enable etcd data encryption in Kubernetes using Azure Key Vault.
+    supportLink: https://github.com/Azure/kubernetes-kms/issues
+    documentationLink: https://github.com/Azure/kubernetes-kms
+    discoveryPortalReadme: README.azurecontainerupstream-Azure-Key-Vault-K8s-KMS-plugin.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/azure/aad-pod-managed-identity/proxy
+    displayName: AAD Pod Managed Identity Proxy
+    description: AAD Pod Managed Identity Proxy Image
+    supportLink: https://github.com/Azure/aad-pod-managed-identity/issues
+    documentationLink: https://github.com/Azure/aad-pod-managed-identity
+    discoveryPortalReadme: README.azurecontainerupstream-AAD-Pod-Managed-Identity-Proxy.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/azure/aad-pod-managed-identity/proxy-init
+    displayName: AAD Pod Managed Identity Proxy Init
+    description: AAD Pod Managed Identity Proxy Init Image
+    supportLink: https://github.com/Azure/aad-pod-managed-identity/issues
+    documentationLink: https://github.com/Azure/aad-pod-managed-identity
+    discoveryPortalReadme: README.azurecontainerupstream-AAD-Pod-Managed-Identity-Proxy-Init.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/azure/aad-pod-managed-identity/webhook
+    displayName: AAD Pod Managed Identity Webhook
+    description: AAD Pod Managed Identity Webhook Image
+    supportLink: https://github.com/Azure/aad-pod-managed-identity/issues
+    documentationLink: https://github.com/Azure/aad-pod-managed-identity
+    discoveryPortalReadme: README.azurecontainerupstream-AAD-Pod-Managed-Identity-Webhook.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/argo/argo-rollouts
+    displayName: Argo Rollouts
+    description: Argo Rollouts for Percentage Rollout
+    supportLink: https://github.com/argoproj/argo-rollouts/issues
+    documentationLink: https://github.com/argoproj/argo-rollouts
+    discoveryPortalReadme: README.azurecontainerupstream-Argo-Rollouts.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/azure/workload-identity/proxy
+    displayName: Azure AD Workload Identity Proxy
+    description: Azure AD Workload Identity Proxy Image
+    supportLink: https://github.com/Azure/azure-workload-identity/issues
+    documentationLink: https://github.com/Azure/azure-workload-identity
+    discoveryPortalReadme: README.azurecontainerupstream-Azure-AD-Workload-Identity-Proxy.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/azure/workload-identity/proxy-init
+    displayName: Azure AD Workload Identity Proxy Init
+    description: Azure AD Workload Identity Proxy Init Image
+    supportLink: https://github.com/Azure/azure-workload-identity/issues
+    documentationLink: https://github.com/Azure/azure-workload-identity
+    discoveryPortalReadme: README.azurecontainerupstream-Azure-AD-Workload-Identity-Proxy-Init.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/azure/workload-identity/webhook
+    displayName: Azure AD Workload Identity Webhook
+    description: Azure AD Workload Identity Webhook Image
+    supportLink: https://github.com/Azure/azure-workload-identity/issues
+    documentationLink: https://github.com/Azure/azure-workload-identity
+    discoveryPortalReadme: README.azurecontainerupstream-Azure-AD-Workload-Identity-Webhook.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v\d\.\d{1,2}\.\d{1,2}\.?\d?$/
+
+  - name: public/oss/kubernetes/node-problem-detector
+    displayName: Node problem detector
+    description: Node problem detector
+    supportLink: https://github.com/kubernetes/node-problem-detector/issues
+    documentationLink: https://github.com/kubernetes/node-problem-detector
+    discoveryPortalReadme: README.azurecontainerupstream-Node-problem-detector.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/nvidia/dcgm-exporter
+    displayName: DCGM Exporter
+    description: DCGM Exporter
+    supportLink: https://www.github.com/NVIDIA/dcgm-exporter
+    documentationLink: https://www.github.com/NVIDIA/dcgm-exporter
+    discoveryPortalReadme: README.azurecontainerupstream-DCGM-Exporter.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/etcd
+    displayName: Upstream Kubernetes etcd
+    description: Upstream Kubernetes etcd
+    supportLink: https://github.com/kubernetes/kubernetes/tree/master/cluster/images/etcd
+    documentationLink: https://github.com/kubernetes/kubernetes/tree/master/cluster/images/etcd
+    discoveryPortalReadme: README.azurecontainerupstream-Upstream-Kubernetes-etcd.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^\d(\.\d{1}){1,2}-\d{1}$/
+
+  - name: public/oss/kubernetes/windows-pause-image-base
+    displayName: Kubernetes Windows Pause Image Base
+    description: Kubernetes Windows Pause Image Base
+    supportLink: https://github.com/microsoft/windows-pause-image-base
+    documentationLink: https://github.com/microsoft/windows-pause-image-base
+    discoveryPortalReadme: README.azurecontainerupstream-Kubernetes-Windows-Pause-Image-Base.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/stakater/reloader
+    displayName: Stakater Reloader
+    description: Watches changes in ConfigMap and Secret and performs rolling upgrades on pods
+    supportLink: https://github.com/stakater/Reloader/issues
+    documentationLink: https://github.com/stakater/Reloader
+    discoveryPortalReadme: README.azurecontainerupstream-Stakater-Reloader.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,3}$/
+
+  - name: public/oss/jaegertracing/jaeger-agent
+    displayName: Jaegertracing jaeger-agent image
+    description: Jaegertracing jaeger-agent image
+    supportLink: https://github.com/jaegertracing/jaeger
+    documentationLink: https://github.com/jaegertracing/jaeger
+    discoveryPortalReadme: README.azurecontainerupstream-Jaegertracing-jaeger-agent-image.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/jaegertracing/all-in-one
+    displayName: Jaegertracing all-in-one image
+    description: Jaegertracing all-in-one image
+    supportLink: https://github.com/jaegertracing/jaeger
+    documentationLink: https://github.com/jaegertracing/jaeger
+    discoveryPortalReadme: README.azurecontainerupstream-Jaegertracing-all-in-one-image.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/jaegertracing/jaeger-collector
+    displayName: Jaegertracing jaeger-collector image
+    description: Jaegertracing jaeger-collector image
+    supportLink: https://github.com/jaegertracing/jaeger
+    documentationLink: https://github.com/jaegertracing/jaeger
+    discoveryPortalReadme: README.azurecontainerupstream-Jaegertracing-jaeger-collector-image.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/jaegertracing/jaeger-query
+    displayName: Jaegertracing jaeger-query image
+    description: Jaegertracing jaeger-query image
+    supportLink: https://github.com/jaegertracing/jaeger
+    documentationLink: https://github.com/jaegertracing/jaeger
+    discoveryPortalReadme: README.azurecontainerupstream-Jaegertracing-jaeger-query-image.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/grafana/grafana
+    displayName: Grafana image
+    description: Grafana image
+    supportLink: https://github.com/grafana/grafana
+    documentationLink: https://github.com/grafana/grafana
+    discoveryPortalReadme: README.azurecontainerupstream-Grafana-image.portal.md
+    requireAuthForDiscovery: true
+    licenseType: AGPL-3.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/grafana/grafana-image-renderer
+    displayName: Grafana image-renderer image
+    description: Grafana image-renderer image
+    supportLink: https://github.com/grafana/grafana-image-renderer
+    documentationLink: https://github.com/grafana/grafana-image-renderer
+    discoveryPortalReadme: README.azurecontainerupstream-Grafana-image-renderer-image.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/local-volume-provisioner
+    displayName: Kubernetes Local Volume Provisioner
+    description: Kubernetes Local Volume Provisioner
+    supportLink: https://github.com/kubernetes-sigs/sig-storage-local-static-provisioner
+    documentationLink: https://github.com/kubernetes-sigs/sig-storage-local-static-provisioner/tree/master/docs
+    discoveryPortalReadme: README.azurecontainerupstream-Kubernetes-Local-Volume-Provisioner.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kedacore/keda
+    displayName: KEDA Operator
+    description: KEDA Operator
+    documentationLink: https://keda.sh/docs/
+    discoveryPortalReadme: README.azurecontainerupstream-KEDA-Operator.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://keda.sh/img/logos/keda-icon-color.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^\d{1,2}\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kedacore/keda-metrics-apiserver
+    displayName: KEDA Metrics Server
+    description: KEDA Metrics Server
+    documentationLink: https://keda.sh/docs/
+    discoveryPortalReadme: README.azurecontainerupstream-KEDA-Metrics-Server.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://keda.sh/img/logos/keda-icon-color.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^\d{1,2}\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kedacore/keda-admission-webhooks
+    displayName: KEDA Admission Webhooks
+    description: KEDA Admission Webhooks
+    documentationLink: https://keda.sh/docs/
+    discoveryPortalReadme: README.azurecontainerupstream-KEDA-Admission-Webhooks.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://keda.sh/img/logos/keda-icon-color.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^\d{1,2}\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/moby/dockerfile
+    displayName: Dockerfile Buildkit image
+    description: Dockerfile Buildkit image
+    supportLink: https://github.com/moby/buildkit/issues
+    documentationLink: https://github.com/moby/buildkit
+    discoveryPortalReadme: README.azurecontainerupstream-Dockerfile-Buildkit-image.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/moby/buildkit
+    displayName: Buildkit daemon
+    description: Buildkit daemon for use with buildx
+    supportLink: https://github.com/moby/buildkit/issues
+    documentationLink: https://github.com/moby/buildkit
+    discoveryPortalReadme: README.azurecontainerupstream-Buildkit-daemon.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kiwigrid/k8s-sidecar
+    displayName: Kubernetes Sidecar
+    description: Kubernetes sidecar to collect config maps with specified labels
+    supportLink: https://github.com/kiwigrid/k8s-sidecar
+    documentationLink: https://github.com/kiwigrid/k8s-sidecar
+    discoveryPortalReadme: README.azurecontainerupstream-Kubernetes-Sidecar.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes-csi/azurelustre-csi
+    displayName: K8s Azure Lustre CSI Driver
+    description: Azure Lustre CSI driver
+    supportLink: https://github.com/kubernetes-sigs/azurelustre-csi-driver/issues
+    documentationLink: https://github.com/kubernetes-sigs/azurelustre-csi-driver
+    discoveryPortalReadme: README.azurecontainerupstream-K8s-Azure-Lustre-CSI-Driver.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/eraser/eraser
+    displayName: Eraser
+    description: Eraser Worker Image
+    supportLink: https://github.com/Azure/eraser/issues
+    documentationLink: https://github.com/Azure/eraser
+    discoveryPortalReadme: README.azurecontainerupstream-Eraser.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/eraser/remover
+    displayName: Remover
+    description: Eraser Remover Image
+    supportLink: https://github.com/Azure/eraser/issues
+    documentationLink: https://github.com/Azure/eraser
+    discoveryPortalReadme: README.azurecontainerupstream-Remover.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+
+
+  - name: public/oss/eraser/eraser-manager
+    displayName: Eraser Manager
+    description: Eraser Manager Image
+    supportLink: https://github.com/Azure/eraser/issues
+    documentationLink: https://github.com/Azure/eraser
+    discoveryPortalReadme: README.azurecontainerupstream-Eraser-Manager.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/eraser/eraser-trivy-scanner
+    displayName: Eraser Trivy Scanner
+    description: Eraser Trivy Scanner Image
+    supportLink: https://github.com/Azure/eraser/issues
+    documentationLink: https://github.com/Azure/eraser
+    discoveryPortalReadme: README.azurecontainerupstream-Eraser-Trivy-Scanner.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/eraser/collector
+    displayName: Eraser Collector
+    description: Eraser Collector Image
+    supportLink: https://github.com/Azure/eraser/issues
+    documentationLink: https://github.com/Azure/eraser
+    discoveryPortalReadme: README.azurecontainerupstream-Eraser-Collector.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^v?\d\.\d{1,2}\.\d{1,2}$/
+
+  - name: public/oss/kubernetes/windows-host-process-containers-base-image
+    displayName: HostProcess Container base image
+    description: Base image for Windows HostProcess container images
+    supportLink: https://github.com/microsoft/windows-host-process-containers-base-image/issues
+    documentationLink: https://github.com/microsoft/windows-host-process-containers-base-image
+    discoveryPortalReadme: README.azurecontainerupstream-HostProcess-Container-base-image.portal.md
+    requireAuthForDiscovery: true
+    licenseType: MIT
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/cluster-api-azure-controller
+    displayName: Container image for CAPZ controller
+    description: Container image for CAPZ controller
+    supportLink: https://github.com/kubernetes-sigs/cluster-api-provider-azure/issues
+    documentationLink: https://github.com/kubernetes-sigs/cluster-api-provider-azure
+    discoveryPortalReadme: README.azurecontainerupstream-Container-image-for-CAPZ-controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/cluster-api-controller
+    displayName: Container image for CAPI controller
+    description: Container image for CAPI controller
+    supportLink: https://github.com/kubernetes-sigs/cluster-api/issues
+    documentationLink: https://github.com/kubernetes-sigs/cluster-api
+    discoveryPortalReadme: README.azurecontainerupstream-Container-image-for-CAPI-controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/kubeadm-control-plane-controller
+    displayName: Container image for kubeadm control plane controller
+    description: Container image for kubeadm control plane controller
+    supportLink: https://github.com/kubernetes-sigs/cluster-api/issues
+    documentationLink: https://github.com/kubernetes-sigs/cluster-api
+    discoveryPortalReadme: README.azurecontainerupstream-Container-image-for-kubeadm-control-plane-controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/kubernetes/kubeadm-bootstrap-controller
+    displayName: Container image for kubeadm bootstrap controller
+    description: Container image for kubeadm bootstrap controller
+    supportLink: https://github.com/kubernetes-sigs/cluster-api/issues
+    documentationLink: https://github.com/kubernetes-sigs/cluster-api
+    discoveryPortalReadme: README.azurecontainerupstream-Container-image-for-kubeadm-bootstrap-controller.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/deislabs/art/main/deislabs/icon.png
+
+  - name: public/oss/istio/app
+    displayName: Istio App
+    description: Istio App container
+    supportLink: https://github.com/istio/istio/issues
+    documentationLink: https://github.com/istio/istio
+    discoveryPortalReadme: README.azurecontainerupstream-Istio-app.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://istio.io/latest/img/istio-whitelogo-bluebackground-framed.svg
+
+  - name: public/oss/istio/ext-authz
+    displayName: Istio Sample External Auth Server
+    description: Istio Sample External Auth Server container
+    supportLink: https://github.com/istio/istio/issues
+    documentationLink: https://github.com/istio/istio
+    discoveryPortalReadme: README.azurecontainerupstream-Istio-ext-authz.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://istio.io/latest/img/istio-whitelogo-bluebackground-framed.svg
+
+  - name: public/oss/istio/install-cni
+    displayName: Istio CNI
+    description: Istio CNI container
+    supportLink: https://github.com/istio/istio/issues
+    documentationLink: https://github.com/istio/istio
+    discoveryPortalReadme: README.azurecontainerupstream-Istio-install-cni.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://istio.io/latest/img/istio-whitelogo-bluebackground-framed.svg
+
+  - name: public/oss/istio/istioctl
+    displayName: Istioctl CLI
+    description: Istioctl CLI container
+    supportLink: https://github.com/istio/istio/issues
+    documentationLink: https://github.com/istio/istio
+    discoveryPortalReadme: README.azurecontainerupstream-Istio-istioctl.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://istio.io/latest/img/istio-whitelogo-bluebackground-framed.svg
+
+  - name: public/oss/istio/operator
+    displayName: Istio Operator
+    description: Istio Operator container
+    supportLink: https://github.com/istio/istio/issues
+    documentationLink: https://github.com/istio/istio
+    discoveryPortalReadme: README.azurecontainerupstream-Istio-operator.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://istio.io/latest/img/istio-whitelogo-bluebackground-framed.svg
+
+  - name: public/oss/istio/pilot
+    displayName: Istio Control Plane
+    description: Istio Control Plane container
+    supportLink: https://github.com/istio/istio/issues
+    documentationLink: https://github.com/istio/istio
+    discoveryPortalReadme: README.azurecontainerupstream-Istio-pilot.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://istio.io/latest/img/istio-whitelogo-bluebackground-framed.svg
+
+  - name: public/oss/istio/proxyv2
+    displayName: Istio Sidecar & Ingress Controller
+    description: Istio Sidecar & Ingress Controller container
+    supportLink: https://github.com/istio/istio/issues
+    documentationLink: https://github.com/istio/istio
+    discoveryPortalReadme: README.azurecontainerupstream-Istio-proxyv2.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://istio.io/latest/img/istio-whitelogo-bluebackground-framed.svg
+
+  - name: public/oss/helmchart/istio/base
+    displayName: Istio base Helm Chart
+    description: Istio base Helm Chart
+    supportLink: https://github.com/istio/istio/issues
+    documentationLink: https://github.com/istio/istio
+    discoveryPortalReadme: README.azurecontainerupstream-Istio-base.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://istio.io/latest/img/istio-whitelogo-bluebackground-framed.svg
+
+  - name: public/oss/helmchart/istio/istiod
+    displayName: Istio istiod Helm Chart
+    description: Istio istiod Helm Chart
+    supportLink: https://github.com/istio/istio/issues
+    documentationLink: https://github.com/istio/istio
+    discoveryPortalReadme: README.azurecontainerupstream-Istio-istiod.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://istio.io/latest/img/istio-whitelogo-bluebackground-framed.svg
+
+  - name: public/oss/helmchart/istio/gateway
+    displayName: Istio gateway Helm Chart
+    description: Istio gateway Helm Chart
+    supportLink: https://github.com/istio/istio/issues
+    documentationLink: https://github.com/istio/istio
+    discoveryPortalReadme: README.azurecontainerupstream-Istio-gateway.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://istio.io/latest/img/istio-whitelogo-bluebackground-framed.svg
+
+  - name: public/oss/kube-vip/kube-vip
+    displayName: Kubernetes Control Plane Virtual IP and Load-Balancer
+    description: Kubernetes Control Plane Virtual IP and Load-Balancer
+    supportLink: https://github.com/kube-vip/kube-vip/issues
+    documentationLink: https://github.com/kube-vip/kube-vip/issues
+    discoveryPortalReadme: README.azurecontainerupstream-kube-vip.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://raw.githubusercontent.com/kube-vip/kube-vip/main/kube-vip.png
+
+  - name: public/oss/otel/opentelemetry-collector
+    displayName: OpenTelemetry Collector
+    description: OpenTelemetry Collector
+    supportLink: https://github.com/open-telemetry/opentelemetry-collector/issues
+    documentationLink: https://opentelemetry.io/docs/collector/
+    discoveryPortalReadme: README.azurecontainerupstream-opentelemetry-collector.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png
+
+  - name: public/oss/otel/opentelemetry-collector-contrib
+    displayName: OpenTelemetry Collector Contrib
+    description: OpenTelemetry Collector Contrib
+    supportLink: https://github.com/open-telemetry/opentelemetry-collector-contrib/issues
+    documentationLink: https://opentelemetry.io/docs/collector/
+    discoveryPortalReadme: README.azurecontainerupstream-opentelemetry-collector.portal.md
+    requireAuthForDiscovery: true
+    licenseType: Apache-2.0
+    logoFile: logo.svg
+    logoUrl: https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png

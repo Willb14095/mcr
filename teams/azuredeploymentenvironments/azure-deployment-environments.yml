@@ -1,0 +1,38 @@
+version: 2.0
+subscriptionId: aa016da5-017a-4781-8df8-d28a9fd73cd5                                                 
+resourceGroup: devcenter-public-global                                                                    
+registry: devcenterpublicexternal                                                                              
+onboardingNotification: ade-mcr                                                       
+dependencyNotification: ade-mcr                                                      
+
+ownership:                                                                                        
+  securityGroups:                                                                                    
+  - groupName: redmond\TM-AZUREFIDALGO                                                             
+    permissions:                                                                                     
+    - read
+    - write
+
+repos:                                                                                                
+  - name: public/deployment-environments/runners/core                                                            
+    displayName: Azure Deployment Environments Core Runner Image                                                                                                                              
+    description: Core Image used to run deployments via ADE                                                                 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg 
+    supportLink: https://github.com/Azure/deployment-environments/issues                  
+    documentationLink: https://learn.microsoft.com/en-us/azure/deployment-environments/                                                                                                             
+    categories: [Base Images, Application Infrastructure]
+                                                                                               
+  - name: public/deployment-environments/runners/terraform                                                            
+    displayName: Azure Deployment Environments Terraform Runner Image                                                                                                                             
+    description: Image used to run Teraform deployments via ADE                                                                 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg 
+    supportLink: https://github.com/Azure/deployment-environments/issues                 
+    documentationLink: https://learn.microsoft.com/en-us/azure/deployment-environments/                                                                         
+    categories: [Base Images, Application Infrastructure]
+
+  - name: public/deployment-environments/runners/arm                                                            
+    displayName: Azure Deployment Environments ARM Runner Image                                                                                                                             
+    description: Image used to run ARM/Bicep deployments via ADE                                                                 
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg 
+    supportLink: https://github.com/Azure/deployment-environments/issues                 
+    documentationLink: https://learn.microsoft.com/en-us/azure/deployment-environments/                                                                         
+    categories: [Base Images, Application Infrastructure]                                                     

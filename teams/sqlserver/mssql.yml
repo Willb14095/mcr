@@ -1,0 +1,836 @@
+version: 2.0
+subscriptionId: 7ccb4c82-4b82-496a-9c58-87b8b4ced0bc
+resourceGroup: sqlpublicregistry
+registry: sqlpublic
+onboardingNotification: mssqlmcr
+dependencyNotification: mssqlmcr
+
+ownership:  
+  securityGroups:                                                                                    
+    - groupName: redmond\sqlservermcr                                                                     
+      permissions:                                                                                      
+      - read
+      - write
+
+repos:
+  - name: public/mssql/tools
+    displayName: Mssql Tools
+    readme: README.mssql-tools.md
+    description: Official image for Microsoft SQL Server Command Line Tools (sqlcmd/bcp) on Linux in Containers.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://feedback.azure.com/forums/908035-sql-server
+    documentationLink: https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2017
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+ 
+  - name: public/samples/mssql-monitoring-collectd
+    displayName: Samples Mssql Monitoring Collectd
+    readme: READMEmssql-monitoring-collectd.md
+    description: This is a project to get users started on monitoring Microsoft SQL Server on Linux.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/samples/mssql-monitoring-influxdb
+    displayName: Samples Mssql Monitoring Influxdb
+    readme: README.mssql-monitoring-influxdb.md
+    description: This is a project to get users started on monitoring Microsoft SQL Server on Linux.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/samples/ml/mssql-image-classifier
+    displayName: Samples Ml Mssql Image Classifier
+    readme: README.mssql-image-classifier.md
+    description: This is sample project that consumes an app deployed in SQL Server Big Data Cluster CTP 2.1.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/mssql/rhel/ha
+    displayName: Mssql Rhel Ha
+    readme: README.mssql-ha-rhel.md
+    description: Official images for Microsoft SQL Server High Availability on Red Hat Entrprise Linux Containers.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/mssql/ha
+    displayName: Mssql Ha
+    readme: README.mssql-ha.md
+    description: Official images for Microsoft SQL Server High Availability on Linux Containers.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+# SQL Big Data Cluster Docker Images
+
+  - name: public/mssql/bdc/mssql-app-service-proxy
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-control-watchdog
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-controller
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-dns
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-ha-operator
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-ha-supervisor
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-hadoop
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-mleap-serving-runtime
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-mlserver-py-runtime
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-mlserver-r-runtime
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-monitor-collectd
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-monitor-elasticsearch
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-monitor-fluentbit
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-monitor-grafana
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-monitor-influxdb
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-monitor-kibana
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-monitor-telegraf
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-security-domainctl
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-security-knox
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-security-support
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-server
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-server-controller
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-server-data
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+  - name: public/mssql/bdc/mssql-server-ha
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+    
+  - name: public/mssql/bdc/mssql-service-proxy
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+  
+  - name: public/mssql/bdc/mssql-ssis-app-runtime
+    displayName: Microsoft SQL Server Big Data Cluster
+    description: Official images for Microsoft SQL Server Big Data Cluster for Docker Engine.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/sql19-forum
+    documentationLink: https://docs.microsoft.com/en-us/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions
+
+# Azure Arc enabled Data Services - Generally Available Docker Images
+
+  - name: public/arcdata/arc-bootstrapper
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-dns
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-postgres-11
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-postgres-12
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-postgres-14
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-postgresql-agent
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-control-watchdog
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-controller
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/arc-controller-db
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-sqlmi
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-monitor-collectd
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-monitor-elasticsearch
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/arc-monitor-opensearch
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/arc-monitor-opensearch-dashboards
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-monitor-fluentbit
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/arc-kafka
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-monitor-grafana
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-monitor-influxdb
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-monitor-kibana
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-monitor-telegraf
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-monitor-opentelemetry-collector
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/arc-security-support
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-server-controller
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-service-proxy
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/arcdataservices-extension
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/mssql-ha-operator
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/arc-ha-operator
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/arc-ha-orchestrator
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/arc-ha-supervisor
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/arc-ci-launcher
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/arc-sb-plugin
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/azure-data/cli
+    description: Offical image for Azure Data CLI
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+# Azure Arc enabled Data Services - Preview Docker Images
+
+  - name: public/arcdata/preview/arc-bootstrapper
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-dns
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-postgres-11
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-postgres-12
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/preview/arc-postgres-14
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-postgresql-agent
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-control-watchdog
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-controller
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/preview/arc-controller-db
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-sqlmi
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-monitor-collectd
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-monitor-elasticsearch
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/preview/arc-monitor-opensearch
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/preview/arc-monitor-opensearch-dashboards
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-monitor-fluentbit
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/preview/arc-kafka
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-monitor-grafana
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-monitor-influxdb
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-monitor-kibana
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-monitor-telegraf
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-monitor-opentelemetry-collector
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-security-support
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-server-controller
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-service-proxy
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/preview/arcdataservices-extension
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/mssql-ha-operator
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/preview/arc-ha-operator
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/preview/arc-ha-orchestrator
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/preview/arc-ha-supervisor
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/preview/arc-ci-launcher
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/preview/arc-sb-plugin
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/azure-data/preview/cli
+    description: Offical image for Azure Data CLI
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+# Azure Arc enabled Data Services - Test Docker Images
+
+  - name: public/arcdata/test/arc-bootstrapper
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-dns
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-postgres-11
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-postgres-12
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arc-postgres-14
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arc-postgresql-agent
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-control-watchdog
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-controller
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arc-controller-db
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-sqlmi
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-monitor-collectd
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-monitor-elasticsearch
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arc-monitor-opensearch
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arc-monitor-opensearch-dashboards
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-monitor-fluentbit
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arc-kafka
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-monitor-grafana
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-monitor-influxdb
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-monitor-kibana
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-monitor-telegraf
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-monitor-opentelemetry-collector
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-security-support
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-server-controller
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-service-proxy
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arcdataservices-extension
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/mssql-ha-operator
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arc-ha-operator
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arc-ha-orchestrator
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arc-ha-supervisor
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/arcdata/test/arc-ci-launcher
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+
+  - name: public/arcdata/test/arc-sb-plugin
+    description: Official images for Azure Arc enabled Data Services
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+  - name: public/azure-data/test/cli
+    description: Offical image for Azure Data CLI
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://aka.ms/azurearcdata-docs
+    documentationLink: https://aka.ms/azurearcdata-docs
+    
+    

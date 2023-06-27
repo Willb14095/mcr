@@ -1,0 +1,103 @@
+version: 2.0
+subscriptionId: ad203158-bc5d-4e72-b764-2607833a71dc
+resourceGroup: model-management
+registry: mmsint
+onboardingNotification: mms-devs
+dependencyNotification: mms-devs
+
+
+ownership:
+  securityGroups:
+  - groupName: redmond\amlinferenceimages
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azureml-aci-frontend
+    displayName: Azureml Aci Frontend
+    description: No Description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 20210908.1
+          - source: ^\d{8}
+  
+  - name: public/azureml/aci-init-container
+    displayName: Azureml ACI Init Container
+    readme: README.aci-init-container.md
+    description: Azure Machine Learning Init container for ACI model deployments
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 20211118
+          - source: ^\d{8}
+        
+  - name: public/azureml-profiling-loadgenerator
+    displayName: Azureml Profiling LoadGenerator
+    description: No Description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/azureml/dependency-unpacker
+    displayName: Azureml Dependency Unpacker
+    readme: README.azureml-dependency-unpacker.md
+    description: Azure Machine Learning unpacking script for volume mounted dependencies
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 20210714
+          - source: ^\d{8}
+    
+  - name: public/azureml/hostpath-cleaner
+    displayName: Azureml HostPath Cleaner
+    readme: README.azureml-hostpath-cleaner.md
+    description: Azure Machine Learning stateless node hostpath cleaner for unpacked dependencies
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 20210924
+          - source: ^\d{8}
+
+  - name: unlisted/azureml/inference-cert-init-container
+    displayName: Azureml Inference Cert Init 
+    licenseType: MIT
+    readme: README.cert-init-container.md
+    description: Azure Machine Learning Inference cert infrastructure internal use
+    logoFile: i_machine-learning.svg
+    logoUrl: https://docs.microsoft.com/en-us/azure/machine-learning/media/index/i_machine-learning.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: 20220524
+          - source: ^\d{8}

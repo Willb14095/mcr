@@ -1,0 +1,29 @@
+version: 2.0
+subscriptionId: 203dfa53-bfa1-47c6-945d-16119dff147e
+resourceGroup: amss-rp-shared
+registry: ascprodacrglobalrp
+onboardingNotification: spring-dev-team
+dependencyNotification: spring-dev-team
+
+ownership:
+  securityGroups:
+    - groupName: fareast\amssst
+      permissions:
+        - read
+        - write
+
+repos:
+  - name: unlisted/azurespringapps/helmchart/springboot-discovery-controller
+    displayName: SpringBoot discovery controller helm chart
+    description: Helm chart to deploy SpringBoot discovery controller
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/images/springboot-discovery-controller
+    displayName: SpringBoot discovery controller image
+    description: Image to run SpringBoot discovery controller
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: unlisted/azurespringapps/images/springboot-discovery-batch
+    displayName: SpringBoot discovery batch job image
+    description: Image to run SpringBoot batch job
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg

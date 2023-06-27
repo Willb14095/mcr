@@ -1,0 +1,28 @@
+version: 2.1
+subscriptionId: 68397ef5-9754-46e7-9572-9b15d12367f1
+resourceGroup: msgraph-public-container-images
+registry: msgraphprod
+onboardingNotification: graphsdkpub
+dependencyNotification: graphsdkpub
+contactEmail: graphsdkpub@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\graphsdkpub
+    permissions:
+    - read
+    - write
+repos:
+  - name: public/microsoftgraph/powershell
+    displayName: Microsoft Graph PowerShell
+    readme: README-powershell.md
+    discoveryPortalReadme: README-powershell.portal.md
+    description: Contains of a set of commands for managing Microsoft Graph recourses directly from PowerShell.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    logoFile: powershell_logo_64.svg
+    supportLink: https://github.com/microsoftgraph/msgraph-sdk-powershell/issues
+    documentationLink: https://docs.microsoft.com/powershell/microsoftgraph/get-started
+    licenseType: MIT
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

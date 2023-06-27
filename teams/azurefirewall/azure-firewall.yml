@@ -1,0 +1,40 @@
+version: 2.0
+subscriptionId: 4eee2378-1f2e-4085-bf0e-31dd826ee663
+resourceGroup: afec-acr-rg
+registry: afecacr
+onboardingNotification: afec
+dependencyNotification: afec
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-BRKT-22822
+    permissions:
+    - read
+    - write
+
+repos:
+
+  - name: public/azfw/afec
+    displayName: Azure Firewall Egress Controller
+    description: Repository for Azure Firewall Egress Controller Docker Images
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: public/azfw/afec-staging
+    displayName: Azure Firewall Egress Controller Staging
+    description: Repository for Azure Firewall Egress Controller Docker Images in Staging Environment
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: public/azfw/helmchart/afec
+    displayName: Azure Firewall Egress Controller Helm Chart
+    description: Repository for Azure Firewall Egress Controller Helm Charts
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  - name: public/azfw/helmchart/afec-staging
+    displayName: Azure Firewall Egress Controller Helm Chart Staging
+    description: Repo for Azure Firewall Egress Controller Helm Charts in Staging Environment
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

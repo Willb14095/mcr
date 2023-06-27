@@ -1,0 +1,97 @@
+version: 2.1
+subscriptionId: 3d88231f-19c3-4721-8c44-49e560266fb6
+resourceGroup: playwright-resource-group
+registry: playwright
+onboardingNotification: playwright-team-dg
+dependencyNotification: playwright-team-dg
+disableOnboardingNotifications: true
+contactEmail: playwright-team-dg@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\playwright-team-sg
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: Playwright for Docker
+  shortDescription: Product family for all official Playwright Docker images
+  readMe: README.product-family.md
+  logoUrl: https://raw.githubusercontent.com/microsoft/playwright.dev/main/static/img/playwright-logo.svg
+  supportLink: https://github.com/microsoft/playwright/issues
+  documentationLink: https://playwright.dev/docs/docker
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+
+repos:
+  - name: public/playwright
+    displayName: Playwright
+    readme: README.playwright.md
+    discoveryPortalReadme: README.playwright.portal.md
+    description: Docker image to run Playwright with Node.js
+    logoUrl: https://raw.githubusercontent.com/microsoft/playwright.dev/main/static/img/playwright-logo.svg
+    logoFile: playwright-logo.svg
+    supportLink: https://github.com/microsoft/playwright/issues
+    documentationLink: https://playwright.dev/docs/docker
+    licenseType: Apache-2.0
+    licenseUrl: https://github.com/microsoft/playwright/blob/main/LICENSE
+    projectWebsite: https://playwright.dev/
+    projectRepositoryUrl: https://github.com/microsoft/playwright
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/playwright/java
+    displayName: Playwright for Java
+    readme: README.playwright-java.md
+    discoveryPortalReadme: README.playwright-java.portal.md
+    description: Docker image to run Playwright for Java
+    logoUrl: https://raw.githubusercontent.com/microsoft/playwright.dev/main/static/img/playwright-logo.svg
+    logoFile: playwright-logo.svg
+    supportLink: https://github.com/microsoft/playwright-java/issues
+    documentationLink: https://playwright.dev/java/docs/docker
+    licenseType: Apache-2.0
+    licenseUrl: https://github.com/microsoft/playwright-java/blob/main/LICENSE
+    projectWebsite: https://playwright.dev/java/
+    projectRepositoryUrl: https://github.com/microsoft/playwright-java
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/playwright/python
+    displayName: Playwright for Python
+    readme: README.playwright-python.md
+    discoveryPortalReadme: README.playwright-python.portal.md
+    description: Docker image to run Playwright for Python
+    logoUrl: https://raw.githubusercontent.com/microsoft/playwright.dev/main/static/img/playwright-logo.svg
+    logoFile: playwright-logo.svg
+    supportLink: https://github.com/microsoft/playwright-python/issues
+    documentationLink: https://playwright.dev/python/docs/docker
+    licenseType: Apache-2.0
+    licenseUrl: https://github.com/microsoft/playwright-python/blob/main/LICENSE
+    projectWebsite: https://playwright.dev/python/
+    projectRepositoryUrl: https://github.com/microsoft/playwright-python
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/playwright/dotnet
+    displayName: Playwright for .NET
+    readme: README.playwright-dotnet.md
+    discoveryPortalReadme: README.playwright-dotnet.portal.md
+    description: Docker image to run Playwright for .NET
+    logoUrl: https://raw.githubusercontent.com/microsoft/playwright.dev/main/static/img/playwright-logo.svg
+    logoFile: playwright-logo.svg
+    supportLink: https://github.com/microsoft/playwright-dotnet/issues
+    documentationLink: https://playwright.dev/dotnet/docs/docker
+    licenseType: MIT
+    licenseUrl: https://github.com/microsoft/playwright-dotnet/blob/main/LICENSE
+    projectWebsite: https://playwright.dev/dotnet/
+    projectRepositoryUrl: https://github.com/microsoft/playwright-dotnet
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true

@@ -1,0 +1,55 @@
+version: 2.0
+subscriptionId: 6c6683e9-e5fe-4038-8519-ce6ebec2ba15
+resourceGroup: vienna-eastus
+registry: azuremlmcr
+onboardingNotification: mir_mcr_onboarding
+dependencyNotification: mir_mcr_dependency
+contactEmail: mir-vmagent@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: fareast\mir_mcr_contributor
+    permissions:
+    - read
+    - write
+  - groupName: fareast\mirbj
+    permissions:
+    - read
+
+repos:
+  - name: public/azureml/mir/mir-vmagent
+    displayName: MIR VM Agent
+    description: VMAgent is the agent running on VM instance.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/azureml/mir/mir-xdsproxyserver
+    displayName: MIR XDS Proxy Server
+    description: Proxy server on vm for aml compute xds server.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/azureml/mir/mir-imagefetcher
+    displayName: MIR Image Fetcher
+    description: Image fetcher pull customer's images.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/azureml/mir/mir-storageinitializer
+    displayName: MIR Storage Initializer
+    description: Init container used for downloading user models.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/azureml/mir/mir-mdsd-cert-updater
+    displayName: MIR MDSD Certificate Updater
+    description: The updater will periodically fetch new certificate for mdsd.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/azureml/mir/mir-admin
+    displayName: MIR Admin
+    description: MIR admin container, used for admin operation like tailing logs.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/azureml/mir/mir-mdc
+    displayName: MIR Model Data Collector
+    description: Model Data Collector collects user's model input and output.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/azureml/mir/mir-cmp
+    displayName: MIR Content Moderation Proxy
+    description: CMP connect RAI(Response AI) to validate both request and response of user model.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  - name: public/azureml/mir/mir-filesyncinitializer
+    displayName: MIR File Sync Initializer
+    description: MIR filesync init container, used for peer-to-peer file sync initialization.
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg

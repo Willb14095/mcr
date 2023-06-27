@@ -1,0 +1,33 @@
+version: 2.1
+subscriptionId: a18897a6-7e44-457d-9260-f2854c0aca42
+resourceGroup: azdev-publishing
+registry: azdevmcrpublish
+onboardingNotification: azdevmcr
+dependencyNotification: azdevmcr
+contactEmail: azdevmcr@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\azdcontainerpublish
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azure-dev-cli-apps
+    displayName: Azure Developer CLI with Apps
+    licenseType: MIT
+    description: CLI for creating, verifying, deploying, and scaling applications on Azure
+    logoFile: azure-dev.svg
+    logoUrl: https://azure-dev.azureedge.net/azd/assets/azure-dev.svg
+    documentationLink: https://github.com/Azure/azure-dev/blob/main/README.md
+    
+    # MAR discovery portal README file in # Docker Hub Syndicated README file in https://github.com/microsoft/mcrdocs
+    discoveryPortalReadme: README.azure-dev-cli-apps.portal.md
+      
+    # Docker Hub Syndicated README file in https://github.com/microsoft/mcrdocs
+    readme: README.azure-dev-cli-apps.dockerhub.md
+
+    syndications: 
+      - type: dockerhub
+        contentUpdate: true

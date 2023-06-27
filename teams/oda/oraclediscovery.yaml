@@ -1,0 +1,29 @@
+version: 2.0
+subscriptionId: 1662310e-f830-4e7e-959a-85c2ba316de6
+resourceGroup: rg-oda-preprod-001
+registry: crodaeus2preprod001
+onboardingNotification: ODAMCRNotification
+dependencyNotification: ODAMCRNotification
+
+ownership:
+  securityGroups:
+    - groupName: fareast\ApolloModernization
+      permissions:
+        - read
+        - write
+
+repos:
+  - name: unlisted/oda/image/oraclediscoveryoperator
+    displayName: Oracle Discovery Operator image
+    description: Image to Oracle Discovery operator(OCI Artifact type = Container images)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    
+  - name: unlisted/oda/image/oraclediscoverywebservice
+    displayName: Oracle Discovery Webservice image
+    description: Image to Oracle Discovery operator(OCI Artifact type = Container images)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    
+  - name: unlisted/oda/helm/oraclediscovery
+    displayName: Oracle Discovery Operator and  Webservice helm chart
+    description: Helm chart for Oracle Discovery Operator(OCI Artifact type = HELM charts)
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg

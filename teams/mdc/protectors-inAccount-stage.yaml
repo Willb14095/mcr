@@ -1,0 +1,22 @@
+version: 2.0
+subscriptionId: ee27420c-7ad4-48f5-ab98-70bdd40860cb
+resourceGroup: rome-inaccount-stg-rg
+registry: marinaccountstgacr
+onboardingNotification: mdcinaccountplatform@microsoft.com
+dependencyNotification: mdcinaccountplatform@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: middleeast\MDCINACCOUNTPLATFORM
+    permissions:
+    - read
+    - write
+
+repos:
+  # InAaccount Manager
+  - name: public/mdc/stage/inaccount-infra
+    displayName: MDC InAccount Infra
+    description: Microsoft Defender for Cloud InAccount Project - Infra images and helm charts STG MAR
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

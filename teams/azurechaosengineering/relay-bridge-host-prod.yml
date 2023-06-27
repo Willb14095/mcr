@@ -1,0 +1,22 @@
+version: 2.0
+subscriptionId: e8cb5807-80d2-45b6-a67f-476205318383
+resourceGroup: rg-chaos-global
+registry: chaosrpprod
+onboardingNotification: squalldri
+dependencyNotification: squalldri
+
+ownership:
+  securityGroups:
+  - groupName: redmond\tm-azurechaosengineering
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azure-chaos-studio/relay-bridge-host
+    displayName: Relay Bridge Host Production Image
+    # readme: README.sampleimage.md
+    # description: A short description
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    # supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    # documentationLink: https://aka.ms/containers

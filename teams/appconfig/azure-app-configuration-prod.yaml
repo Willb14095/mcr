@@ -1,0 +1,21 @@
+version: 2.0
+subscriptionId: ecf2fe63-9ecb-41eb-a9ca-5c1731e70ab0
+resourceGroup: Prod-ArtifactPublish-ACR
+registry: azcfgacrproduction
+onboardingNotification: appcfgmar
+dependencyNotification: appcfgmar
+
+ownership:
+  securityGroups:
+  - groupName: redmond\appcmar
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azure-app-configuration/helmchart/kubernetes-provider
+    displayName: App Configuration Kubernetes Provider Helm Chart
+    description: Helm chart for the Kubernetes provider of Azure App Configuration
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://github.com/Azure/AppConfiguration/issues
+    documentationLink: https://aka.ms/azureappconfiguration

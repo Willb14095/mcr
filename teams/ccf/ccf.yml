@@ -1,0 +1,63 @@
+version: 2.1
+subscriptionId: f482af20-c550-4fa8-84f4-75ce2e2753c9
+resourceGroup: ccf-containers
+registry: ccfmsrc
+onboardingNotification: CCF-Sec@microsoft.com
+dependencyNotification: CCF-Sec@microsoft.com
+contactEmail: CCF-Sec@microsoft.com
+
+ownership:
+  securityGroups:
+    - groupName: europe\CCF-SEC
+      permissions:
+        - read
+        - write
+
+repos:
+  - name: public/ccf/app/run
+    displayName: CCF Runtime Image
+    description: Image to run CCF applications
+    readme: README.md
+    discoveryPortalReadme: README.portal.md
+    logoUrl: https://raw.githubusercontent.com/microsoft/CCF/main/doc/_static/ccf.svg
+    logoFile: ccf.svg
+    supportLink: https://github.com/microsoft/CCF/issues
+    documentationLink: https://microsoft.github.io/CCF
+    licenseType: Apache-2.0
+    projectWebsite: https://ccf.dev
+    projectRepositoryUrl: https://github.com/microsoft/CCF
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/ccf/app/run-js
+    displayName: CCF JavaScript Runtime Image
+    description: Image to run JavaScript/TypeScript CCF applications
+    readme: README.md
+    discoveryPortalReadme: README.portal.md
+    logoUrl: https://raw.githubusercontent.com/microsoft/CCF/main/doc/_static/ccf.svg
+    logoFile: ccf.svg
+    supportLink: https://github.com/microsoft/CCF/issues
+    documentationLink: https://microsoft.github.io/CCF
+    licenseType: Apache-2.0
+    projectWebsite: https://ccf.dev
+    projectRepositoryUrl: https://github.com/microsoft/CCF
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/ccf/app/dev
+    displayName: CCF Developer Image
+    description: Developer image to build CCF applications
+    readme: README.md
+    discoveryPortalReadme: README.portal.md
+    logoUrl: https://raw.githubusercontent.com/microsoft/CCF/main/doc/_static/ccf.svg
+    logoFile: ccf.svg
+    supportLink: https://github.com/microsoft/CCF/issues
+    documentationLink: https://microsoft.github.io/CCF
+    licenseType: Apache-2.0
+    projectWebsite: https://ccf.dev
+    projectRepositoryUrl: https://github.com/microsoft/CCF
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

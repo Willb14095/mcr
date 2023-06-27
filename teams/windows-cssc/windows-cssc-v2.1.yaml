@@ -1,0 +1,150 @@
+version: 2.1
+subscriptionId: ed397ee3-9d34-46cf-815d-7e3e24c0e116
+resourceGroup: wincssc-rg
+registry: wincssc
+onboardingNotification: WinCSSC
+dependencyNotification: WinCSSC
+contactEmail: wincssc@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\WinCSSC-Onboarding
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/windows-cssc/python3.7.2nanoserver
+    displayName: Nano Server base image with Python 3.7.2
+    discoveryPortalReadme: README.python3.7.2nanoserver.portal.md
+    description: The Nano Server base image with python 3.7.2, pip 22.1.2, and setuptools 58.1.0
+    readme: README.python3.7.2nanoserver.md
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Windows-Containers/issues
+    documentationLink: https://aka.ms/containers
+    logoFile: Microsoft_logo.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS#LicenseModel
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/windows-cssc/python3.7.2servercore
+    displayName: Server Core base image with Python 3.7.2
+    discoveryPortalReadme: README.python3.7.2servercore.portal.md
+    description: The Server Core base image with python 3.7.2, pip 22.1.2, and setuptools 58.1.0
+    readme: README.python3.7.2servercore.md
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Windows-Containers/issues
+    documentationLink: https://aka.ms/containers
+    logoFile: Microsoft_logo.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS#LicenseModel
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/windows-cssc/python3.7.2server
+    displayName: Server base image with Python 3.7.2
+    discoveryPortalReadme: README.python3.7.2server.portal.md
+    description: The Server base image with python 3.7.2, pip 22.1.2, and setuptools 58.1.0
+    readme: README.python3.7.2server.md
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Windows-Containers/issues
+    documentationLink: https://aka.ms/containers
+    logoFile: Microsoft_logo.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS#LicenseModel
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/windows-cssc/python3.7.2windows
+    displayName: Windows base image with Python 3.7.2
+    discoveryPortalReadme: README.python3.7.2windows.portal.md
+    description: The Windows base image with python 3.7.2, pip 22.1.2, and setuptools 58.1.0
+    readme: README.python3.7.2windows.md
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Windows-Containers/issues
+    documentationLink: https://aka.ms/containers
+    logoFile: Microsoft_logo.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS#LicenseModel
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/windows-cssc/python3.7nanoserver
+    displayName: Nano Server base image with Python 3.7.17
+    discoveryPortalReadme: README.python3.7nanoserver.portal.md
+    description: The Nano Server base image with python 3.7.17, pip 23.1.2, and setuptools 58.1.0
+    readme: README.python3.7nanoserver.md
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Windows-Containers/issues
+    documentationLink: https://aka.ms/containers
+    logoFile: Microsoft_logo.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS#LicenseModel
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/windows-cssc/python3.7servercore
+    displayName: Server Core base image with Python 3.7.17
+    discoveryPortalReadme: README.python3.7servercore.portal.md
+    description: The Server Core base image with python 3.7.17, pip 23.1.2, and setuptools 58.1.0
+    readme: README.python3.7servercore.md
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Windows-Containers/issues
+    documentationLink: https://aka.ms/containers
+    logoFile: Microsoft_logo.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS#LicenseModel
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/windows-cssc/python3.7server
+    displayName: Server base image with Python 3.7.17
+    discoveryPortalReadme: README.python3.7server.portal.md
+    description: The Server base image with python 3.7.17, pip 23.1.2, and setuptools 58.1.0
+    readme: README.python3.7server.md
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Windows-Containers/issues
+    documentationLink: https://aka.ms/containers
+    logoFile: Microsoft_logo.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS#LicenseModel
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/windows-cssc/python3.7windows
+    displayName: Windows base image with Python 3.7.17
+    discoveryPortalReadme: README.python3.7windows.portal.md
+    description: The Windows base image with python 3.7.17, pip 23.1.2, and setuptools 58.1.0
+    readme: README.python3.7windows.md
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Windows-Containers/issues
+    documentationLink: https://aka.ms/containers
+    logoFile: Microsoft_logo.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS#LicenseModel
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/windows-cssc/python
+    displayName: Windows base image with Python
+    discoveryPortalReadme: README.python.portal.md
+    description: The Windows base image with python
+    readme: README.python.md
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://github.com/microsoft/Windows-Containers/issues
+    documentationLink: https://aka.ms/containers
+    logoFile: Microsoft_logo.svg
+    licenseType: Other
+    licenseUrl: https://www.microsoft.com/licensing/terms/productoffering/WindowsServerStandardDatacenterEssentials/EAEAS#LicenseModel
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

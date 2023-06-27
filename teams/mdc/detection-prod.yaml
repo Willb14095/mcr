@@ -1,0 +1,182 @@
+version: 2.0
+subscriptionId: 2cda8d31-5571-45ac-b137-0c8e6637dce4
+resourceGroup: AzureDefender-MCR-Prod
+registry: azuredefendermcrprod                                                                        # REQUIRED. The private ACR where the container image lives
+onboardingNotification: ascdetectionmcrnotf                                                           # REQUIRED. An @microsoft.com distribution group for onboarding notifications that include image scanning results. Can be the same DG used for dependencyNotification.
+
+ownership:
+  securityGroups:
+  - groupName: middleeast\romedetectioneng
+    permissions:
+    - read
+    - write
+
+repos:
+  # Arc Helm chart repo - eu
+  - name: public/mdc/stable/arc-extension-eu
+    displayName: MDC Arc Extension
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - small regions
+  - name: public/mdc/stable/arc-extension-small-regions
+    displayName: MDC Arc Extension (Small Regions)
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - us
+  - name: public/mdc/stable/arc-extension-us
+    displayName: MDC Arc Extension (Small Regions)
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - canary
+  - name: public/mdc/stable/arc-extension-canary
+    displayName: MDC Arc Extension - Canary
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - west europe
+  - name: public/mdc/stable/arc-extension-weu
+    displayName: MDC Arc Extension - West Europe
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - north europe
+  - name: public/mdc/stable/arc-extension-neu
+    displayName: MDC Arc Extension - North Europe
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - east us
+  - name: public/mdc/stable/arc-extension-eus
+    displayName: MDC Arc Extension - East US
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - west us 2
+  - name: public/mdc/stable/arc-extension-wus2
+    displayName: MDC Arc Extension - West US 2
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - central us
+  - name: public/mdc/stable/arc-extension-cus
+    displayName: MDC Arc Extension - Central US
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - fairfax
+  - name: public/mdc/stable/arc-extension-ffx
+    displayName: MDC Arc Extension (Fairfax)
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Arc Helm chart repo - mooncake
+  - name: public/mdc/stable/arc-extension-mc
+    displayName: MDC Arc Extension (Mooncake)
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud cluster state collector
+  - name: public/mdc/stable/cluster-state-collector
+    displayName: MDC Cluster State Collector Agent for K8S
+    description: Microsoft Defender for Cloud Cluster State Collector Agent for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud low level collector
+  - name: public/mdc/stable/low-level-collector
+    displayName: MDC Low Level Collector Agent for K8S
+    description: Microsoft Defender for Cloud Low Level Collector Agent for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud low level collector init container
+  - name: public/mdc/stable/low-level-init
+    displayName: MDC Low Level Init for K8S
+    description: Microsoft Defender for Cloud Low Level Init for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud sysdig
+  - name: public/mdc/stable/sysdig
+    displayName: MDC Sysdig CLI
+    description: Microsoft Defender for Cloud Sysdig CLI
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud pod collector
+  - name: public/mdc/stable/pod-collector
+    displayName: MDC Pod Collector Agent for K8S
+    description: Microsoft Defender for Cloud Pod Collector Agent for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud Publisher Agent 
+  - name: public/mdc/stable/security-publisher
+    displayName: MDC Security Publisher Agent for K8S
+    description: Microsoft Defender for Cloud Security Publisher Agent for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Audit Logs Enabler
+  - name: public/mdc/stable/audit-logs-enabler
+    displayName: MDC Audit logs enabler for K8S
+    description: Microsoft Defender for Cloud Audit logs enabler for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud Old File Cleaner
+  - name: public/mdc/stable/old-file-cleaner
+    displayName: MDC File Cleaner for K8S
+    description: Microsoft Defender for Cloud File Cleaner for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Kernel Headers Enabler
+  - name: public/mdc/stable/kernel-headers-enabler
+    displayName: MDC kernel headers enabler for K8S
+    description: Microsoft Defender for Cloud kernel headers enabler for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud In Cluster Defense Helm chart repo
+  - name: public/mdc/stable/in-cluster-defense-helm
+    displayName: Microsoft Defender In Cluster Defense for K8S Helm Repo
+    description: Microsoft Defender In Cluster Defense for K8S Helm Repo
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud In Cluster Defense
+  - name: public/mdc/stable/in-cluster-defense
+    displayName: Microsoft Defender In Cluster Defense for K8S
+    description: Microsoft Defender In Cluster Defense for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud In Cluster Defense - Redis Cache
+  - name: public/mdc/stable/in-cluster-defense-redis
+    displayName: Microsoft Defender In Cluster Defense for K8S Redis Cache
+    description: Microsoft Defender In Cluster Defense for K8S Redis Cache
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Multi Cloud Container VA - Analyzer
+  - name: public/mdc/stable/multicloud-containerva-analyzer
+    displayName: Multi Cloud Container VA Analyzer - Stable
+    description: Multi Cloud Container VA Analyzer - Stable
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

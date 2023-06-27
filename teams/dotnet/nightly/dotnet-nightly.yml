@@ -1,0 +1,171 @@
+version: 2.1
+subscriptionId: 941d4baa-5ef2-462e-b4b1-505791294610
+resourceGroup: DotnetContainers
+registry: dotnetdocker
+onboardingNotification: dotnetdocker-onboard
+dependencyNotification: dotnetdocker-deps
+contactEmail: netcontainers@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\netcontainers
+    permissions:
+    - read
+    - write
+
+repos:
+- name: internal/private/dotnet/nightly/aspnet
+  displayName: ASP.NET Core Runtime (Internal)
+  readme: README.aspnetinternal.md
+  description: Internal images for the ASP.NET Core runtime
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+
+- name: public/dotnet/nightly/aspnet
+  displayName: ASP.NET Core Runtime (Preview)
+  readme: README.aspnet.md
+  discoveryPortalReadme: README.aspnet.portal.md
+  licenseType: MIT
+  description: Preview images for the ASP.NET Core runtime
+  projectWebsite: https://dotnet.microsoft.com
+  projectRepositoryUrl: https://github.com/dotnet/dotnet-docker
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  logoFile: dotnet-logo.svg
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/
+  categories: [Application Frameworks]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: internal/private/dotnet/nightly/monitor
+  displayName: .NET Monitor (Internal)
+  readme: README.monitorinternal.md
+  description: Internal images for the .NET Monitor tool
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+
+- name: public/dotnet/nightly/monitor
+  displayName: .NET Monitor (Preview)
+  readme: README.monitor.md
+  discoveryPortalReadme: README.monitor.portal.md
+  licenseType: MIT
+  description: Preview images for the .NET Monitor tool
+  projectWebsite: https://dotnet.microsoft.com
+  projectRepositoryUrl: https://github.com/dotnet/dotnet-docker
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  logoFile: dotnet-logo.svg
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/
+  categories: [Monitoring]
+  architectures: [x86-64]
+  operatingSystems: [Linux]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: internal/private/dotnet/nightly/monitor/base
+  displayName: .NET Monitor Base (Internal)
+  readme: README.monitorbaseinternal.md
+  description: Internal images for the .NET Monitor Base installation
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+
+- name: public/dotnet/nightly/monitor/base
+  displayName: .NET Monitor Base (Preview)
+  readme: README.monitor-base.md
+  discoveryPortalReadme: README.monitor-base.portal.md
+  licenseType: MIT
+  description: Preview images for the .NET Monitor Base installation
+  projectWebsite: https://dotnet.microsoft.com
+  projectRepositoryUrl: https://github.com/dotnet/dotnet-docker
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  logoFile: dotnet-logo.svg
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/
+  categories: [Monitoring]
+  architectures: [x86-64]
+  operatingSystems: [Linux]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: internal/private/dotnet/nightly/runtime
+  displayName: .NET Runtime (Internal)
+  readme: README.runtimeinternal.md
+  description: Internal images for the .NET runtime
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+
+- name: public/dotnet/nightly/runtime
+  displayName: .NET Runtime (Preview)
+  readme: README.runtime.md
+  discoveryPortalReadme: README.runtime.portal.md
+  licenseType: MIT
+  description: Preview images for the .NET runtime
+  projectWebsite: https://dotnet.microsoft.com
+  projectRepositoryUrl: https://github.com/dotnet/dotnet-docker
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  logoFile: dotnet-logo.svg
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/
+  categories: [Application Frameworks]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: internal/private/dotnet/nightly/runtime-deps
+  displayName: .NET Runtime Dependencies (Internal)
+  readme: README.runtime-depsinternal.md
+  description: Internal images for the .NET runtime dependencies
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+
+- name: public/dotnet/nightly/runtime-deps
+  displayName: .NET Runtime Dependencies (Preview)
+  readme: README.runtime-deps.md
+  discoveryPortalReadme: README.runtime-deps.portal.md
+  licenseType: MIT
+  description: Preview images for the .NET runtime dependencies
+  projectWebsite: https://dotnet.microsoft.com
+  projectRepositoryUrl: https://github.com/dotnet/dotnet-docker
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  logoFile: dotnet-logo.svg
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/
+  categories: [Application Frameworks]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true
+
+- name: internal/private/dotnet/nightly/sdk
+  displayName: .NET SDK (Internal)
+  readme: README.sdkinternal.md
+  description: Internal images for the .NET SDK
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+
+- name: public/dotnet/nightly/sdk
+  displayName: .NET SDK (Preview)
+  readme: README.sdk.md
+  discoveryPortalReadme: README.sdk.portal.md
+  licenseType: MIT
+  description: Preview images for the .NET SDK
+  projectWebsite: https://dotnet.microsoft.com
+  projectRepositoryUrl: https://github.com/dotnet/dotnet-docker
+  logoUrl: https://raw.githubusercontent.com/dotnet/brand/master/logo/dotnet-logo.png
+  logoFile: dotnet-logo.svg
+  supportLink: https://github.com/dotnet/dotnet-docker/issues
+  documentationLink: https://docs.microsoft.com/dotnet/
+  categories: [Programming Languages]
+  architectures: [ARM, ARM 64, x86-64]
+  operatingSystems: [Linux, Windows]
+  syndications:
+  - type: dockerhub
+    imageUpdate: false
+    contentUpdate: true

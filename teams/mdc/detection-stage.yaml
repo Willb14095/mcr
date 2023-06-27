@@ -1,0 +1,105 @@
+version: 2.0
+subscriptionId: 9d352739-a748-4ce6-8d9c-6d864a156e94                                                  # REQUIRED. The id of the Azure subscription where the registry lives
+resourceGroup: AzureDefender-MCR-Stage                                                                   # REQUIRED. The Azure resource group where the registry lives
+registry: azuredefendermcrstage                                                                              # REQUIRED. The private ACR where the container image lives
+onboardingNotification: ascdetectionmcrnotf                                                         # REQUIRED. An @microsoft.com distribution group for onboarding notifications that include image scanning results. Can be the same DG used for dependencyNotification.
+
+ownership:                                                                                            # REQUIRED Specifies what groups own the repositories listed in this file
+  securityGroups:                                                                                     # REQUIRED Starts the security group section
+  - groupName: middleeast\RomeDetectionEng                                                            # REQUIRED The name of the security group - You can find ones you belong to here: https://idweb/identitymanagement/aspx/groups/MyMemberships.aspx
+    permissions:                                                                                      # REQUIRED The permissions the group has when managing repositories listed in this file. read/write are currently supported
+    - read
+    - write
+
+repos:
+  # Arc Helm chart repo
+  - name: public/mdc/stage/arc-extension
+    displayName: MDC Arc Extension - Stage
+    description: Microsoft Defender for Cloud Arc Extension Helm Chart - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud cluster state collector
+  - name: public/mdc/stage/cluster-state-collector
+    displayName: MDC Cluster State Collector Agent for K8S - Stage
+    description: Microsoft Defender for Cloud Cluster State Collector Agent for K8S - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud low level collector
+  - name: public/mdc/stage/low-level-collector
+    displayName: MDC Low Level Collector Agent for K8S - Stage
+    description: Microsoft Defender for Cloud Low Level Collector Agent for K8S - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud low level collector init container
+  - name: public/mdc/stage/low-level-init
+    displayName: MDC Low Level Init for K8S - Stage
+    description: Microsoft Defender for Cloud Low Level Init for K8S - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud pod collector
+  - name: public/mdc/stage/pod-collector
+    displayName: MDC Pod Collector Agent for K8S - Stage
+    description: Microsoft Defender for Cloud Pod Collector Agent for K8S - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud Publisher Agent 
+  - name: public/mdc/stage/security-publisher
+    displayName: MDC Security Publisher Agent for K8S - Stage
+    description: Microsoft Defender for Cloud Security Publisher Agent for K8S - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Audit Logs Enabler
+  - name: public/mdc/stage/audit-logs-enabler
+    displayName: MDC Audit logs enabler for K8S - Stage
+    description: Microsoft Defender for Cloud Audit logs enabler for K8S - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud Old File Cleaner
+  - name: public/mdc/stage/old-file-cleaner
+    displayName: MDC File Cleaner for K8S - Stage
+    description: Microsoft Defender for Cloud File Cleaner for K8S - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+      # Microsoft Defender for Cloud In Cluster Defense Helm chart repo
+  - name: public/mdc/stage/in-cluster-defense-helm
+    displayName: Microsoft Defender In Cluster Defense for K8S Helm - Stage
+    description: Microsoft Defender In Cluster Defense for K8S Helm - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Kernel Headers Enabler
+  - name: public/mdc/stage/kernel-headers-enabler
+    displayName: MDC kernel headers enabler for K8S
+    description: Microsoft Defender for Cloud kernel headers enabler for K8S
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud In Cluster Defense
+  - name: public/mdc/stage/in-cluster-defense
+    displayName: Microsoft Defender In Cluster Defense for K8S - Stage
+    description: Microsoft Defender In Cluster Defense for K8S - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Microsoft Defender for Cloud In Cluster Defense - Redis Cache
+  - name: public/mdc/stage/in-cluster-defense-redis
+    displayName: Microsoft Defender In Cluster Defense for K8S Redis Cache - Stage
+    description: Microsoft Defender In Cluster Defense for K8S Redis Cache - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  # Multi Cloud Container VA - Analyzer
+  - name: public/mdc/stage/multicloud-containerva-analyzer
+    displayName: Multi Cloud Container VA Analyzer - Stage
+    description: Multi Cloud Container VA Analyzer - Stage
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com

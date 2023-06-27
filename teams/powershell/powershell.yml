@@ -1,0 +1,66 @@
+version: 2.1
+subscriptionId: 94cf12ad-4fe9-490b-b281-0a260198a4e0
+resourceGroup: pscore_mcr
+registry: pwshmcr
+onboardingNotification: pwshmcronboarding
+dependencyNotification: pwshmcrdepnot
+contactEmail: sldirect@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\PowerShell_Docker_Admins
+    permissions:
+    - read
+    - write
+
+repos:
+
+  - name: internal/powershell
+    displayName: PowerShell
+    readme: README.powershell.md
+    description: PowerShell for every system!
+    logoUrl: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true
+    supportLink: https://github.com/PowerShell/PowerShell/issues/new/choose
+    documentationLink: https://docs.microsoft.com/en-us/powershell/
+    
+  - name: internal/powershell/test-deps
+    displayName: PowerShell with Test Dependecies
+    readme: README.powershell-test-deps.md
+    description: PowerShell for every system with test dependencies for CI systems such as Azure Pipelines!
+    logoUrl: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true
+    supportLink: https://github.com/PowerShell/PowerShell/issues/new/choose
+    documentationLink: https://docs.microsoft.com/en-us/powershell/
+        
+  - name: public/powershell
+    displayName: PowerShell
+    readme: README.powershell.md
+    discoveryPortalReadme: readme.powershell.portal.md
+    licenseType: MIT
+    logoFile: stable.svg
+    description: PowerShell for every system!
+    logoUrl: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true
+    supportLink: https://github.com/PowerShell/PowerShell/issues/new/choose
+    documentationLink: https://docs.microsoft.com/en-us/powershell/
+    projectWebsite: https://github.com/powershell/powershell
+    projectRepositoryUrl: https://github.com/powershell/powershell-docker
+    categories: ['Programming Languages', 'DevOps Tools']
+    syndications:
+      - type: dockerhub
+        contentUpdate: true 
+
+  - name: public/powershell/test-deps
+    displayName: PowerShell with Test Dependecies
+    readme: README.powershell-test-deps.md
+    discoveryPortalReadme: readme.powershell-test-deps.portal.md
+    licenseType: MIT
+    logoFile: stable.svg
+    description: PowerShell for every system with test dependencies for CI systems such as Azure Pipelines!
+    logoUrl: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true
+    supportLink: https://github.com/PowerShell/PowerShell/issues/new/choose
+    documentationLink: https://docs.microsoft.com/en-us/powershell/
+    projectWebsite: https://github.com/powershell/powershell
+    projectRepositoryUrl: https://github.com/powershell/powershell-docker
+    categories: ['Programming Languages', 'DevOps Tools']
+    syndications:
+      - type: dockerhub
+        contentUpdate: true 

@@ -1,0 +1,35 @@
+version: 2.0
+subscriptionId: 98a9d76f-c5d2-49a6-bc9f-3deb11587a64
+resourceGroup: Core
+registry: arcproxypartner
+onboardingNotification: ArcNotifications
+dependencyNotification: ArcNotifications
+
+ownership:
+  securityGroups:
+  - groupName: redmond\AP-ArcNotifications
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/azureconnectivity/proxy/arc-proxy
+    displayName: Azure Arc L7 Proxy
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: unlisted/azureconnectivity/proxy/notification-proxy
+    displayName: Azure Arc Notification Proxy
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc
+
+  - name: unlisted/azureconnectivity/proxy/sni-proxy
+    displayName: Azure Arc SNI Proxy
+    description: No Description
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://aka.ms/azurearc

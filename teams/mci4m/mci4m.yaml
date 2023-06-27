@@ -1,0 +1,52 @@
+version: 2.0
+subscriptionId: 1a9c6de0-3f24-4808-b4a3-5f95369c65d5
+resourceGroup: mci4m-prod-acr
+registry: mci4macr
+onboardingNotification: mci4mmcrdg
+dependencyNotification: mci4mmcrdg
+
+ownership:
+  securityGroups:
+  - groupName: redmond\mci4mmcr
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: unlisted/mci4m/idsworkerservice
+    displayName: MDS Worker Service
+    description: MDS Worker Service by MCI4M
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: unlisted/mci4m/mdsservice
+    displayName: MDS Service
+    description: MDS Service by MCI4M
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: unlisted/mci4m/dmmcopilot
+    displayName: DMM Copilot
+    description: DMM Copilot by MCI4M
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+  
+  - name: unlisted/mci4m/dmmworkerservice
+    displayName: DMM Worker Service
+    description: DMM Worker Service by MCI4M
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: unlisted/mci4m/dmmservice
+    displayName: DMM Service
+    description: DMM Service by MCI4M
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+
+    

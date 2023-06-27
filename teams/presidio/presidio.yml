@@ -1,0 +1,71 @@
+version: 2.1
+subscriptionId: 0b3f04a9-6375-4341-a513-dd53731a99a4
+resourceGroup: rg-dstoolkit-demo-dev
+registry: acrdstoolkitdemowedev
+onboardingNotification: presidio-onboard
+dependencyNotification: presidio-dependency
+contactEmail: presidio@microsoft.com
+
+ownership:
+  securityGroups:
+    - groupName: redmond\csenghealthcaredev
+      permissions:
+        - read
+        - write
+
+productFamily:
+  name: presidio
+  shortDescription: Context aware, pluggable and customizable data protection and PII data anonymization service for text and images https://aka.ms/presidio
+  readMe: README.presidio.md
+  logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+  documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+repos:
+  - name: public/presidio-anonymizer
+    displayName: Presidio Anonymizer
+    discoveryPortalReadme: README.presidio-anonymizer.portal.md
+    readme: README.presidio-anonymizer.md
+    description: The Presidio anonymizer
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: container.svg
+    documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+    licenseType: MIT
+    projectWebsite: https://microsoft.github.io/presidio
+    projectRepositoryUrl: https://github.com/microsoft/presidio
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/presidio-analyzer
+    displayName: Presidio Analyzer
+    discoveryPortalReadme: README.presidio-analyzer.portal.md
+    readme: README.presidio-analyzer.md
+    description: The Presidio analyzer
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: container.svg
+    documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+    licenseType: MIT
+    projectWebsite: https://microsoft.github.io/presidio
+    projectRepositoryUrl: https://github.com/microsoft/presidio
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true
+  - name: public/presidio-image-redactor
+    displayName: Presidio Image Redactor
+    discoveryPortalReadme: README.presidio-image-redactor.portal.md
+    readme: README.presidio-image-redactor.md
+    description: The Presidio Image Redactor
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    logoFile: container.svg
+    documentationLink: https://github.com/microsoft/presidio/blob/main/README.MD
+    licenseType: MIT
+    projectWebsite: https://microsoft.github.io/presidio
+    projectRepositoryUrl: https://github.com/microsoft/presidio
+    syndications:
+      - type: dockerhub
+        imageUpdate: false
+        contentUpdate: true

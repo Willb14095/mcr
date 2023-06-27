@@ -1,0 +1,79 @@
+version: 2.0
+subscriptionId: 9caf2a1e-9c49-49b6-89a2-56bdec7e3f97
+resourceGroup: rtms-mcr
+registry: signalrservice
+onboardingNotification: VSCSIGNALR
+
+ownership:
+  securityGroups:
+  - groupName: fareast\VSCSIGNALR
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/signalrsamples/chatroom
+    displayName: Azure SignalR Sample ChatRoom
+    readme: README.signalr-sample-chatroom.md
+    description: Azure SignalR sample chatroom image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/signalrsamples/advancedchatroom
+    displayName: Azure SignalR Sample AdvancedChatRoom
+    readme: README.signalr-sample-advancedchatroom.md
+    description: Azure SignalR sample advancedchatroom image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/signalrsamples/reliablechatroom
+    displayName: Azure SignalR Sample ReliableChatRoom
+    readme: README.signalr-sample-reliablechatroom.md
+    description: Azure SignalR sample reliablechatroom image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+  
+  - name: public/signalrsamples/githubchat
+    displayName: Azure SignalR Sample GitHubChat
+    readme: README.signalr-sample-githubchat.md
+    description: Azure SignalR sample githubchat image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/signalrsamples/blazorchat
+    displayName: Azure SignalR Sample BlazorChat
+    readme: README.signalr-sample-blazorchat.md
+    description: Azure SignalR sample blazorchat image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/signalrsamples/flightmap
+    displayName: Azure SignalR Sample FlightMap
+    readme: README.signalr-sample-flightmap.md
+    description: Azure SignalR sample flightmap image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

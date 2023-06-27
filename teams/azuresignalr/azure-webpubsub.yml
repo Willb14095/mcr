@@ -1,0 +1,91 @@
+version: 2.0
+subscriptionId: 9caf2a1e-9c49-49b6-89a2-56bdec7e3f97
+resourceGroup: rtms-mcr
+registry: signalrservice
+onboardingNotification: VSCSIGNALR
+
+ownership:
+  securityGroups:
+  - groupName: fareast\VSCSIGNALR
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/webpubsubsamples/chatapp
+    displayName: Azure WebPubSub Sample ChatRoom
+    readme: README.WebPubSub-sample-chatroom.md
+    description: Azure WebPubSub sample chatroom image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/webpubsubsamples/chatapp-reliable-subprotocol
+    displayName: Azure WebPubSub Sample chatapp-reliable-subprotocol
+    readme: README.WebPubSub-sample-chatapp-reliable-subprotocol.md
+    description: Azure WebPubSub sample chatapp-reliable-subprotocol image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/webpubsubsamples/codestream
+    displayName: Azure WebPubSub Sample codestream
+    readme: README.WebPubSub-sample-codestream.md
+    description: Azure WebPubSub sample codestream image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+          
+
+  - name: public/webpubsubsamples/collaborate-code-editor
+    displayName: Azure WebPubSub Sample collaborate-code-editor
+    readme: README.WebPubSub-sample-collaborate-code-editor.md
+    description: Azure WebPubSub sample collaborate-code-editor image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/webpubsubsamples/videoshare
+    displayName: Azure WebPubSub Sample videoshare
+    readme: README.WebPubSub-sample-videoshare.md
+    description: Azure WebPubSub sample videoshare image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/webpubsubsamples/whiteboard
+    displayName: Azure WebPubSub Sample whiteboard
+    readme: README.WebPubSub-sample-whiteboard.md
+    description: Azure WebPubSub sample whiteboard image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/webpubsubsamples/scoreboard
+    displayName: Azure WebPubSub Sample scoreboard
+    readme: README.WebPubSub-sample-scoreboard.md
+    description: Azure WebPubSub sample scoreboard image
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

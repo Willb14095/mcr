@@ -1,0 +1,47 @@
+version: 2.0
+subscriptionId: abcf82ae-4674-4cea-9d54-77c5529ca1b7
+resourceGroup: OnePubAcrProd-rg
+registry: OnePubAcrProd
+onboardingNotification: wsbasenotifications
+dependencyNotification: wsbasenotifications
+
+ownership:
+  securityGroups:
+  - groupName: redmond\OnePubMCR-Onboarding
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: Windows Layer Storage
+  shortDescription: Product family for all Windows base OS container images
+  readMe: README.windowsbaseprodfamily.md
+  logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+  documentationLink: https://aka.ms/containers
+  categories: [Base Images]
+  syndications:
+    - type: dockerhub
+      enabled: True
+
+
+repos:
+  - name: public/windows/layerstorage
+    displayName: Windows layer storage
+    readme: README.windows.md
+    description: Repo for storing windows base layers
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    supportLink: https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowscontainers
+    documentationLink: https://aka.ms/containers
+    syndications:
+      - type: cloud
+        destinations:
+            - usnat
+            - ussec
+        tags:
+            - source: /servercore_10\.0\.17763\..*/ #this will match all Rs5 servercore layerstorage tags with prefix of servercore_10.0.17763 (Rs5 exclusively has 17763 has its version prefix for all releases)
+            - source: /nanoserver_10\.0\.17763\..*/ #this will match all Rs5 nanoserver layerstorage tags with prefix of nanoserver_10.0.17763 (Rs5 exclusively has 17763 as its version prefix for all releases)
+            - source: /nanoserver_10\.0\.19041\..*/ #this will match all 2004 nanoserver layerstorage tags with prefix of nanoserver_10.0.19041 (2004 exclusively has 19041 as its version prefix for all releases)
+            - source: /cliententerprise_10\.0\.17763\..*/ #this will match all Rs5 client enterprise layerstorage tags
+            - source: /nanoserver_10\.0\.20348\..*/  #this will match all server2022 nanoserver layerstorage tags
+            - source: /servercore_10\.0\.20348\..*/ #this will match all server2022 servercore layerstorage tags

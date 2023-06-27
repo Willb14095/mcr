@@ -1,0 +1,32 @@
+version: 2.1
+subscriptionId: 6b085460-5f21-477e-ba44-1035046e9101
+resourceGroup: azure-ps-prod
+registry: azureps
+onboardingNotification: azdevxps@microsoft.com
+dependencyNotification: azdevxps@microsoft.com
+contactEmail: azdevxps@microsoft.com
+
+ownership:                                                                                           
+  securityGroups:                                                                                     
+  - groupName: redmond\azurepowershell                                                                       
+    permissions:                                                                                      
+    - read
+    - write
+
+repos:
+    - name: public/azure-powershell
+      displayName: Azure PowerShell
+      readme: README.azure-powershell.md
+      description: Set of cmdlets for managing Azure resources directly from the PowerShell command line.
+      logoUrl: https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true
+      supportLink: https://github.com/Azure/azure-powershell/issues
+      documentationLink: http://aka.ms/azpsdocker
+      discoveryPortalReadme: README.azure-powershell.portal.md
+      licenseType: 	Apache-2.0
+      licenseUrl: https://github.com/Azure/azure-powershell/blob/main/LICENSE.txt
+      projectWebsite: https://github.com/Azure/azure-powershell
+      logoFile: ps_black_64.svg
+      categories: ['Programming Languages', 'DevOps Tools']
+      syndications:
+        - type: dockerhub
+          contentUpdate: true 

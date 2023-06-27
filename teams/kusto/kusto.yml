@@ -1,0 +1,81 @@
+version: 2.1
+subscriptionId: 3bda4a98-5fb5-48e9-b0b9-b320cff8e5df
+resourceGroup: kusto-acr
+registry: kusto
+onboardingNotification: kusto-images
+dependencyNotification: kusto-images
+contactEmail: kops@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\mcrdev
+    permissions:
+    - read
+    - write
+  - groupName: redmond\kustoops
+    permissions:
+    - read
+    - write
+
+productFamily:
+  name: kusto
+  shortDescription: Azure Data Explorer
+  readMe: README.kusto.portal.md
+  logoUrl: https://kustoes.blob.core.windows.net/kusto/adx_logo.svg
+  supportLink: https://microsoft.sharepoint.com/teams/kustalk_group/SitePages/Home.aspx
+  documentationLink: https://docs.microsoft.com/en-us/azure/data-explorer/
+  categories: [Databases]
+  syndications:
+    - type: dockerhub
+      enabled: True 
+  
+
+repos:
+  - name: public/azuredataexplorer/kustainer
+    displayName: kustainer
+    description: Azure data explorer query engine emulator
+    logoUrl: https://kustoes.blob.core.windows.net/kusto/adx_logo.svg
+    logoFile: adx_logo.svg 
+    discoveryPortalReadme: README.kusto.portal.md
+    readme: data-explorer/kusto-emulator.md
+    supportLink: https://microsoft.sharepoint.com/teams/kustalk_group/SitePages/Home.aspx
+    description: Kusto Emulator - Azure Data Explorer engine single node server container
+    documentationLink: https://docs.microsoft.com/en-us/azure/data-explorer/kusto-emulator
+    licenseType: MS-PL
+    licenseUrl: https://docs.microsoft.com/en-us/azure/data-explorer/kusto-emulator
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+  
+  - name: public/azuredataexplorer/kustainer-linux
+    displayName: kustainer (mariner linux)
+    description: Azure data explorer query engine emulator (mariner linux)
+    logoUrl: https://kustoes.blob.core.windows.net/kusto/adx_logo.svg
+    logoFile: adx_logo.svg 
+    discoveryPortalReadme: README.kusto.portal.md
+    readme: data-explorer/kusto-emulator.md
+    supportLink: https://microsoft.sharepoint.com/teams/kustalk_group/SitePages/Home.aspx
+    description: Kusto Emulator - Azure Data Explorer engine single node server container (mariner linux)
+    documentationLink: https://docs.microsoft.com/en-us/azure/data-explorer/kusto-emulator
+    licenseType: MS-PL
+    licenseUrl: https://docs.microsoft.com/en-us/azure/data-explorer/kusto-emulator
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+
+  - name: public/azuredataexplorer/kuiper-dev-release
+    displayName: kuiper
+    description: Azure data explorer query engine node (mariner linux)
+    logoUrl: https://kustoes.blob.core.windows.net/kusto/adx_logo.svg
+    logoFile: adx_logo.svg 
+    discoveryPortalReadme: README.kuiper.portal.md
+    requireAuthForDiscovery: true
+    readme: data-explorer/kusto-emulator.md
+    supportLink: https://microsoft.sharepoint.com/teams/kustalk_group/SitePages/Home.aspx
+    description: Kusto - Azure Data Explorer engine single node server container (mariner linux)
+    documentationLink: https://kusto.azurewebsites.net/docs/index.html
+    licenseType: Other
+    licenseUrl: https://kusto.azurewebsites.net/docs/index.html
+    syndications:
+      - type: dockerhub
+        contentUpdate: true

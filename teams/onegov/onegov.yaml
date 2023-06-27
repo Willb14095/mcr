@@ -1,0 +1,29 @@
+version: 2.0
+subscriptionId: 68b46264-29c0-4859-ad04-d1e7d6c9364e
+resourceGroup: powershell-gallery-test
+registry: psgallerytestacr
+onboardingNotification: guidomassoni@microsoft.com
+dependencyNotification: guidomassoni@microsoft.com
+
+ownership:                                                                                             
+  securityGroups:                                                                                     
+  - groupName: redmond\TM-Toolbox                                                            
+    permissions:                                                                                   
+    - read
+    - write
+
+repos:
+    - name: unlisted/az.accounts
+      displayName: Az.Accounts
+      readme: README.md
+      description: Testing PowerShell Gallery in MCR end to end
+      logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg 
+      supportLink: 
+      documentationLink:
+      syndications:
+        - type: cloud                                  
+          destinations:
+            - usnat                                     
+            - ussec                                     
+          tags: 
+            - source: ^(0|[1-9]\d*)(\.(0|[1-9]\d*)){0,3}$

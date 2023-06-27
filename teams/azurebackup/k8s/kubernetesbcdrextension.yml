@@ -1,0 +1,39 @@
+version: 2.0
+subscriptionId: dc5ab8ab-4323-4368-9964-fd7ef7bca5e8
+resourceGroup: KubernetesBCDRExtensionRG
+registry: KubernetesBCDRExtensionACR
+onboardingNotification: k8sbackup@microsoft.com
+dependencyNotification: k8sbackup@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: fareast\azurebackupk8s
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/azurebackup/k8s/helm
+    displayName: Kubernetes BCDR Extension Helm Chart
+    description: Helm chart for Microsoft.DataProtection.Kubernetes BCDR extension
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+  
+  - name: public/azurebackup/k8s/controller
+    displayName: Controller
+    description: Controller image for Microsoft.DataProtection.Kubernetes BCDR extension
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+ 
+  - name: public/azurebackup/k8s/velero
+    displayName: Velero
+    description: Velero image for Microsoft.DataProtection.Kubernetes BCDR extension
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: public/azurebackup/k8s/velero-plugin-for-csi
+    displayName: Velero plugin for CSI
+    description: Velero plugin for CSI image for Microsoft.DataProtection.Kubernetes BCDR extension
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+
+  - name: public/azurebackup/k8s/velero-plugin-for-microsoft-azure
+    displayName: Velero plugin for Microsoft Azure
+    description: Velero plugin for Microsoft Azure for Microsoft.DataProtection.Kubernetes BCDR extension
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg

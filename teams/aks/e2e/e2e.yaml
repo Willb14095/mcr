@@ -1,0 +1,111 @@
+version: 2.0
+subscriptionId: 89954b57-27c4-4d64-8594-881007d7ade6
+resourceGroup: DevInfraGlobalResources-prod
+registry: aksdevinfraprodprod
+onboardingNotification: k8sdev
+dependencyNotification: k8sdev
+
+ownership:
+  securityGroups:
+  - groupName: northamerica\RCG-Read_Write-CG-23637
+    permissions:
+    - read
+    - write
+
+repos:
+  - name: public/aks/e2e/library-busybox
+    displayName: 'busybox image for AKS E2E'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/aks/e2e/bloomberg-goldpinger
+    displayName: 'network debugging tool for Kubernetes nodes'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/e2e/grafana-tempo
+    displayName: 'tracing backend from Grafana'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+
+  - name: public/aks/e2e/k8s-agnhost
+    displayName: 'Kubernetes agnhost image for AKS E2E'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+          - source: /^\d+\.\d+$/
+
+  - name: public/aks/e2e/k8s-agnhost-windows
+    displayName: 'Kubernetes agnhost Windows image for AKS E2E'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/e2e/python-alpine
+    displayName: 'Python alpine image for AKS E2E'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/e2e/web-app-routing-test
+    displayName: 'Image to run e2e tests for Web App Routing add-on'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/
+
+  - name: public/aks/e2e/webhook-server
+    displayName: 'Image to run e2e tests for validating and mutating webhook server'
+    logoUrl: https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg
+    supportLink: https://microsoft.com
+    documentationLink: https://microsoft.com
+    syndications:
+      - type: cloud
+        destinations:
+          - usnat
+          - ussec
+        tags:
+          - source: /^master\.\d*\.\d*$/
+          - source: /^official\.\d*\.\d*$/

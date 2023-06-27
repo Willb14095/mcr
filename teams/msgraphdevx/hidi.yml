@@ -1,0 +1,41 @@
+version: 2.1
+subscriptionId: 68397ef5-9754-46e7-9572-9b15d12367f1
+resourceGroup: msgraph-public-container-images
+registry: msgraphprod
+onboardingNotification: graphsdkpub
+dependencyNotification: graphsdkpub
+contactEmail: graphsdkpub@microsoft.com
+
+ownership:
+  securityGroups:
+  - groupName: redmond\graphsdkpub
+    permissions:
+    - read
+    - write
+repos:
+  - name: public/hidi
+    displayName: Microsoft OpenAPI Hidi (deprecated)
+    readme: README-hidi-renamed.md
+    discoveryPortalReadme: README-hidi-renamed.portal.md
+    description: Hidi is a command line tool that makes it easy to work with and transform OpenAPI documents.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    logoFile: generic_logo.svg
+    supportLink: https://github.com/microsoft/OpenAPI.NET/issues
+    documentationLink: https://github.com/microsoft/OpenAPI.NET/tree/vnext/src/Microsoft.OpenApi.Hidi
+    licenseType: MIT
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
+  - name: public/openapi/hidi
+    displayName: Microsoft OpenAPI Hidi
+    readme: README-hidi.md
+    discoveryPortalReadme: README-hidi.portal.md
+    description: Hidi is a command line tool that makes it easy to work with and transform OpenAPI documents.
+    logoUrl: https://mcrflowpublic.blob.core.windows.net/assets/Microsoft_logo.svg
+    logoFile: generic_logo.svg
+    supportLink: https://github.com/microsoft/OpenAPI.NET/issues
+    documentationLink: https://github.com/microsoft/OpenAPI.NET/tree/vnext/src/Microsoft.OpenApi.Hidi
+    licenseType: MIT
+    syndications:
+      - type: dockerhub
+        contentUpdate: true
